@@ -28,3 +28,15 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover{
     background-color: rgba(0, 0, 0, 0.815);
     color: rgba(240, 88, 18, 0.719);
 }
+a{
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.959);
+    padding: 2px;
+    background-color: rgba(241, 11, 11, 0.89);
+    border: 1px solid rgba(20, 5, 5, 0.719);
+    border-radius: 3px;
+}
+a:hover{
+    color: rgba(248, 244, 244, 0.932);
+    background-color: rgba(240, 99, 18, 0.966);
+}

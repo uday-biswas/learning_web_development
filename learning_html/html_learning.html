@@ -105,15 +105,16 @@
         border-style: inset;
         border-width: 1px;
     }</pre><hr>
+    <h3>html text formatting</h3>
     => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
        -><abbr title="World Health Organisation">WHO</abbr> <hr>
-    => the <b>&lt;address&gt;</b> tag is used to insert an address.<br>
+    => the <b>&lt;address&gt;</b> tag is used to define the contact information of the author or owner of the document or article.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;address&gt; 123, abc street, xyz city, 123456 &lt;/address&gt;</b> 
        -><address> 123, abc street, xyz city, 123456 </address> <hr>
-    => the <b>&lt;b&gt;</b> tag is used to insert bold text.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;b&gt; bold text &lt;/b&gt;</b> 
-       -><b> bold text </b> <hr>
+    => the <b>&lt;b&gt; and &lt;strong&gt;</b> tags are used to make bold text.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;b&gt; bold or strong text &lt;/b&gt;</b> 
+       -><b> bold or strong text </b> <hr>
     => the <b>&lt;bdo&gt;</b> tag is used to insert a text with a different direction.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;bdo dir="rtl"&gt; text with a different direction &lt;/bdo&gt;</b> 
        -><bdo dir="rtl"> text with a different direction </bdo> <hr>
@@ -123,67 +124,109 @@
     => the <b>&lt;cite&gt;</b> tag is used to insert a citation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;cite&gt; citation &lt;/cite&gt;</b> 
        -><cite> citation </cite> <hr>
-    => the <b>&lt;code&gt;</b> tag is used to insert a piece of computer code.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;code&gt; code &lt;/code&gt;</b> 
-        -><code> code </code> <hr>
-    => the <b>&lt;del&gt;</b> tag is used to insert a deleted text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;del&gt; deleted text &lt;/del&gt;</b> 
-        -><del> deleted text </del> <hr>
+    => the <b>&lt;code&gt; , &lt;kbd&gt; , &lt;samp&gt; </b> tags are used to make a text look like written by typewritter.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;code&gt; this is the way &lt;/code&gt;</b> 
+        -><code> this is the way </code> <hr>
+    => the <b>&lt;del&gt; and &lt;s&gt;</b> tags are used to make a deleted or strikethrough text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;del&gt; deleted or strikethrough text &lt;/del&gt;</b> 
+        -><del> deleted or strikethrough text </del> <hr>
     => the <b>&lt;dfn&gt;</b> tag is used to insert a definition.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dfn&gt; definition &lt;/dfn&gt;</b> 
         -><dfn> definition </dfn> <hr>
-    => the <b>&lt;em&gt;</b> tag is used to insert emphasized text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;em&gt; emphasized text &lt;/em&gt;</b> 
-        -><em> emphasized text </em> <hr>
-    => the <b>&lt;i&gt;</b> tag is used to insert italic text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;i&gt; italic text &lt;/i&gt;</b> 
-        -><i> italic text </i> <hr>
-    => the <b>&lt;ins&gt;</b> tag is used to insert a inserted text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ins&gt; inserted text &lt;/ins&gt;</b> 
-        -><ins> inserted text </ins> <hr>
-    => the <b>&lt;kbd&gt;</b> tag is used to insert a keyboard input.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;kbd&gt; keyboard input &lt;/kbd&gt;</b> 
-        -><kbd> keyboard input </kbd> <hr>
+    => the <b>&lt;em&gt;</b> and <b>&lt;i&gt;</b> tag is used to insert emphasized or italic text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;em&gt; emphasized or italic text &lt;/em&gt;</b> 
+        -><em> emphasized or italic text </em> <hr>
+    => the <b>&lt;ins&gt; and &lt;u&gt; </b> tags are used to insert a underlined or inserted text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;u&gt; underlined or inserted text &lt;/u&gt;</b> 
+        -><u> underlined or inserted text </u> <hr>
     => the <b>&lt;mark&gt;</b> tag is used to insert a marked text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;mark&gt; marked text &lt;/mark&gt;</b> 
         -><mark> marked text </mark> <hr>
-    => the <b>&lt;pre&gt;</b> tag is used to insert a preformatted text.<br>
+    => the <b>&lt;pre&gt;</b> tag is used to insert a preformatted text, the spaces and line breaks are kept as it is. <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;pre&gt; preformatted text &lt;/pre&gt;</b> 
         -><pre> preformatted text </pre> <hr>
-    => the <b>&lt;q&gt;</b> tag is used to insert a short quotation.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
-        -><q> short quotation </q> <hr>
-    => the <b>&lt;s&gt;</b> tag is used to insert a strikethrough text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;s&gt; strikethrough text &lt;/s&gt;</b> 
-        -><s> strikethrough text </s> <hr>
-    => the <b>&lt;samp&gt;</b> tag is used to insert a sample output from a computer program.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;samp&gt; sample output &lt;/samp&gt;</b> 
-        -><samp> sample output </samp> <hr>
-    => the <b>&lt;small&gt;</b> tag is used to insert a small text.<br>
+        => the <b>&lt;small&gt;</b> tag is used to make small sized text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;small&gt; small text &lt;/small&gt;</b> 
         -><small> small text </small> <hr>
-    => the <b>&lt;strong&gt;</b> tag is used to insert a strong text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;strong&gt; strong text &lt;/strong&gt;</b> 
-        -><strong> strong text </strong> <hr>
-    => the <b>&lt;sub&gt;</b> tag is used to insert a subscript text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;sub&gt; subscript text &lt;/sub&gt;</b> 
-        -><sub> subscript text </sub> <hr>
-    => the <b>&lt;sup&gt;</b> tag is used to insert a superscript text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;sup&gt; superscript text &lt;/sup&gt;</b> 
-        -><sup> superscript text </sup> <hr>
-    => the <b>&lt;u&gt;</b> tag is used to insert an underlined text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;u&gt; underlined text &lt;/u&gt;</b> 
-        -><u> underlined text </u> <hr>
-    => the <b>&lt;var&gt;</b> tag is used to insert a variable.<br>
+        => the <b>&lt;sub&gt;</b> tag is used to insert a subscript text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>(a + b)&lt;sub&gt; 2 &lt;/sub&gt;</b> 
+        ->(a + b)<sub>2</sub> <hr>
+        => the <b>&lt;sup&gt;</b> tag is used to insert a superscript text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>(a + b)&lt;sup&gt; 2 &lt;/sup&gt;</b> 
+        ->(a + b)<sup>2 </sup> <hr>
+        => the <b>&lt;var&gt;</b> tag is used to insert a variable.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;var&gt; variable &lt;/var&gt;</b> 
         -><var> variable </var> <hr>
-    => the <b>&lt;wbr&gt;</b> tag is used to insert a possible line-break.<br>
+        => the <b>&lt;wbr&gt;</b> tag is used to insert a possible line-break.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;wbr&gt; possible line-break &lt;/wbr&gt;</b> 
         -><wbr> possible line-break </wbr> <hr>
-
-
-
-
-
+        
+        <h3 id="quote">html quotation</h3>
+        => the <b>&lt;q&gt;</b> tag is used to insert the content inside short quotation.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
+            -><q> short quotation </q> <hr>
+        => The HTML <b>&lt;blockquote&gt;</b> element defines a section that is quoted from another source.<br>
+           Example
+                <br>Here is a quote from WWF's website:<br>
+                <b>&lt;blockquote&gt;</b> cite="http://www.worldwildlife.org/who/index.html">
+                For 60 years, WWF has worked to help people and nature thrive. 
+                As the world's leading conservation organization, WWF works in nearly 100 countries. 
+                At every level, we collaborate with people around the world to develop and deliver innovative 
+                solutions that protect communities, wildlife, and the places in which they live.
+                <br><b>&lt;/blockquote&gt;</b><hr>
+       <h3>html links</h3>
+        => the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;a href="http://www.google.com"&gt; google &lt;/a&gt;</b> 
+                -><a href="http://www.google.com"> google </a> <hr>
+        => By default, links will appear as follows in all browsers:<br>
+             >An unvisited link is underlined and blue<br>
+             >A visited link is underlined and purple<br>
+             >An active link is underlined and red<br><hr>
+        => By default, the linked page will be displayed in the current browser window.<br>
+             Use the attribute "target" to open the linked document in a new browser window or tab:<br>
+             Example: <b>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;</b>Visit W3Schools!<b>&lt;/a&gt;</b> ->
+                <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a><hr>   
+        => to use image as link , we just have to put the img tag inside the <b>&lt;a&gt;</b> tag.<br>
+            <b>&lt;a href="../learning_html/login_page.html">
+            &lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style="width:42px;height:42px;"&gt;
+            &lt;/a&gt;</b> &rAarr;
+            <a href="../learning_html/login_page.html">
+            <img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style="width:40px;height:40px;">
+            </a><hr>    
+        =>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
+         <br>Example: <b>&lt;a href="mailto:udaybiswasofficial@gmail.com"&gt;</b> email <b>&lt;/a&gt;</b>  
+            -><a href="mailto:udaybiswasofficial@gmail.com">Send email to us. </a><hr>  
+        => if the page is too long , then to access different parts of the page :<br>
+            First, use the id attribute to create a bookmark:<br>
+            <b>&lt;h3 id="quote"&gt;html quotation&lt;/h3&gt;</b><br>
+            Then, add a link to the bookmark using a "#" before that id:<br>
+            Example : <b>&lt;a href="#quote"&gt;html quotation&lt;/a&gt;</b> -> <a href="#quote">html quotation</a><br>
+            You can also add a link to a bookmark on another page:
+            <br>&lt;a href="static_page.html#bold1"&gt; players list &lt;/a&gt;
+             -> <a href="static_page.html#bold1">players list</a> <hr>
+        => the <b>&lt;link&gt;</b> tag is used to link external files.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;link rel="stylesheet" href="mystyle.css"&gt;</b><br> 
+        => the <b>&lt;nav&gt;</b> tag is used to define navigation links.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;nav&gt; navigation links &lt;/nav&gt;</b> 
+            -><nav> navigation links </nav> <hr>
+        <h3>html images</h3>
+        
+            
+        => the <b>&lt;ul&gt;</b> tag is used to define unordered list.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ul&gt; unordered list &lt;/ul&gt;</b> 
+            -><ul> unordered list </ul> <hr>
+        => the <b>&lt;ol&gt;</b> tag is used to define ordered list.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ol&gt; ordered list &lt;/ol&gt;</b> 
+            -><ol> ordered list </ol> <hr>
+        => the <b>&lt;li&gt;</b> tag is used to define list item.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;li&gt; list item &lt;/li&gt;</b> 
+            -><li> list item </li> <hr>
+        => the <b>&lt;dl&gt;</b> tag is used to define description list.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dl&gt; description list &lt;/dl&gt;</b> 
+            -><dl> description list </dl> <hr>
+        => the <b>&lt;dt&gt;</b> tag is used to define description term.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dt&gt; description term &lt;/dt&gt;</b> 
+            -><dt> description term </dt> <hr>
+         
 </body>
 </html>
