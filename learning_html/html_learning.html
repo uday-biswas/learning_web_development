@@ -1,0 +1,116 @@
+<!DOCTYPE html>    <!-- tells the browser is a html 5 file -->
+<html lang="en-us">   <!-- lang attribute is used to define the language of the document 
+                        first two characters are language code and next two characters are country code -->
+                   <!-- the html tag contains all the content of the web page -->
+<head>             <!-- the contents of head tag are not shown in the browser window -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html tutorial</title>    <!-- title tag is used to define the title of the web page -->
+    <link rel="shortcut icon" type="image/icon" href="../images/icons8-gunter-100.png">
+    <link rel="stylesheet" type="text/css" href="html_learning.css">    <!-- link tag is used to link external files to the html file -->
+</head>
+<body>
+    <ul class="left">
+        <li>Home</li>
+        <li>Html</li>
+        <li>Css</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>About Us</li>
+        <li class="right">Bottom</li>
+        <li class="right">Login</li>
+    </ul>
+    <h1 title="main header"><u> Html tutorial </u></h1>    <!-- title attribute can be used to provide additional information
+                                                                about the element on hover -->
+    ● &lt;body&gt; &lt;/body&gt; contains all the things visible on the web page.
+    =>the user agent css style is :
+    <pre>
+    body {
+        display: block;
+        margin: 8px;
+    }
+    </pre><hr>
+    <h3>html tags and attributes</h3> 
+    <p>                   
+        =>The tag name can either start from an alphabet or an underscore( _ ).<br>
+        => Attributes can provide additional information about the HTML elements 
+             on your page and control their behaviour. <br>
+           Eg: <b> &lt;tag_name attribute_name="value"&gt; Content Enclosed &lt;/tag_name&gt; </b><br>
+        =>HTML tags are not case sensitive, &lt;p&gt; means the same as &lt;P&gt;
+    </p>  <hr>
+    <h3>html headings</h3>
+    <p>
+        =>there are 6 heading tags from &lt;h1&gt; to &lt;h6&gt; , the size and boldness of the text 
+        inside the header tags will go on decreasing as we go from h1 to h6.<br>
+        =>we can use this header tags multiple times in a single html file.<br>
+        =>the user agent css style is : 
+        <pre>
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        </pre>
+        => eg. &lt;h1&gt; heading 1 &lt;/h1&gt;
+        <h1 style="text-align:left">heading 1</h1>
+        <h2 style="text-align:left">heading 2</h2>
+        <h3 style="text-align:left">heading 3</h3>
+        <h4 style="text-align:left">heading 4</h4>
+        <h5 style="text-align:left">heading 5</h5>
+        <h6 style="text-align:left">heading 6</h6>
+    </p><hr>
+    <h3>html paragraphs</h3>
+    <p>
+        =>paragraphs are defined with the &lt;p&gt; tag, and is most commonly used for writing paragraphs<br>
+        =>the user agent css style is : 
+        <pre>
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        </pre>
+        =>eg. &lt;p&gt; paragraph &lt;/p&gt;
+    </p>
+    => the contents inside &lt;pre&gt; and &lt;/pre&gt; tags are shown as it is, without any formatting.
+       <br> usually it reserves the space and the line breaks.<br>
+    the user agent css style is:
+    <pre>
+        pre {
+            display: block;
+            font-family: monospace;
+            white-space: pre;
+            margin: 1em 0px;
+        }
+    </pre>
+    => the &lt;br&gt; tag is used to insert a single line break.<br>
+    => the &lt;hr&gt; tag is used to insert a horizontal line below.
+    the user agent css style is:
+    <pre> 
+    hr {
+        display: block;
+        unicode-bidi: isolate;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+    }</pre><hr>
+    => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
+       -><abbr title="World Health Organisation">WHO</abbr> <br>
+    => the <b>&lt;address&gt;</b> tag is used to insert an address.<br>
+    eg. <b>&lt;address&gt; 123, abc street, xyz city, 123456 &lt;/address&gt;</b> -><address> 123, abc street, xyz city, 123456 </address> <br>
+
+
+</body>
+</html>

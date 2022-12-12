@@ -1,0 +1,132 @@
+html important points-
+
+basic structure of html:
+   ● <!DOCTYPE html> tells the browser that the file being displayed is HTML5 page. 
+   ● <html> </html> meant to contain all the html data and is the start of an HTML document. 
+   ● <head> </head> provides information about the document. 
+        It is not displayed in the browser window. 
+   ● <title> </title> provides a title for the document. 
+         it is written between head tags.
+   ● <body> </body> contains all the things visible on the web page.
+=>The tag name can either start from an alphabet or an underscore(_).
+=> Attributes can provide additional information about the HTML elements 
+     on your page and control their behaviour. 
+   Eg: <tag_name attribute_name="value"> Content Enclosed </tag_name>
+=>HTML tags are not case sensitive, <p> means the same as <P>.
+=>there are 6 heading tags from <h1> to <h6> , the size and boldness of the text 
+inside the header tags will go on decreasing as we go from h1 to h6.
+=>we can use this header tags multiple times in a single html file.
+
+=>html,head,title,body,h1 etc are paired tags and if opened , then they needed
+to be closed . example : <title> ind vs newzealand </title>.
+and there are many single tags too that dont need to be closed.
+example : <br> 
+=><br> tag is used to add a line breaker.
+=> A new paragraph is written inside <p> and </p>
+=> $nbsp is used to add spaces.
+=> we represent the unordered lists by listing them inside <li> and </li>
+   and all the <li> tags are written inside <ul> and </ul> tags.
+   the name of the "type" attribute can be circle , disc , square.
+=> attributes are used to add extra information to the tags.
+   example: <ul type="cirle"> 
+                <li> mahendra singh dhoni </li>
+                <li> virat kohli </li>
+            </ul>
+=>we represent the ordered lists by listing them inside <li> and </li>
+   and all the <li> tags are written inside <ol> and </ol> tags.
+  >the values of the "type" attribute can be a(alphabets),A,i(roman numericals),I,1(numbers).
+  >the values of the "start" attribute can be number. 
+          example: <ol type="A" start="5">  starts the list from 5.
+=> <img> is single tag used to add image
+   >the value of the attribute "src" is the file name of the image.
+         the image file should be present in the same folder as the html file
+         otherwise the absolute path of the image file should be given.
+   >the value of the attibute "alt" is the alternative text ,that would be 
+         shown only if the image does not loads.
+   >there are two attributes "height" and "width" to specify the size of the picture.
+     example: <img src="peakpx.jpg" 
+                   height="300"
+                   width="100%"
+                   alt="macOs background">
+=> we represent the hyperlinks by the text by placing the text inside the anchor tag <a> and </a>.
+   >the value of the attribute "href" is the link that the text will refer to.
+   >the value of the attribute "target" is "_blank" to open the link website 
+     into a new tab.
+=> By default, links will appear as follows in all browsers:
+      ● An unvisited link is underlined and blue
+      ● A visited link is underlined and purple
+      ● An active link is underlined and red
+   example: <a href="https://frontendfoc.us/" target="_blank"> frontend focus </a>
+   >we can even make the image as hyperlink by inserting the image inside anchor tag.
+      example: <a href="https://frontendfoc.us/" target="_blank"> 
+                  <img src="peakpx.jpg" 
+                      height="300"
+                      width="100%"
+                      alt="macOs background">
+               </a>
+   >even we can link it to any other html file within the computer by giving 
+    the absolute or relative path.
+      example: <a href="intro.html" target="_blank"> frontend focus </a>
+=>The <div> tag defines a block-level section or a division and the item inside
+   <div> and </div> are used for common css style.
+  by default ,the browsers always place a line break before and after the <div> element.
+=> internal links <=
+  firstly , we will give unique IDs to the tags and then will give the unique id as the
+  value to the attribute "href" of <a> tag to refer to that tag. 
+  we have to use # before the ID .
+  if we use only # as value of href, then it will refer to the top of the page.
+  example, <a href="#para7"> go to the para 7 </a>
+           .
+           .
+          <p id="para7"> this is the para number 7 </p>
+
+=>BLOCK VS INLINE ELEMENTS
+ =>Block elements are those that take up the full width available on a web page, 
+   effectively blocking out any other elements from sitting next to it on the left or right. 
+ =>Inline elements are those who only take up as much width as much needed to display the
+   contents of the element, thereby allowing other elements to be in line with the inline element. 
+   Block elements always start on a new line. Inline elements does not start from a new line. 
+   Examples of block elements are <div>, <p>, <h1> to <h6>, <nav>, etc. 
+   Examples of inline elements are <b>, <i>, <span>, <img>, etc. 
+   NOTE: You can also check which elements are block and which are inline by inspecting them using chrome
+
+=> <i> - defines italic text. eg. <i> written in italics </i>
+=> <sub> is used for subscripts
+=> <sup> is used for superscripts
+=> <del> is used for deleted text by striking through the text
+=> <mark> is used for highlighting the text
+=> <q> places the text inside the quotes
+=> <tt> makes the text looks like as it is by a typewritter
+
+=> special characters
+An HTML entity is a piece of text that begins with an ampersand (&) and ends with a
+semicolon(;) and between is the hex code or entity name. These entities are used to display
+the reserved characters. Eg., these are some html entities with how they will look on browser:
+● some useful character entities - &nbsp;(single space), &lt;(<), &gt;(>), &apos;('), &copy;(©)
+● mathematical symbols - &forall; , &sum;
+● some other entities - &larr;(←), &hearts;(♥), &trade;(™)
+
+=> tables
+  all the data inside the table are written between <table> tags.
+  <tr> is used for representing rows
+  <td> is used for representing data inside the cell
+  <th> inplace of <td> if the data to be represented in bold 
+  =>The border attribute is used for mentioning the thickness of the borders. If you do
+    not specify a border attribute the table will be displayed without any borders.
+  =>The <caption> tag defines a table heading. 
+    The <caption> tag must be inserted immediately after the <table> tag.
+  =>Attribute rowspan is used to mention the number of rows that a particular cell will
+    be occupying. Attribute colspan is used to mention the number of columns that a
+    particular cell will be occupying. They both are used with the td tag and can also be
+  example:
+        <table id="table2" border="4">
+        <caption><b><u>table 2</u></b></caption>
+        <tr><td></td><th colspan="2">row1</th><th>row2</th></tr>
+        <tr><th rowspan="2">col1</th><td>cell(1,1)</td><td>cell(1,2)</td><td>cell(1,3)</td></tr>
+        <tr><td>cell(2,1)</td><td>cell(2,2)</td><td>cell(2,3)</td></tr>
+        <tr><th>col2</th><td>cell(3,1)</td><td>cell(3,2)</td><td>cell(3,3)</td></tr>
+        </table>
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/icon" href="../images/icons8-gunter-100.png">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="html,css,javascript">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<body class="orange">
+    <a href="../learning_html/static_page.html" >go to home</a>
+    <form action="/action.php" novalidate autocomplete="on" name="user_details" method="post">
+        <div>
+        <label for="username">Username</label><br>       
+        <input type="text" required id="username">
+        </div>
+        <div>
+            <label for="country">Country</label><br>       
+            <input type="text" value="India" disabled required id="country">
+            </div>
+        <div>
+            <label for="email">Email</label><br>       
+            <input type="email" required id="email" placeholder="abc@example.com">
+            </div>
+        <div>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" required>
+        </div>
+        Gender<br>
+        <input style="accent-color:red" type="radio" name="gender" value="male" id="male"><label for="male">male </label>
+        <input type="radio" name="gender" value="female" id="female"><label for="female">female</label>
+        <input type="radio" name="gender" value="other" id="other"><label for="other">other</label>
+        <div>
+            <label for="date">Date of Birth</label><br>
+            <select name="date" id="date">
+                <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option>
+                <option>06</option><option>07</option><option>08</option><option>09</option><option>10</option>
+                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+            </select>
+            <select name="month">
+                <option>january</option>
+                <option>february</option>
+                <option>march</option>
+                <option>april</option>
+                <option>may</option>
+                <option>june</option>
+                <option>july</option>
+                <option>august</option>
+                <option>september</option>
+                <option>october</option>
+                <option>november</option>
+                <option>december</option>
+            </select>
+            <input type="number" name="year" placeholder="year" required>
+            <input type="date" name="dob"> <br>
+            Why should we select you?<br>
+            <textarea name="selection" rows="5" cols="50"></textarea> 
+        </div>
+        <audio controls><source src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" type="audio/mp3"></audio><br>
+        <div>
+            <input type="submit" value="submit1">
+        <button type="button" name="submit" onclick="location.href='../learning_html/static_page.html';">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
