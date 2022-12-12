@@ -41,7 +41,7 @@
     </p>  <hr>
     <h3>html headings</h3>
     <p>
-        =>there are 6 heading tags from &lt;h1&gt; to &lt;h6&gt; , the size and boldness of the text 
+        =>there are 6 heading tags from <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> , the size and boldness of the text 
         inside the header tags will go on decreasing as we go from h1 to h6.<br>
         =>we can use this header tags multiple times in a single html file.<br>
         =>the user agent css style is : 
@@ -56,7 +56,7 @@
             font-weight: bold;
         }
         </pre>
-        => eg. &lt;h1&gt; heading 1 &lt;/h1&gt;
+        => eg. <b>&lt;h1&gt;</b> heading 1 <b>&lt;/h1&gt;</b>
         <h1 style="text-align:left">heading 1</h1>
         <h2 style="text-align:left">heading 2</h2>
         <h3 style="text-align:left">heading 3</h3>
@@ -66,7 +66,7 @@
     </p><hr>
     <h3>html paragraphs</h3>
     <p>
-        =>paragraphs are defined with the &lt;p&gt; tag, and is most commonly used for writing paragraphs<br>
+        =>paragraphs are defined with the <b>&lt;p&gt;</b> tag, and is most commonly used for writing paragraphs<br>
         =>the user agent css style is : 
         <pre>
         p {
@@ -77,10 +77,10 @@
             margin-inline-end: 0px;
         }
         </pre>
-        =>eg. &lt;p&gt; paragraph &lt;/p&gt;
-    </p>
-    => the contents inside &lt;pre&gt; and &lt;/pre&gt; tags are shown as it is, without any formatting.
-       <br> usually it reserves the space and the line breaks.<br>
+        =>eg. <b>&lt;p&gt;</b> paragraph <b>&lt;/p&gt;</b>
+    </p><hr>
+    => the contents inside <b>&lt;pre&gt;</b> and <b>&lt;/pre&gt;</b> tags are shown as it is, without any formatting.
+       usually it reserves the space and the line breaks.<br>
     the user agent css style is:
     <pre>
         pre {
@@ -89,9 +89,9 @@
             white-space: pre;
             margin: 1em 0px;
         }
-    </pre>
-    => the &lt;br&gt; tag is used to insert a single line break.<br>
-    => the &lt;hr&gt; tag is used to insert a horizontal line below.
+    </pre><hr>
+    => the <b>&lt;br&gt;</b> tag is used to insert a single line break.<hr>
+    => the <b>&lt;hr&gt;</b> tag is used to insert a horizontal line below.
     the user agent css style is:
     <pre> 
     hr {
@@ -107,10 +107,82 @@
     }</pre><hr>
     => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
-       -><abbr title="World Health Organisation">WHO</abbr> <br>
+       -><abbr title="World Health Organisation">WHO</abbr> <hr>
     => the <b>&lt;address&gt;</b> tag is used to insert an address.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;address&gt; 123, abc street, xyz city, 123456 &lt;/address&gt;</b> 
-       -><address> 123, abc street, xyz city, 123456 </address> <br>
+       -><address> 123, abc street, xyz city, 123456 </address> <hr>
+    => the <b>&lt;b&gt;</b> tag is used to insert bold text.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;b&gt; bold text &lt;/b&gt;</b> 
+       -><b> bold text </b> <hr>
+    => the <b>&lt;bdo&gt;</b> tag is used to insert a text with a different direction.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;bdo dir="rtl"&gt; text with a different direction &lt;/bdo&gt;</b> 
+       -><bdo dir="rtl"> text with a different direction </bdo> <hr>
+    => the <b>&lt;blockquote&gt;</b> tag is used to insert a block of quoted text.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;blockquote&gt; quoted text &lt;/blockquote&gt;</b> 
+       -><blockquote> quoted text </blockquote> <hr>
+    => the <b>&lt;cite&gt;</b> tag is used to insert a citation.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;cite&gt; citation &lt;/cite&gt;</b> 
+       -><cite> citation </cite> <hr>
+    => the <b>&lt;code&gt;</b> tag is used to insert a piece of computer code.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;code&gt; code &lt;/code&gt;</b> 
+        -><code> code </code> <hr>
+    => the <b>&lt;del&gt;</b> tag is used to insert a deleted text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;del&gt; deleted text &lt;/del&gt;</b> 
+        -><del> deleted text </del> <hr>
+    => the <b>&lt;dfn&gt;</b> tag is used to insert a definition.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dfn&gt; definition &lt;/dfn&gt;</b> 
+        -><dfn> definition </dfn> <hr>
+    => the <b>&lt;em&gt;</b> tag is used to insert emphasized text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;em&gt; emphasized text &lt;/em&gt;</b> 
+        -><em> emphasized text </em> <hr>
+    => the <b>&lt;i&gt;</b> tag is used to insert italic text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;i&gt; italic text &lt;/i&gt;</b> 
+        -><i> italic text </i> <hr>
+    => the <b>&lt;ins&gt;</b> tag is used to insert a inserted text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ins&gt; inserted text &lt;/ins&gt;</b> 
+        -><ins> inserted text </ins> <hr>
+    => the <b>&lt;kbd&gt;</b> tag is used to insert a keyboard input.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;kbd&gt; keyboard input &lt;/kbd&gt;</b> 
+        -><kbd> keyboard input </kbd> <hr>
+    => the <b>&lt;mark&gt;</b> tag is used to insert a marked text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;mark&gt; marked text &lt;/mark&gt;</b> 
+        -><mark> marked text </mark> <hr>
+    => the <b>&lt;pre&gt;</b> tag is used to insert a preformatted text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;pre&gt; preformatted text &lt;/pre&gt;</b> 
+        -><pre> preformatted text </pre> <hr>
+    => the <b>&lt;q&gt;</b> tag is used to insert a short quotation.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
+        -><q> short quotation </q> <hr>
+    => the <b>&lt;s&gt;</b> tag is used to insert a strikethrough text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;s&gt; strikethrough text &lt;/s&gt;</b> 
+        -><s> strikethrough text </s> <hr>
+    => the <b>&lt;samp&gt;</b> tag is used to insert a sample output from a computer program.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;samp&gt; sample output &lt;/samp&gt;</b> 
+        -><samp> sample output </samp> <hr>
+    => the <b>&lt;small&gt;</b> tag is used to insert a small text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;small&gt; small text &lt;/small&gt;</b> 
+        -><small> small text </small> <hr>
+    => the <b>&lt;strong&gt;</b> tag is used to insert a strong text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;strong&gt; strong text &lt;/strong&gt;</b> 
+        -><strong> strong text </strong> <hr>
+    => the <b>&lt;sub&gt;</b> tag is used to insert a subscript text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;sub&gt; subscript text &lt;/sub&gt;</b> 
+        -><sub> subscript text </sub> <hr>
+    => the <b>&lt;sup&gt;</b> tag is used to insert a superscript text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;sup&gt; superscript text &lt;/sup&gt;</b> 
+        -><sup> superscript text </sup> <hr>
+    => the <b>&lt;u&gt;</b> tag is used to insert an underlined text.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;u&gt; underlined text &lt;/u&gt;</b> 
+        -><u> underlined text </u> <hr>
+    => the <b>&lt;var&gt;</b> tag is used to insert a variable.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;var&gt; variable &lt;/var&gt;</b> 
+        -><var> variable </var> <hr>
+    => the <b>&lt;wbr&gt;</b> tag is used to insert a possible line-break.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;wbr&gt; possible line-break &lt;/wbr&gt;</b> 
+        -><wbr> possible line-break </wbr> <hr>
+
+
+
 
 
 </body>
