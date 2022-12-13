@@ -185,7 +185,7 @@
         => By default, the linked page will be displayed in the current browser window.<br>
              Use the attribute "target" to open the linked document in a new browser window or tab:<br>
              Example: <b>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;</b>Visit W3Schools!<b>&lt;/a&gt;</b> ->
-                <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a><hr>   
+                <a href="https://www.w3schools.com/" target="_blank">Visit-W3Schools!</a><hr>   
         => to use image as link , we just have to put the img tag inside the <b>&lt;a&gt;</b> tag.<br>
             <b>&lt;a href="../learning_html/login_page.html">
             &lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style="width:42px;height:42px;"&gt;
@@ -195,7 +195,7 @@
             </a><hr>    
         =>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
          <br>Example: <b>&lt;a href="mailto:udaybiswasofficial@gmail.com"&gt;</b> email <b>&lt;/a&gt;</b>  
-            -><a href="mailto:udaybiswasofficial@gmail.com">Send email to us. </a><hr>  
+            -><a href="mailto:udaybiswasofficial@gmail.com">Send-email-to-us. </a><hr>  
         => if the page is too long , then to access different parts of the page :<br>
             First, use the id attribute to create a bookmark:<br>
             <b>&lt;h3 id="quote"&gt;html quotation&lt;/h3&gt;</b><br>
@@ -210,8 +210,73 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;nav&gt; navigation links &lt;/nav&gt;</b> 
             -><nav> navigation links </nav> <hr>
         <h3>html images</h3>
+        => The HTML <img> tag is used to embed an image in a web page.<br>
+           the essential attributes of the <img> tag are: src, alt, float, height and width.<br>
+           <b>src</b> - defines the path to the image , <b>alt</b> - defines an alternate text for the image, 
+           and the css style attribute is used to define the float, width and height of an image.<br>
+           the width is given in percentage and the height is given in pixels to get the the best result.<br>
+           Example : <b>&lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right;width:42px;height:42px;"&gt;</b>
+           <img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right;width:42px;height:42px;"><br><br><br><br>
+           <img src="../images/peakpx.jpg" style="width:45%;height:250px">
+           <img src="../images/victory.jpg" style="width:45%;height:250px"><hr>
+        <h4 style="text-align:left">html image maps</h4>
+        <img src="../images/workplace.jpg"  style="float:left;margin-right:5px;" usemap="#image-map">
+        <map name="image-map">
+        <area target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle">
+        <area target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect">
+        <area target="_blank" alt="mobile" href="https://www.samsung.com/" coords="289,172,327,172,334,245,293,244" shape="poly">
+        <area target="_blank" alt="checking default" href="https://www.hello.com/" shape="default">
+        </map>
+        => An image map is used to make an image with clickable areas.<br>
+           The HTML &lt;map&gt; tag is used to define an image map, and then it is linked with the &lt;img&gt; tag using "usemap" attribute.<br>
+           The &lt;area&gt; tag defines an area inside an image map, it is present inside &lt;map&gt; tag, and it has several attributes
+           such as : href, shape, coords, alt, target, download.<br>
+           => shape can be circle, rect, poly, default.<br>
+              >for circle, the coordinates are x,y,radius.(x,y are coordinates of center of the circle)<br>
+              >for rect(rectangle), the coordinates are x1,y1,x2,y2.(x1,y1 are coordinates of top-left corner of the rectangle 
+               and x2,y2 are coordinates of bottom-right corner of the rectangle)<br>
+              >for poly(polygon), the coordinates are x1,y1,x2,y2,x3,y3,....,xn,yn.(x1,y1 are coordinates of first point of the polygon and so on)<br>
+              >for default, the coordinates are not required, it selects the entire region.<br>
+           Example : 
+              <b>&lt;img src="../images/workplace.jpg"  style="float:left;margin-right:5px;" usemap="#image-map"&gt;<br>
+                &lt;map name="image-map"&gt;<br>
+                &lt;area target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle"&gt;<br>
+                &lt;area target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect"&gt;<br>
+                &lt;area target="_blank" alt="mobile" href="https://www.samsung.com/" coords="289,172,327,172,334,245,293,244" shape="poly"&gt;<br>
+                &lt;area target="_blank" alt="checking default" href="https://www.hello.com/" shape="default"&gt;<br>
+                &lt;/map&gt;</b><br><br><br><hr>
         
-            
+            <h4 style="text-align:left">html picture</h4>
+            <picture style="float:left;margin-right:5px;">
+                <source srcset="../images/peakpx.jpg" media="(max-width: 600px)">
+                <source srcset="../images/victory.jpg" media="(max-width: 900px)">
+                <img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:340px;">
+            </picture>
+
+            => the <b>&lt;picture&gt;</b> tag is used to define a container for multiple image resources.<br>
+               the <b>&lt;source&gt;</b> tag is used to define multiple image resources for different display devices.<br>
+               the <b>&lt;img&gt;</b> tag defined as the last element of the picture element as the backup if none of the above elements work 
+               and also we can style the width and height for all the images together at once only inside <b>img</b> tag.<br>
+              Example :
+                <b>&lt;picture&gt;<br>
+                   &lt;source srcset="../images/peakpx.jpg" media="(max-width: 600px)"&gt; </b> //0px&lt; device-width &lt;600px <br>
+                  <b>&lt;source srcset="../images/victory.jpg" media="(max-width: 900px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
+                  <b>&lt;img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:200px" &gt; </b> //device-width &gt; 900px<br>
+                <b>&lt;/picture&gt; </b><br>
+                <h3>OR</h3>
+                <b>&lt;picture&gt;<br>
+                   &lt;source srcset="../images/peakpx.jpg" media="(min-width: 900px)"&gt; </b> //device-width &gt; 900px<br>
+                   <b>&lt;source srcset="../images/victory.jpg" media="(min-width: 600px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
+                   <b>&lt;img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:200px" &gt; </b> //0px&lt; device-width &lt;600px <br>
+                <b>&lt;/picture&gt; </b><br><hr>
+                
+
+        
+        
+                <h3>html tables</h3>
+
+
+
         => the <b>&lt;ul&gt;</b> tag is used to define unordered list.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ul&gt; unordered list &lt;/ul&gt;</b> 
             -><ul> unordered list </ul> <hr>
