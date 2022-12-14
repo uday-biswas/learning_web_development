@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html tutorial</title>    <!-- title tag is used to define the title of the web page -->
-    <link rel="shortcut icon" type="image/icon" href="../images/icons8-gunter-100.png">
+    <link rel="icon" type="image/icon" href="../images/icons8-gunter-100.png">
     <link rel="stylesheet" type="text/css" href="html_learning.css">    <!-- link tag is used to link external files to the html file -->
 </head>
 <body>
@@ -20,7 +20,7 @@
         <li>About Us</li>
         <li class="right">Bottom</li>
         <li class="right">Login</li>
-    </ul>
+    </ul><br>
     <h1 title="main header"><u> Html tutorial </u></h1>    <!-- title attribute can be used to provide additional information
                                                                 about the element on hover -->
     ● &lt;body&gt; &lt;/body&gt; contains all the things visible on the web page.
@@ -205,9 +205,10 @@
             <br>&lt;a href="static_page.html#bold1"&gt; players list &lt;/a&gt;
              -> <a href="static_page.html#bold1">players list</a> <hr>
         => the <b>&lt;link&gt;</b> tag is used to link external files.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;link rel="stylesheet" href="mystyle.css"&gt;</b><br> 
+            eg. <b>&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</b> // here link tag is used to link with the external css file<br> 
+            eg. <b>&lt;link rel="icon" type="image/icon" href="../image/favicon.jpg"&gt;</b> //here link tag is used to add the favicon to the webpage<hr>    
         => the <b>&lt;nav&gt;</b> tag is used to define navigation links.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;nav&gt; navigation links &lt;/nav&gt;</b> 
+            eg. <b>&lt;nav&gt; navigation links &lt;/nav&gt;</b> 
             -><nav> navigation links </nav> <hr>
         <h3>html images</h3>
         => The HTML <img> tag is used to embed an image in a web page.<br>
@@ -258,7 +259,7 @@
                the <b>&lt;img&gt;</b> tag defined as the last element of the picture element as the backup if none of the above elements work 
                and also we can style the width and height for all the images together at once only inside <b>img</b> tag.<br>
               Example :
-                <b>&lt;picture&gt;<br>
+                <b>&lt;picture style="float:left;margin-right:5px;"&gt;<br>
                    &lt;source srcset="../images/peakpx.jpg" media="(max-width: 600px)"&gt; </b> //0px&lt; device-width &lt;600px <br>
                   <b>&lt;source srcset="../images/victory.jpg" media="(max-width: 900px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
                   <b>&lt;img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:200px" &gt; </b> //device-width &gt; 900px<br>
@@ -269,12 +270,41 @@
                    <b>&lt;source srcset="../images/victory.jpg" media="(min-width: 600px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
                    <b>&lt;img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:200px" &gt; </b> //0px&lt; device-width &lt;600px <br>
                 <b>&lt;/picture&gt; </b><br><hr>
+        <h3>html tables</h3>
+        =>all the table content lie inside &lt;table&gt; tags.<br>
+          the &lt;td&gt; tag defines a standard cell in an HTML table.<br>
+          the &lt;th&gt; tag defines a header cell in an HTML table,basically it shows the cell content in bold.<br>
+          the &lt;tr&gt; tag defines a row in an HTML table.<br>
+          the &lt;caption&gt; tag defines a table caption, it should be the written as the first element inside the &lt;table&gt; tag.<br>
+          the css is used to adjust the table properties like border, padding, width, height, etc.<br>
+            Example :
+                <b>&lt;table style="border:1px solid black"&gt;<br>
+                    &lt;caption&gt;Table Caption&lt;/caption&gt;<br>
+                    &lt;tr&gt;<br>
+                        &lt;th&gt;Name&lt;/th&gt;<br>
+                        &lt;th&gt;Age&lt;/th&gt;<br>
+                        &lt;th&gt;Gender&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                        &lt;td&gt;John&lt;/td&gt;<br>
+                        &lt;td&gt;20&lt;/td&gt;<br>
+                        &lt;td&gt;Male&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                        &lt;td&gt;Mary&lt;/td&gt;<br>
+                        &lt;td&gt;25&lt;/td&gt;<br>
+                        &lt;td&gt;Female&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                        &lt;td&gt;Peter&lt;/td&gt;<br>
+                        &lt;td&gt;30&lt;/td&gt;<br>
+                        &lt;td&gt;Male&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                &lt;/table&gt;</b><br><br><br><hr>
                 
 
         
-        
-                <h3>html tables</h3>
-
+                
 
 
         => the <b>&lt;ul&gt;</b> tag is used to define unordered list.<br>
