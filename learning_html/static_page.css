@@ -8,12 +8,12 @@
     height: 300px;
 }
 table{
-    border: 3px solid black;
-    border-collapse: collapse;
+    
+    /* border-collapse: collapse; */
     width: 100%;
 }
 th, td{
-    border: 3px solid black;
+    border-bottom: 3px solid rgb(224, 23, 23);
     text-align: center;
     padding: 8px;
     background-color: rgba(19, 218, 218, 0.13);

@@ -3,6 +3,9 @@ body{
     color: #ebe1e1c0;
     margin:0px;
 }
+div{
+    margin-left: 7px;
+}
 h1,h2,h3,h4,h5,h6 {
     font-family: "Times New Roman", Times, serif;
     text-decoration: underline;
@@ -24,8 +27,10 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover{
        right: 0;
        position: fixed;
        left: 0;
-    
-    
+}
+.left li a{
+    color: rgba(240, 248, 255, 0.788);
+    text-decoration: none;
 }
 .left li{
     float: left;
@@ -39,9 +44,8 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover{
 }
 .left li:hover, .right:hover{
     background-color: rgba(0, 0, 0, 0.815);
-    color: rgba(240, 88, 18, 0.719);
 }
-a{
+div a{
     text-decoration: none;
     color: rgba(240, 248, 255, 0.959);
     padding: 2px;
@@ -49,10 +53,70 @@ a{
     border: 1px solid rgba(20, 5, 5, 0.719);
     border-radius: 3px;
 }
-a:hover{
+div a:hover{
     color: rgba(248, 244, 244, 0.932);
     background-color: rgba(240, 99, 18, 0.966);
 }
 hr{
     border-color: rgba(0, 0, 0, 0.945);
 }
+ span table, span th,  span td{
+    border: 1px solid rgba(0, 0, 0, 0.945);
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(127, 225, 255, 0.726);
+    color: black;
+}
+ span table{
+    width: 50%;
+    float:left;
+    margin-right: 10px;
+    color:antiquewhite;
+    margin-bottom: 15px;
+}
+ span .table5 th:nth-child(even), span .table5 td:nth-child(even){
+    background-color: rgba(241, 31, 31, 0.842);
+    color: rgba(240, 248, 255, 0.959);
+}
+ span .table6 tr:nth-child(odd) td, span .table6 tr:nth-child(odd) th{
+    background-color: #4722eee7;
+    color: rgba(234, 238, 241, 0.856);
+}
+.tab th,.tab td{
+    padding: 5px;
+    text-align: center;
+    color: rgba(240, 228, 228, 0.945);
+}
+.tab tr{
+    border-bottom: 1px white solid;
+}
+ .tab tr:hover td,.tab tr:hover th{
+    color:black;
+    background-color: white;
+}
+ .tab{
+    width: 50%;
+    float:left;
+    margin-right: 10px;
+    color:antiquewhite;
+    margin-bottom: 15px;
+    border-collapse:collapse;
+}
+.tab2{
+    width: 50%;
+    float:left;
+    margin-right: 10px;
+    color:antiquewhite;
+    margin-bottom: 15px;
+    border-collapse:collapse;
+    border:1px solid rgba(15, 11, 11, 0.842);
+}
+.tab2 th,.tab2 td{
+    border:1px solid rgba(19, 12, 12, 0.87);
+    padding: 5px;
+    text-align: center;
+    color: rgba(185, 170, 170, 0.795);
+}
+
+
