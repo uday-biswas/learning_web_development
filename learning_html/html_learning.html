@@ -65,21 +65,21 @@
         <h5 style="text-align:left">heading 5</h5>
         <h6 style="text-align:left">heading 6</h6>
     </p><hr>
-    <h3>html paragraphs</h3>
-    <p>
-        =>paragraphs are defined with the <b>&lt;p&gt;</b> tag, and is most commonly used for writing paragraphs<br>
-        =>the user agent css style is : 
-        <pre>
-        p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
-        </pre>
-        =>eg. <b>&lt;p&gt;</b> paragraph <b>&lt;/p&gt;</b>
-    </p><hr>
+    <h3>html blocks vs inline</h3>
+    =>Every HTML element has a default display value, depending on what type of element it is.<br>
+    =>There are two display values: block and inline.<br><hr>
+    =>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.<br>
+    =>A block-level element always takes up the full width available (stretches out to the left and right as far as it can).<br>
+    =>Two commonly used block elements are: &lt;p> and &lt;div>.<br>
+    the other block elements are: &lt;address>, &lt;article>, &lt;aside>, &lt;blockquote>, &lt;canvas>, &lt;dd>, &lt;div>, &lt;dl>, 
+    &lt;dt>, &lt;fieldset>, &lt;figcaption>, &lt;figure>, &lt;footer>, &lt;form>, &lt;h1> to &lt;h6>, &lt;header>, &lt;hr>, &lt;li>, 
+    &lt;main>, &lt;nav>, &lt;noscript>, &lt;ol>, &lt;output>, &lt;p>, &lt;pre>, &lt;section>, &lt;table>, &lt;tfoot>, &lt;ul>,
+     &lt;video>.<br><hr>
+    =>An inline element does not start on a new line, and it only takes up as much width as necessary.<br>
+    =>Two commonly used inline elements are: &lt;a> and &lt;span>.<br>
+    the other inline elements are: &lt;a>, &lt;abbr>, &lt;acronym>, &lt;b>, &lt;bdo>, &lt;big>, &lt;br>, &lt;button>, &lt;cite>,
+    &lt;code>, &lt;dfn>, &lt;em>, &lt;i>, &lt;img>, &lt;input>, &lt;kbd>, &lt;label>, &lt;map>, &lt;object>, &lt;q>, &lt;s>, &lt;samp>, 
+    &lt;select>, &lt;small>, &lt;span>, &lt;strong>, &lt;sub>, &lt;sup>, &lt;textarea>, &lt;time>, &lt;tt>, &lt;var>.<br><hr> 
     => the contents inside <b>&lt;pre&gt;</b> and <b>&lt;/pre&gt;</b> tags are shown as it is, without any formatting.
        usually it reserves the space and the line breaks.<br>
     the user agent css style is:
@@ -106,6 +106,17 @@
         border-style: inset;
         border-width: 1px;
     }</pre><hr>
+    <h3>Html class and id</h3>
+    =>Class<br>
+    The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript 
+    to access and manipulate elements with the specific class name.
+    The class attribute can be used on any HTML element, and each class can be used on multiple elements.<br>
+    eg. &lt;h2 class="city">Paris.&lt;/h2><br>
+    =>Id<br>
+    The id attribute specifies a unique id for an HTML element and we cannot have more than one element with the same id in an HTML document.<br>
+    The id attribute is most used to point to a specific style in a style sheet, and by JavaScript (via the HTML DOM) to manipulate the
+    specific element with the specific id.<br>
+    eg. &lt;h2 id="city">Paris.&lt;/h2><br><hr>
     <h3>html text formatting</h3>
     => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
@@ -176,7 +187,7 @@
                 solutions that protect communities, wildlife, and the places in which they live.
                 <br><b>&lt;/blockquote&gt;</b><hr>
        <h3>html links</h3>
-        => the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
+        <span class="links">=> the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;a href="http://www.google.com"&gt; google &lt;/a&gt;</b> 
                 -><a href="http://www.google.com"> google </a> <hr>
         => By default, links will appear as follows in all browsers:<br>
@@ -210,7 +221,7 @@
             eg. <b>&lt;link rel="icon" type="image/icon" href="../image/favicon.jpg"&gt;</b> //here link tag is used to add the favicon to the webpage<hr>    
         => the <b>&lt;nav&gt;</b> tag is used to define navigation links.<br>
             eg. <b>&lt;nav&gt; navigation links &lt;/nav&gt;</b> 
-            -><nav> navigation links </nav> <hr>
+            -><nav> navigation links </nav> <hr></span>
         <h3>html images</h3>
         => The HTML <img> tag is used to embed an image in a web page.<br>
            the essential attributes of the <img> tag are: src, alt, float, height and width.<br>
@@ -401,7 +412,7 @@
                     &lt;tr&gt;&lt;th&gt;1.&lt;/th&gt;&lt;td&gt;Suresh&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;<br>
                     &lt;tr&gt;&lt;td&gt;2.&lt;/td&gt;&lt;td&gt;Mukesh&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;<br>
                 &lt;/table&gt;<br><br><br>
-                =>we can use the border-bottom and hover proprty to make the table look more attractive.<br>
+                =>we can use the border-bottom and hover property to make the table look more attractive.<br>
                 for that we firsty have to use the "border-collapse: collapse;" property to remove the space between the table cells.<br>
                 for table 7 the following css code is used.<br>
                 <pre>
@@ -453,33 +464,105 @@
                     &lt;tr&gt;&lt;th&gt;1.&lt;/th&gt;&lt;td&gt;Suresh&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;<br>
                     &lt;tr&gt;&lt;td&gt;2.&lt;/td&gt;&lt;td&gt;Mukesh&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;<br>
                 &lt;/table&gt;<br><br><hr>
+                <h3>Html lists</h3>
+                =>there are three types of lists in html.<br>
+                <ul>
+                    <li>unordered list</li>
+                    <li>ordered list</li>
+                    <li>definition list</li>
+                </ul><hr>
+                =>the <b>&lt;ul&gt; tag is used to represent unordered list.</b>
+                and the <b>li</b> tag is used to represent list item, and li tag is written inside ul tag.<br>
+                The CSS "list-style-type" property is used to define the style of the list item marker. It can have one of the following values:<br>
+                1)disc - Sets the list item marker to a bullet (default)<br>
+                2)circle - Sets the list item marker to a circle<br>
+                3)square - Sets the list item marker to a square<br>
+                4)none - The list items will not be marked<br><br>
+                Example:<br>
+                <ul class="unorder" style="list-style-type:square;">
+                    <li>item 1</li>
+                    <li>item 2 &emsp; &lt;= &emsp;</li>
+                    <li>item 3</li>
+                </ul>
+                &lt;ul style="list-style-type:square;"&gt;<br>
+                    &lt;li&gt;item 1&lt;/li&gt;<br>
+                    &lt;li&gt;item 2&lt;/li&gt;<br>
+                    &lt;li&gt;item 3&lt;/li&gt;<br>
+                &lt;/ul&gt;<br><br>
+                the unordered list can also be used to make horizontal lists to make the top navigation bar of a website.<br>
+                Example:<br>
+                <ul class="horizontal">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="right"><a href="login">login</a></li>
+                    <li class="right"><a href="signup">signup</a></li>
+                    <li class="right"><a href="logout">logout</a></li>
+                </ul><br><hr>
+
+                =>the <b>&lt;ol&gt; tag is used to represent ordered list.</b>
+                and the <b>li</b> tag is used to represent list item.<br>
+                =>The type attribute of the &lt;ol&gt; tag or the css property "list-style-type" can be used to define the type of the list item marker:<br>
+                    type="1" - The list items will be numbered with numbers (default).<br>
+                    type="A" or type="a" - The list items will be numbered with uppercase or lowercase letters.<br>
+                    type="I" or type="i" - The list items will be numbered with uppercase  or lowercase roman numbers.<br><br>
+                =>the <b>start</b> attribute of the <b>ol</b> tag can be used to define the starting number of the list item marker.<br><br>    
+                <ol type="a" start="3">
+                    <li>item 1</li>
+                    <li>item 2 &emsp; &lt;= &emsp; </li>
+                    <li>item 3<br><br></li>
+                </ol>
+                &lt;ol type="a" start="3"&gt;<br>
+                    &lt;li&gt;item 1&lt;/li&gt;<br>
+                    &lt;li&gt;item 2&lt;/li&gt;<br>
+                    &lt;li&gt;item 3&lt;/li&gt;<br>
+                &lt;/ol&gt;<br><br><hr>
+                =>the <b>&lt;dl&gt; tag is used to represent definition list.</b>
+                and the <b>dt</b> tag is used to represent definition term and <b>dd</b> tag is used to represent definition description.<br>
+                <dl>
+                    <dt>item 1</dt>
+                    <dd>- item 1 description</dd>
+                    <dt>item 2</dt>
+                    <dd>- item 2 description &emsp; &lt;= &emsp; </dd>
+                    <dt>item 3</dt>
+                    <dd>- item 3 description</dd>
+                </dl>
+                &lt;dl&gt;<br>
+                    &lt;dt&gt;item 1&lt;/dt&gt;<br>
+                    &lt;dd&gt;item 1 description&lt;/dd&gt;<br>
+                    &lt;dt&gt;item 2&lt;/dt&gt;<br>
+                    &lt;dd&gt;item 2 description&lt;/dd&gt;<br>
+                    &lt;dt&gt;item 3&lt;/dt&gt;<br>
+                    &lt;dd&gt;item 3 description&lt;/dd&gt;<br>
+                &lt;/dl&gt;<br><br><hr>
+                <h3>Html iframe</h3>
+                =>the <b>&lt;iframe&gt; tag is used to embed another webpage within the current HTML document.</b><br>
+                =>the <b>src</b> attribute of the <b>iframe</b> tag is used to define the source of the embedded webpage.<br>
+                =>the <b>width</b> and <b>height</b> attributes of the <b>iframe</b> tag are used to define the width and height of the embedded webpage.<br>
+                =>the <b>frameborder</b> attribute of the <b>iframe</b> tag is used to define whether the iframe should have a border or not.<br>
+                =>the <b>scrolling</b> attribute of the <b>iframe</b> tag is used to define whether the iframe should have a scroll bar or not.<br>
+                =>the <b>name</b> attribute of the <b>iframe</b> tag is used to define the name of the iframe.<br>
+                =>the <b>title</b> attribute of the <b>iframe</b> tag is used to define the title of the iframe.<br>
+                =>the <b>sandbox</b> attribute of the <b>iframe</b> tag is used to define whether the iframe should be sandboxed or not.<br>
+                =>the <b>allowfullscreen</b> attribute of the <b>iframe</b> tag is used to define whether the iframe should be allowed to go fullscreen or not.<br>
+                =>the <b>seamless</b> attribute of the <b>iframe</b> tag is used to define whether the iframe should be seamless or not.<br>
+                =>the <b>srcdoc</b> attribute of the <b>iframe</b> tag is used to define the source of the embedded webpage.<br>
+                =>the <b>longdesc</b> attribute of the <b>iframe</b> tag is used to define the long description of the iframe.<br>
+                =>the <b>referrerpolicy</b> attribute of the <b>iframe</b> tag is used to define the referrer policy of the iframe.<br>
+                =>the <b>loading</b> attribute of the <b>iframe</b> tag is used to define the loading of the iframe.<br>
+                =>the <b>align</b> attribute of the <b>iframe</b> tag is used to define the alignment of the iframe.<br>
+                Example:<br>
+                <!-- <iframe src="https://www.w3schools.com" width="70%" height="500px" frameborder="0" scrolling="no" name="iframe" 
+                title="iframe" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" 
+                allowfullscreen seamless srcdoc="&lt;h1&gt;Hello&lt;/h1&gt;" longdesc="https://www.w3schools.com" 
+                referrerpolicy="no-referrer" loading="lazy" align="center"></iframe><br><br><hr> -->
+                <iframe src="static_page.html" width="70%" height="500px" name="iframe_" allow="fullscreen" ></iframe>
+                <br><br>
+                <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span><br><br><hr>
                 
-            
 
-
-                 
                 
-
-        
-                
-
-
-        => the <b>&lt;ul&gt;</b> tag is used to define unordered list.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ul&gt; unordered list &lt;/ul&gt;</b> 
-            -><ul> unordered list </ul> <hr>
-        => the <b>&lt;ol&gt;</b> tag is used to define ordered list.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;ol&gt; ordered list &lt;/ol&gt;</b> 
-            -><ol> ordered list </ol> <hr>
-        => the <b>&lt;li&gt;</b> tag is used to define list item.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;li&gt; list item &lt;/li&gt;</b> 
-            -><li> list item </li> <hr>
-        => the <b>&lt;dl&gt;</b> tag is used to define description list.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dl&gt; description list &lt;/dl&gt;</b> 
-            -><dl> description list </dl> <hr>
-        => the <b>&lt;dt&gt;</b> tag is used to define description term.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dt&gt; description term &lt;/dt&gt;</b> 
-            -><dt> description term </dt> <hr>
-            <span id="bottom" style="color:blue">bottom</span>
-    </div>
+            </div>
+            <para id="bottom">bottom</para>
 </body>
 </html>

@@ -45,7 +45,7 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover{
 .left li:hover, .right:hover{
     background-color: rgba(0, 0, 0, 0.815);
 }
-div a{
+div span a{
     text-decoration: none;
     color: rgba(240, 248, 255, 0.959);
     padding: 2px;
@@ -53,7 +53,7 @@ div a{
     border: 1px solid rgba(20, 5, 5, 0.719);
     border-radius: 3px;
 }
-div a:hover{
+div span a:hover{
     color: rgba(248, 244, 244, 0.932);
     background-color: rgba(240, 99, 18, 0.966);
 }
@@ -118,5 +118,42 @@ hr{
     text-align: center;
     color: rgba(185, 170, 170, 0.795);
 }
-
-
+.unorder{
+    float:left;
+    margin-right: 10px;
+}
+.horizontal {
+    /* padding: 0px; */
+    /* margin: 0px; */
+    background-color: rgba(11, 143, 22, 0.774);
+    overflow: hidden;
+    list-style-type: none;
+    /* color: rgba(240, 248, 255, 0.788); */
+    /* top: 0; */
+       /* right: 0; */
+       /* position: fixed; */
+       /* left: 0; */
+}
+.horizontal li a{
+    color: rgba(240, 248, 255, 0.788);
+    text-decoration: none;
+}
+.horizontal li{
+    float: left;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: large;
+}
+.horizontal .right{
+    float: right;
+}
+.horizontal li:hover, .right:hover{
+    background-color: rgba(0, 0, 0, 0.815);
+}
+ol{
+    float:left;
+}
+dl{
+    float:left;
+}
