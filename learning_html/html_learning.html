@@ -556,13 +556,61 @@
                 title="iframe" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" 
                 allowfullscreen seamless srcdoc="&lt;h1&gt;Hello&lt;/h1&gt;" longdesc="https://www.w3schools.com" 
                 referrerpolicy="no-referrer" loading="lazy" align="center"></iframe><br><br><hr> -->
-                <iframe src="static_page.html" width="70%" height="500px" name="iframe_" allow="fullscreen" ></iframe>
+
+                &lt;iframe src="static_page.html" width="70%" height="500px" name="iframe_"&gt;your browser doesnt support iframe.&lt;/iframe&gt;<br><br>
+                &lt;span&gt;&lt;a href="https://www.google.com/webhp?igu=1" target="iframe_"&gt;click here to open google in iframe&lt;/a&gt;&lt;/span&gt;<br><br><hr>
+                <iframe src="static_page.html" width="70%" height="500px" name="iframe_">your browser doesnt support iframe.</iframe>
                 <br><br>
                 <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span><br><br><hr>
+                <h3>Html entities or symbols</h3>
+                An HTML entity is a piece of text that begins with an ampersand (&) and ends with a
+                semicolon(;) and between is the hex code or entity name. These entities are used to display
+                the reserved characters. <br>Eg., these are some html entities with how they will look on browser:<br>
+                ● some useful character entities - &#38;nbsp;(single space), &#38;lt;(&lt;), &#38;gt;(>), &#38;apos;('), &#38;copy;(&copy;)<br>
+                ● mathematical symbols - &#38;forall;(&forall;) , &#38;sum;(∑), &#38;prod;(∏), &#38;infin;(∞), &#38;int;(∫)<br>
+                ● some other entities - &#38;larr;(←), &#38;hearts;(♥), &#38;trade;(™)<br>
+                =>all other entity codes for different symbols can be found on google. :)<hr>
+                <h3>Html url(uniform resource locator)</h3>
+                =>a url is a unique address of a resource on the internet.<br>
+                =>a url is made up of 3 parts - protocol, domain name and path.<br>
+                =>the protocol is the type of communication between the browser and the server.<br>
+                =>the domain name is the name of the server.<br>
+                =>the path is the location of the resource on the server.<br>
+                =>the url is case sensitive.<br>
+                =>the url is used to identify the location of a resource on the internet.<br>
                 
-
+                =>A normal url looks like this - scheme://prefix.domain:port/path/filename<br>
+                Explanation:<br><br>
                 
+                scheme - defines the type of Internet service (most common is http or https)<br>
+                prefix - defines a domain prefix (default for http is www)<br>
+                domain - defines the Internet domain name (like w3schools.com)<br>
+                port - defines the port number at the host (default for http is 80)<br>
+                path - defines a path at the server (If omitted: the root directory of the site)<br>
+                filename - defines the name of a document or resource<br><br>
+                Example:<br>
+                https://www.w3schools.com/html/default.asp<br><hr>
+                <h3>Html media</h3>
+                =>media is used to embed audio, video, images, etc.<br>
+                =>the &lt;audio&gt; tag is used to embed audio and &lt;video&gt; tag is used to embed video.<br>
+                =>the <b>src</b> attribute is used to define the source of the audio or video<br>
+                =>the <b>autoplay</b> attribute is used to define whether the audio or video should be played automatically or not.<br>
+                =>the <b>controls</b> attribute is used to define whether the audio or video should have controls or not.<br>
+                =>the <b>loop</b> attribute is used to define whether the audio or video should be looped or not.<br>
+                =>the <b>preload</b> attribute is used to define whether the audio or video should be preloaded or not.<br>
+                =>the <b>poster</b> attribute is used to define the poster of the video.<br>
+                =>the style attribute is used to define the style of the audio or video.<br>
+                Example:<br>
+                &lt;audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" autoplay controls loop preload="auto" poster="poster.jpg" style="width:40%;"&gt;&lt;/audio&gt;&lt;br&gt;<br>
+                &lt;video src="../video/29. Favicon and Meta Tags.mp4" autoplay controls loop preload="auto" poster="poster.jpg" style="width:40%;"&gt;&lt;/video&gt;&lt;br&gt;&lt;hr&gt;<br><br>
+                <audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" controls preload="auto" style="width:40%;"></audio><br>
+                <video src="../video/29. Favicon and Meta Tags.mp4" controls loop preload="auto" poster="../images/workplace.jpg" style="width:40%;height:300px;"></video><br><hr>
+                <b>embedding youtube videos.</b><br>
+                we can use the &lt;iframe&gt; tag to embed youtube videos.<br>
+                Example:<br>
+                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0L-D-k_0GGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;<br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4wg6df4KnQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><hr>
             </div>
-            <para id="bottom">bottom</para>
+            <a href="#" id="bottom">back to top</a>
 </body>
 </html>

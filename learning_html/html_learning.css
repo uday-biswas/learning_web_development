@@ -45,7 +45,7 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover{
 .left li:hover, .right:hover{
     background-color: rgba(0, 0, 0, 0.815);
 }
-div span a{
+div span a,#bottom{
     text-decoration: none;
     color: rgba(240, 248, 255, 0.959);
     padding: 2px;
