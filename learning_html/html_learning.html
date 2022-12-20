@@ -1,4 +1,4 @@
-<!DOCTYPE html>    <!-- tells the browser is a html 5 file -->
+<!DOCTYPE html>    <!-- tells the browser that it is a html 5 file -->
 <html lang="en-us">   <!-- lang attribute is used to define the language of the document 
                         first two characters are language code and next two characters are country code -->
                    <!-- the html tag contains all the content of the web page -->
@@ -38,6 +38,7 @@
         <li><a href="#entities" class="hyper">Html enitites or symbols</a></li>
         <li><a href="#url" class="hyper">Html url(uniform resource locator)</a></li>
         <li><a href="#media" class="hyper">Html media</a></li>
+        <li><a href="../learning_html/html_forms_learning.html" class="hyper" target="_blank">Html forms</a></li>
     </ul>
     <h1 title="main header"><u> Html tutorial </u></h1>    <!-- title attribute can be used to provide additional information
                                                                 about the element on hover -->
@@ -51,7 +52,7 @@
     </pre><hr>
 
     <h3 id="tags">html tags and attributes</h3> 
-    <hr><a href="#" class="hyper">back to top</a><hr>
+    <a href="#" class="hyper">back to top</a>
     <p>                   
         =>The tag name can either start from an alphabet or an underscore( _ ).<br>
         => Attributes can provide additional information about the HTML elements 
@@ -61,7 +62,7 @@
     </p>  <hr>
  
     <h3 id="headings">html headings</h3>
-    <hr><a href="#" class="hyper">back to top</a><hr>
+    <a href="#" class="hyper">back to top</a>
     <p>
         =>there are 6 heading tags from <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> , the size and boldness of the text 
         inside the header tags will go on decreasing as we go from h1 to h6.<br>
@@ -88,7 +89,7 @@
     </p><hr>
    
     <h3 id="block">html blocks vs inline</h3>
-    <hr><a href="#" class="hyper">back to top</a><hr>
+    <a href="#" class="hyper">back to top</a><br><br>
     =>Every HTML element has a default display value, depending on what type of element it is.<br>
     =>There are two display values: block and inline.<br><hr>
     =>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.<br>
@@ -131,7 +132,7 @@
     }</pre><hr>
     
     <h3 id="class">Html class and id</h3>
-    <hr><a href="#" class="hyper">back to top</a><hr>
+    <a href="#" class="hyper">back to top</a><br><br>
     =>Class<br>
     The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript 
     to access and manipulate elements with the specific class name.
@@ -144,64 +145,64 @@
     eg. &lt;h2 id="city">Paris.&lt;/h2><br><hr>
   
     <h3 id="formatting">html text formatting</h3>
-    <hr><a href="#" class="hyper">back to top</a><hr>
+    <a href="#" class="hyper">back to top</a><br><br>
     => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
-       -><abbr title="World Health Organisation">WHO</abbr> <hr>
+       -><abbr title="World Health Organisation">WHO</abbr> <br>
     => the <b>&lt;address&gt;</b> tag is used to define the contact information of the author or owner of the document or article.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;address&gt; 123, abc street, xyz city, 123456 &lt;/address&gt;</b> 
-       -><address> 123, abc street, xyz city, 123456 </address> <hr>
+       -><address> 123, abc street, xyz city, 123456 </address> <br>
     => the <b>&lt;b&gt; and &lt;strong&gt;</b> tags are used to make bold text.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;b&gt; bold or strong text &lt;/b&gt;</b> 
-       -><b> bold or strong text </b> <hr>
+       -><b> bold or strong text </b> <br>
     => the <b>&lt;bdo&gt;</b> tag is used to insert a text with a different direction.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;bdo dir="rtl"&gt; text with a different direction &lt;/bdo&gt;</b> 
-       -><bdo dir="rtl"> text with a different direction </bdo> <hr>
+       -><bdo dir="rtl"> text with a different direction </bdo> <br>
     => the <b>&lt;blockquote&gt;</b> tag is used to insert a block of quoted text.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;blockquote&gt; quoted text &lt;/blockquote&gt;</b> 
-       -><blockquote> quoted text </blockquote> <hr>
+       -><blockquote> quoted text </blockquote> <br>
     => the <b>&lt;cite&gt;</b> tag is used to insert a citation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;cite&gt; citation &lt;/cite&gt;</b> 
-       -><cite> citation </cite> <hr>
+       -><cite> citation </cite> <br>
     => the <b>&lt;code&gt; , &lt;kbd&gt; , &lt;samp&gt; </b> tags are used to make a text look like written by typewritter.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;code&gt; this is the way &lt;/code&gt;</b> 
-        -><code> this is the way </code> <hr>
+        -><code> this is the way </code> <br>
     => the <b>&lt;del&gt; and &lt;s&gt;</b> tags are used to make a deleted or strikethrough text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;del&gt; deleted or strikethrough text &lt;/del&gt;</b> 
-        -><del> deleted or strikethrough text </del> <hr>
+        -><del> deleted or strikethrough text </del> <br>
     => the <b>&lt;dfn&gt;</b> tag is used to insert a definition.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dfn&gt; definition &lt;/dfn&gt;</b> 
-        -><dfn> definition </dfn> <hr>
+        -><dfn> definition </dfn> <br>
     => the <b>&lt;em&gt;</b> and <b>&lt;i&gt;</b> tag is used to insert emphasized or italic text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;em&gt; emphasized or italic text &lt;/em&gt;</b> 
-        -><em> emphasized or italic text </em> <hr>
+        -><em> emphasized or italic text </em> <br>
     => the <b>&lt;ins&gt; and &lt;u&gt; </b> tags are used to insert a underlined or inserted text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;u&gt; underlined or inserted text &lt;/u&gt;</b> 
-        -><u> underlined or inserted text </u> <hr>
+        -><u> underlined or inserted text </u> <br>
     => the <b>&lt;mark&gt;</b> tag is used to insert a marked text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;mark&gt; marked text &lt;/mark&gt;</b> 
-        -><mark> marked text </mark> <hr>
+        -><mark> marked text </mark> <br>
     => the <b>&lt;pre&gt;</b> tag is used to insert a preformatted text, the spaces and line breaks are kept as it is. <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;pre&gt; preformatted text &lt;/pre&gt;</b> 
-        -><pre> preformatted text </pre> <hr>
+        -><pre> preformatted text </pre> <br>
         => the <b>&lt;small&gt;</b> tag is used to make small sized text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;small&gt; small text &lt;/small&gt;</b> 
-        -><small> small text </small> <hr>
+        -><small> small text </small> <br>
         => the <b>&lt;sub&gt;</b> tag is used to insert a subscript text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>(a + b)&lt;sub&gt; 2 &lt;/sub&gt;</b> 
-        ->(a + b)<sub>2</sub> <hr>
+        ->(a + b)<sub>2</sub> <br>
         => the <b>&lt;sup&gt;</b> tag is used to insert a superscript text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>(a + b)&lt;sup&gt; 2 &lt;/sup&gt;</b> 
-        ->(a + b)<sup>2 </sup> <hr>
+        ->(a + b)<sup>2 </sup> <br>
         => the <b>&lt;var&gt;</b> tag is used to insert a variable.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;var&gt; variable &lt;/var&gt;</b> 
-        -><var> variable </var> <hr>
+        -><var> variable </var> <br>
         => the <b>&lt;wbr&gt;</b> tag is used to insert a possible line-break.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;wbr&gt; possible line-break &lt;/wbr&gt;</b> 
         -><wbr> possible line-break </wbr> <hr>
         
         <h3 id="quote">html quotation</h3>
-        <hr><a href="#" class="hyper">back to top</a><hr>
+        <a href="#" class="hyper">back to top</a><br><br>
         => the <b>&lt;q&gt;</b> tag is used to insert the content inside short quotation.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
             -><q> short quotation </q> <hr>
@@ -216,7 +217,7 @@
                 <br><b>&lt;/blockquote&gt;</b><hr>
 
         <h3 id="link">html links</h3>
-        <hr><a href="#" class="hyper">back to top</a><hr>
+        <a href="#" class="hyper">back to top</a><br><br>
         <span class="links">=> the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;a href="http://www.google.com"&gt; google &lt;/a&gt;</b> 
                 -><a href="http://www.google.com"> google </a> <hr>
@@ -254,7 +255,7 @@
             -><nav> navigation links </nav> <hr></span>
      
        <h3 id="image">html images</h3>
-       <hr><a href="#" class="hyper">back to top</a><hr>
+       <a href="#" class="hyper">back to top</a><br><br>
         => The HTML <img> tag is used to embed an image in a web page.<br>
            the essential attributes of the <img> tag are: src, alt, float, height and width.<br>
            <b>src</b> - defines the path to the image , <b>alt</b> - defines an alternate text for the image, 
@@ -316,7 +317,7 @@
                 <b>&lt;/picture&gt; </b><br><hr>
 
         <h3 id="table">html tables</h3>
-        <hr><a href="#" class="hyper">back to top</a><hr>
+        <a href="#" class="hyper">back to top</a><br><br>
         =>all the table content lie inside &lt;table&gt; tags.<br>
           the &lt;td&gt; tag defines a standard cell in an HTML table.<br>
           the &lt;th&gt; tag defines a header cell in an HTML table,basically it shows the cell content in bold.<br>
@@ -500,7 +501,7 @@
                 &lt;/table&gt;<br><br><hr>
   
             <h3 id="list">Html lists</h3>
-            <hr><a href="#" class="hyper">back to top</a><hr>
+            <a href="#" class="hyper">back to top</a><br><br>
                 =>there are three types of lists in html.<br>
                 <ul>
                     <li>unordered list</li>
@@ -573,7 +574,7 @@
                 &lt;/dl&gt;<br><br><hr>
    
             <h3 id="iframe">Html iframe</h3>
-            <hr><a href="#" class="hyper">back to top</a><hr>
+            <a href="#" class="hyper">back to top</a><br><br>
                 =>the <b>&lt;iframe&gt; tag is used to embed another webpage within the current HTML document.</b><br>
                 =>the <b>src</b> attribute of the <b>iframe</b> tag is used to define the source of the embedded webpage.<br>
                 =>the <b>width</b> and <b>height</b> attributes of the <b>iframe</b> tag are used to define the width and height of the embedded webpage.<br>
@@ -602,7 +603,7 @@
                 <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span><br><br><hr>
               
             <h3 id="entities">Html entities or symbols</h3>
-            <hr><a href="#" class="hyper">back to top</a><hr>
+            <a href="#" class="hyper">back to top</a><br><br>
                 An HTML entity is a piece of text that begins with an ampersand (&) and ends with a
                 semicolon(;) and between is the hex code or entity name. These entities are used to display
                 the reserved characters. <br>Eg., these are some html entities with how they will look on browser:<br>
@@ -612,7 +613,7 @@
                 =>all other entity codes for different symbols can be found on google. :)<hr>
                 
             <h3 id="url">Html url(uniform resource locator)</h3>
-            <hr><a href="#" class="hyper">back to top</a><hr>
+            <a href="#" class="hyper">back to top</a><br><br>
                 =>a url is a unique address of a resource on the internet.<br>
                 =>a url is made up of 3 parts - protocol, domain name and path.<br>
                 =>the protocol is the type of communication between the browser and the server.<br>
@@ -634,7 +635,7 @@
                 https://www.w3schools.com/html/default.asp<br><hr>
        
             <h3 id="media">Html media</h3>
-            <hr><a href="#" class="hyper">back to top</a><hr>
+            <a href="#" class="hyper">back to top</a><br><br>
                 =>media is used to embed audio, video, images, etc.<br>
                 =>the &lt;audio&gt; tag is used to embed audio and &lt;video&gt; tag is used to embed video.<br>
                 =>the <b>src</b> attribute is used to define the source of the audio or video<br>
@@ -655,7 +656,7 @@
                 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0L-D-k_0GGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;<br>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/4wg6df4KnQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><hr>
             </div>
-            <hr><a href="#" class="hyper">back to top</a><hr>
+            <a href="#" class="hyper">back to top</a>
             <div class="footer">
                 <p>&copy; 2021 All Rights Reserved.</p>
             </div>

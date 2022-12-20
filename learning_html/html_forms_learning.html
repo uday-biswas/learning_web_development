@@ -2,71 +2,415 @@
 <html lang="en">
 <head>
     <link rel="shortcut icon" type="image/icon" href="../images/icons8-gunter-100.png">
-    <link rel="stylesheet" type="text/css" href="static_page.css">
+    <link rel="stylesheet" type="text/css" href="html_forms_learning.css">
     <meta name="description" content=" ">
     <meta name="keywords" content="html,css,javascript">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>Html forms tutorial</title>
 </head>
-<body class="orange">
-    <a href="../learning_html/static_page.html" >go to home</a>
+<body>
+  <a id="signup" target="_blank" href="../learning_html/sign_up.html">Signup</a>
     <form action="/action.php" novalidate autocomplete="on" name="user_details" method="post">
         <div>
-        <label for="username">Username</label><br>       
-        <input type="text" required id="username">
-        </div>
-        <div>
-            <label for="country">Country</label><br>       
-            <input type="text" value="India" disabled required id="country">
-            </div>
-        <div>
-            <label for="email">Email</label><br>       
-            <input type="email" required id="email" placeholder="abc@example.com">
-            </div>
-        <div>
-        <label for="password">Password</label><br>
-        <input type="password" id="password" required>
-        </div>
-        Gender<br>
-        <input style="accent-color:red" type="radio" name="gender" value="male" id="male"><label for="male">male </label>
-        <input type="radio" name="gender" value="female" id="female"><label for="female">female</label>
-        <input type="radio" name="gender" value="other" id="other"><label for="other">other</label>
-        <div>
-            <label for="date">Date of Birth</label><br>
-            <select name="date" id="date">
-                <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option>
-                <option>06</option><option>07</option><option>08</option><option>09</option><option>10</option>
-                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-                <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
-                <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
-            </select>
-            <select name="month">
-                <option>january</option>
-                <option>february</option>
-                <option>march</option>
-                <option>april</option>
-                <option>may</option>
-                <option>june</option>
-                <option>july</option>
-                <option>august</option>
-                <option>september</option>
-                <option>october</option>
-                <option>november</option>
-                <option>december</option>
-            </select>
-            <input type="number" name="year" placeholder="year" required>
-            <input type="date" name="dob"> <br>
-            Why should we select you?<br>
-            <textarea name="selection" rows="5" cols="50"></textarea> 
-        </div>
-        <audio controls><source src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" type="audio/mp3"></audio><br>
-        <div>
-            <input type="submit" value="submit1">
-        <button type="button" name="submit" onclick="location.href='../learning_html/static_page.html';">Submit</button>
-        </div>
+          <h1>Contents</h1>
+          <ul>
+            <li><a href="#select">select tag(drop down menu)</a></li>
+            <li><a href="#textarea">Text area</a></li>
+            <li><a href="#button">Button tag</a></li>
+            <li><a href="#fieldset">Fieldset and legend</a></li>
+            <li><a href="#datalist">Datalists</a></li>
+            <li><a href="#input">The input tag</a>
+              <ul>
+              <li><a href="#types">Some general input types</a></li>
+              <li><a href="#radio">Radio button</a></li>
+              <li><a href="#check">Checkbox</a></li>
+              <li><a href="#submit">Submit button</a></li>
+              </ul>
+            </li>
+            <li><a href="#attri">Input tag attributes</a></li>
+            <li><a href="#overrider">Input form overrider attributes</a>
+                <ul>
+                  <li><a href="formaction">Formaction</a></li>
+                  <li><a href="formenctype">Formenctype</a></li>
+                  <li><a href="formmethod">Formmethod</a></li>
+                  <li><a href="formtarget">Formtarget</a></li>
+                </ul>
+            </li>
+          </ul>
+            <h1>Html forms</h1>
+            An HTML form is used to collect user input. The user input is most often sent to a server for processing.<br>
+            =>All the content of the form is enclosed in the &lt;form> tag.<br>
+            => there are many attrubutes in the form tag, some of them are :<br>
+            => action - it specifies where to send the form-data when a form is submitted.<br>
+            &emsp; eg. action="https://www.w3schools.com/action_page.php"<br>
+            => method - it specifies how to send the form-data (the form-data can be sent as URL variables or as HTTP post transaction).<br>
+            &emsp; method="get" sends the data as URL variables, means the names and values can be seen in the URL, 
+            so it cannot be used to send sensitive data and also its word capacity is limited.<br>
+            &emsp; and method="post" sends the data as HTTP post transaction , hence it is safe. <br>
+            => name - specifies the name of the form.<br>
+            => novalidate - specifies that the form should not be validated when submitted.<br>
+            => autocomplete - specifies that the form should be autocompleted or not when submitted.<br>
+            => target - specifies where to display the response that is received after submitting the form.<br>
+            => enctype - specifies how the form-data should be encoded when submitting it to the server (only for method="post").<br>
+            => accept-charset - specifies the character encodings that are to be used for the form submission.<br>
+            => onsubmit - specifies a JavaScript to be run when the form is submitted.<br>
+            => onreset - specifies a JavaScript to be run when the form is reset.<br>
+            => accept - specifies the types of files that the server accepts (only for method="post" and enctype="multipart/form-data").<br><hr>
+            
+            <h3 id="select">select tag(drop down menu)</h3>
+            <a href="#">back to top</a><br><br>
+            =>The &lt;select> tag defines a drop-down list.<br>
+            =>The &lt;option> tag defines an option in a drop-down list.<br>
+            >The &lt;option> elements defines an option that can be selected.<br>
+            >By default, the first item in the drop-down list is selected.<br>
+            >To define a pre-selected option, add the "selected" attribute to the option tag<br>
+            >to allow the user to select multiple options, add the "multiple" attribute to the &lt;select> tag.
+            press control key to select multiple options.<br>
+                Example:<br>
+                <span>&lt;label for="cars">Choose a car:</label><br>
+                &lt;select id="cars" name="cars" multiple> &emsp;&emsp;&emsp; => &emsp;&emsp; <br>
+                  &lt;option value="volvo">Volvo&lt;/option><br>
+                  &lt;option value="saab">Saab&lt;/option><br>
+                  &lt;option value="fiat" selected>Fiat&lt;/option><br>
+                  &lt;option value="audi">Audi&lt;/option><br>
+                &lt;/select></span><br>
+                <label for="cars">Choose a car:</label><br>
+                <select id="cars" name="cars" multiple>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option> 
+                  <option value="fiat" selected>Fiat</option>
+                  <option value="audi">Audi</option>
+                </select><br><br><br><br><hr>
+                
+              <h3 id="textarea">Text area</h3>
+              <a href="#">back to top</a><br><br>
+                =>The &lt;textarea> tag defines a multi-line input field (a text area).<br>
+                =>The &lt;textarea> element can be disabled.<br>
+                =>The &lt;textarea> element can be readonly.<br>
+                => the size of the text area can be specified by the "cols" and "rows" attributes, or even better through CSS width and height property.<br>
+                => the text area can be pre-filled with text by adding text between the opening and closing tag.<br>
+                Example:<br>
+                <textarea class="long" name="message" style="width:30%;height:80px;" placeholder="testing placeholder and you can write here."></textarea>
+                <textarea class="long" name="message1" style="width:250px;height:100px;" readonly>testing readonly , style's width and height property</textarea>
+                <textarea name="message2" rows="10" cols="30" disabled>testing rows , cols and disabled attributes</textarea><br>
+                1) &lt;textarea class="long" name="message" style="width:300px;height:100px;" placeholder="testing placeholder and you can write here.">&lt;/textarea><br>
+                2) &lt;textarea class="long" name="message1" style="width:250px;height:80px;" readonly>testing readonly , style's width and height property&lt;/textarea><br>
+                3) &lt;textarea class="long" name="message2" rows="10" cols="30" disabled>testing rows , cols and disabled attributes&lt;/textarea><br><br><br><hr>
+
+            <h3 id="button">Buttons</h3>
+            <a href="#">back to top</a><br><br>
+            The &lt;button> element defines a clickable button:<br>
+                Example:<br>
+                &lt;button type="button" onclick="alert('Hello World!')">Click Me!&lt;/button> &emsp; =>
+                <button type="button" onclick="alert('Hello World!')">Click Me!</button><br><hr>
+
+            <h3 id="fieldset">fieldset and legend</h3>
+            <a href="#">back to top</a><br><br>
+            =>The &lt;fieldset> tag is used to group related elements in a form.<br>
+            =>The &lt;legend> tag defines a caption for the &lt;fieldset> element.<br>
+                Example:<br>
+                <span>&lt;form action="/action_page.php"> <br>
+                  &lt;fieldset> <br>
+                    &lt;legend>Personalia:&lt;/legend> <br>
+                    &lt;label for="fname">First name:&lt;/label><br>
+                    &lt;input type="text" id="fname" name="fname"> &emsp; => &emsp; <br>
+                    &lt;label for="lname">Last name:&lt;/label><br>
+                    &lt;input type="text" id="lname" name="lname"><br>
+                    &lt;input type="submit" value="Submit"> <br>
+                  &lt;/fieldset><br>
+                &lt;/form></span> <br>
+                <form action="/action_page.php">
+                  <fieldset style="width:50%">
+                    <legend>Personalia:</legend>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                </form><br><hr>
+
+            <h3 id="datalist">datalists</h3>
+            <a href="#">back to top</a><br><br>
+            The &lt;datalist> element specifies a list of pre-defined options for an &lt;input> element.<br>
+            Users will see a drop-down list of the pre-defined options as they input data and they can insert their own values along with that.<br>
+            The list attribute of the &lt;input> element, must refer to the id attribute of the &lt;datalist> element.<br>
+                Example:<br>
+                <span>&lt;form action="/action_page.php"> <br>
+                  &lt;input list="browsers"> <br>
+                  &lt;datalist id="browsers"> <br>
+                    &lt;option value="Internet Explorer"> &emsp; => &emsp; <br>
+                    &lt;option value="Firefox"> <br>
+                    &lt;option value="Chrome"> <br>
+                    &lt;option value="Opera"> <br>
+                    &lt;option value="Safari"> <br>
+                  &lt;/datalist> <br>
+                &lt;/form></span> <br><br>
+                which is your favourite browser?<br><br>
+                <form action="/action_page.php">
+                  <input list="browsers">
+                  <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                  </datalist>
+                </form><br><br><br><br><br><hr>
+            
+            <h1 id="input">The &lt;input> tag</h1>
+            <a href="#">back to top</a><br><br>
+            =>The &lt;input> tag is used to create interactive controls for web-based forms in order to accept data from the user, and is written inside form tag.<br>
+            => the &lt;input> tag has many attributes, some of them are :<br>
+            => type - specifies the type of &lt;input> element to display. eg. text,radio,checkbox,
+               submit,reset,button,hidden,search,email,password,etc.<br>
+            => name - specifies the name of an &lt;input> element.<br>
+            => value - specifies the value of an &lt;input> element.<br>
+            &emsp; every input element sends the name and value to the server, value is either selected or entered by the user.<br>
+            &emsp; eg. &lt;input type="text" name="username"><br>
+            > In the above, name is "username" and value is the text entered by the user.<br><hr>
+            
+            <h3 id="types">some general input types</h3>
+            <a href="#">back to top</a><br><br>
+            <b>Important:</b> The &lt;label> tag is used to refer to the input elements , basically an id is given to the input element 
+            and then that id is used by the "for" attribute of the label tag to refer to that input element.<br>
+            &emsp; eg. &lt;label for="username">Username : &lt;/label><br>
+            &emsp; &lt;input type="text" id="username" name="username"> &emsp; => &emsp; 
+            <label for="username">Username : </label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <b>=> text</b> - The &lt;input type="text"> defines a single-line text input field.<br>
+            &emsp; eg. &lt;input type="text" name="name"> &emsp; => &emsp; name: <input type="text" name="name"><br>
+            <b>=> password</b> - The &lt;input type="password"> defines a password field (characters are masked).<br>
+            &emsp; eg. &lt;input type="password" name="password"> &emsp; => &emsp; password: <input type="password" name="password"><br>
+            <b>=> reset</b> - The &lt;input type="reset"> defines a reset button (resets all form values to default).<br>
+            &emsp; eg. &lt;input type="reset" value="Reset"> &emsp; => &emsp; <input type="reset" value="Reset"><br>
+            <b>=> button</b> - The &lt;input type="button"> defines a clickable button, this is not used for buttons , usually "button" tag is used for creating buttons.<br>
+            &emsp; eg. &lt;input type="button" value="Click Me"> &emsp; => &emsp; <input type="button" value="Click Me"><br>
+            <b>=> hidden</b> - The &lt;input type="hidden"> defines a hidden input field.<br>
+            A hidden field lets web developers include data that cannot be seen or modified by users when a form is submitted.<br>
+            A hidden field often stores what database record that needs to be updated when the form is submitted.
+            Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) 
+            using any browser's developer tools or "View Source" functionality. 
+            Do not use hidden inputs as a form of security!<br>
+            &emsp; eg. &lt;input type="hidden" name="hidden"> &emsp; => &emsp; <input type="hidden" name="hidden"><br>
+            <b>=> color</b> - The &lt;input type="color"> defines a color picker.<br>
+            &emsp; eg. &lt;input type="color" name="color"> &emsp; => &emsp; Pick a color: <input type="color" name="color"><br>
+            <b>=> date</b> - The &lt;input type="date"> defines a date control (year, month and day (no time)).<br>
+            we can also use the min and max attributes to add restrictions to dates.<br>
+            &emsp; eg. &lt;input type="date" name="date" min="1947-08-15" max="2022-08-15"> &emsp; => &emsp; Pick a date: <input type="date" name="date" min="1947-08-15" max="2022-08-15"><br>
+            <b>=> datetime-local</b> - The &lt;input type="datetime-local"> defines a date and time control (year, month, day, hour, minute, and second (no time zone)).<br>
+            &emsp; eg. &lt;input type="datetime-local" name="datetime-local"> &emsp; => &emsp; Pick a date and time: <input type="datetime-local" name="datetime-local"><br>
+            <b>=> email</b> - The &lt;input type="email"> defines a field for an e-mail address.<br>
+            &emsp; eg. &lt;input type="email" name="email" placeholder="abc@xyz.com"> &emsp; => &emsp; email: <input type="email" name="email" placeholder="abc@xyz.com"><br>
+            <b>=> file</b> - The &lt;input type="file"> defines a file-select field and a "Browse" button (for file uploads).<br>
+            &emsp; eg. &lt;input type="file" name="file"> &emsp; => &emsp; <input type="file" name="file"><br>
+            <b>=> month</b> - The &lt;input type="month"> defines a month and year control (no time zone).<br>
+            &emsp; eg. &lt;input type="month" name="month"> &emsp; => &emsp; Pick a month: <input type="month" name="month"><br>
+            <b>=> number</b> - The &lt;input type="number"> defines a field for entering a number.<br>
+            &emsp; eg. &lt;input type="number" name="number"> &emsp; => &emsp; number: <input type="number" name="number"><br>
+            <b>=> range</b> - The &lt;input type="range"> defines a control for entering a number whose exact value is not important (like a slider control).<br>
+            &emsp; eg. &lt;input type="range" name="range"> &emsp; => &emsp; <input type="range" name="range"><br>
+            <b>=> search</b> - The &lt;input type="search"> defines a text field for entering a search string.<br>
+            &emsp; eg. &lt;input type="search" name="search"> &emsp; => &emsp; search: <input type="search" name="search"><br>
+            <b>=> tel</b> - The &lt;input type="tel"> defines a field for entering a telephone number.<br>
+            &emsp; eg. &lt;input type="tel" name="tel"> &emsp; => &emsp; tel: <input type="tel" name="tel"><br><br>
+            <b>=> time</b> - The &lt;input type="time"> defines a control for entering a time (no time zone).<br>
+            &emsp; eg. &lt;input type="time" name="time"> &emsp; => &emsp; Pick a time: <input type="time" name="time"><br>
+            <b>=> url</b> - The &lt;input type="url"> defines a field for entering a URL.<br>
+            &emsp; eg. &lt;input type="url" name="url"> &emsp; => &emsp; url: <input type="url" name="url"><br><br>
+            <b>=> week</b> - The &lt;input type="week"> defines a week and year control (no time zone).<br>
+            &emsp; eg. &lt;input type="week" name="week"> &emsp; => &emsp; Pick a week: <input type="week" name="week"><br>
+            <b>=> image</b> - The &lt;input type="image"> defines an image as the submit button.<br>
+            &emsp; eg. &lt;input type="image" src="../images/icons8-gunter-100.png" alt="Submit" style="width:40px;height:40px;"> &emsp; => &emsp; 
+            <input type="image" src="../images/icons8-gunter-100.png" alt="Submit" style="width:40px;height:40px;"><br><hr>
+      
+            <h3 id="radio">radio button</h3>
+            <a href="#">back to top</a><br><br>
+            The &lt;input type="radio"> defines radio buttons that lets a user select ONE of a limited number of choices.<br>
+            here only one radio button can be selected at a time,and the name for all the radio buttons should be same. but the
+            value for each radio button should be different,hence the same name but different values 
+            corresponding to the radio button selected by the user are sent to the server.<br>
+            Example:<br>
+            Choose your favorite Web language:<br>
+            <span>&lt;form><br>
+                &lt;input type="radio" id="html" name="fav_language" value="HTML"><br>
+                &lt;label for="html">HTML&lt;/label><br>
+                &lt;input type="radio" id="css" name="fav_language" value="CSS"> &emsp;&emsp; => &emsp;&emsp; <br>
+                &lt;label for="css">CSS&lt;/label><br>
+                &lt;input type="radio" id="javascript" name="fav_language" value="JavaScript"><br>
+                &lt;label for="javascript">JavaScript&lt;/label><br>
+                &lt;/form></span><br>
+                <form>
+            Choose your favorite Web language:<br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+            </form>
+            <br><br><br><br><hr>
+
+            <h3 id="check">checkbox</h3>
+            <a href="#">back to top</a><br><br>
+            >The &lt;input type="checkbox"> defines a checkbox.
+            here multiple checkboxes can be selected at a time,and the name for all the checkboxes could be same or different, but the
+            value for each checkbox should be different,hence the same name and different values
+            corresponding to the checkbox are sent to the server.<br>
+            Example:<br>
+            <span></span>&lt;form><br>
+              &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><br>
+              &lt;label for="vehicle1"> I have a bike&lt;/label><br>
+              &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"><br>
+              &lt;label for="vehicle2"> I have a car&lt;/label><br>
+              &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"><br>
+              &lt;label for="vehicle3"> I have a boat&lt;/label><br>
+              &lt;/form></span><br>
+            <form>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1"> I have a bike</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label for="vehicle2"> I have a car</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3"> I have a boat</label>
+            </form><hr>
+
+            <h3 id="submit">submit button</h3>
+            <a href="#">back to top</a><br><br>
+            >The &lt;input type="submit"> defines a button for submitting the form data to a form-handler.<br>
+            >The form-handler is typically a server page with a script for processing input data.<br>
+            >The form-handler is specified in the form's action attribute.<br>
+            >The submit button is displayed by default in the browser's default style.<br><br>
+            Example: here, the form handler is action_page.php<br>
+            <span>&lt;form action="/action_page.php"><br>
+              &lt;label for="fname">Name:</label><br>
+                &lt;input type="text" id="fname" name="fname"> &emsp; => &emsp; <br>
+              &lt;input type="submit" value="Submit"><br>
+            &lt;/form></span><br>
+             <form action="/action_page.php">
+                <label for="fname">Name: </label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <input type="submit" value="Submit">
+              </form><br><hr>
+
+              <h3 id="attri">input tag attributes</h3>
+              <a href="#">back to top</a><br><br>
+            => placeholder - specifies a short hint that describes the expected value of an &lt;input> element.<br>
+            => required - specifies that an &lt;input> element must be filled out before submitting the form.<br>
+            => disabled - specifies that an &lt;input> element should be disabled.<br>
+            => readonly - specifies that an &lt;input> element is read-only.<br>
+            => size - specifies the visible width of an &lt;input> element.<br>
+               The default value for size is 20.<br>
+               Note: The size attribute works with the following input types: text, search, tel, url, email, and password.
+            => maxlength - specifies the maximum number of characters allowed in an &lt;input> element.<br>
+            => minlength - specifies the minimum number of characters allowed in an &lt;input> element.<br>
+            => min - specifies the minimum value for an &lt;input> element (only for type = number ,range ,date ,week ,time, datetime-local, month).<br>
+            => max - specifies the maximum value for an &lt;input> element (only for type=number ,range ,date ,week ,time, datetime-local, month).<br>
+            => step - specifies the legal number intervals for an &lt;input> element (only for type=number ,range ,date ,week ,time, datetime-local, month).<br>
+               Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.<br>
+            => pattern - specifies a regular expression that an &lt;input> element's value should be.<br>
+            The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
+            Tip: Use the global title attribute to describe the pattern to help the user.<br>
+              <label for="country_code">Country code:</label>
+              <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+            => multiple - specifies that a user can enter more than one value.<br>
+            => autofocus - specifies that an &lt;input> element should automatically get focus when the page loads.<br>
+            => autocomplete - specifies that the value of the &lt;input> element should be automatically completed by the browser.<br>
+            => accept - specifies the types of files that the server accepts (only for type="file").<br> 
+            => alt - specifies an alternate text for images (only for type="image").<br>
+            => src - specifies the URL of the image to use as a submit button (only for type="image").<br>
+            => height - specifies the height of the image in pixels (only for type="image").<br>
+            => width - specifies the width of the image in pixels (only for type="image").<br>
+            => list - specifies a list of pre-defined options for an &lt;input> element (only for type="text", type="search", type="url", type="tel", type="email", or type="password").<br>
+            => multiple - specifies that a user can enter more than one value (only for type="email" or type="file").<br>
+            => checked - specifies that an &lt;input> element should be pre-selected when the page loads (for type="checkbox" or type="radio").<br>
+            => selected - specifies that an &lt;option> element should be pre-selected when the page loads (for type="checkbox" or type="radio").<br>
+            => onfocus - specifies a JavaScript to be run when an &lt;input> element gets focus.<br>
+            => onblur - specifies a JavaScript to be run when an &lt;input> element loses focus.<br>
+            => oninput - specifies a JavaScript to be run when an &lt;input> element gets user input.<br>
+            => onchange - specifies a JavaScript to be run when the value of an &lt;input> element is changed.<br>
+            => onselect - specifies a JavaScript to be run when some text is selected in an &lt;input> element.<br>
+            => onsearch - specifies a JavaScript to be run when the user writes something in a search field (for type="search").<br>
+            => oninvalid - specifies a JavaScript to be run when an &lt;input> element is invalid.<br>
+            => onreset - specifies a JavaScript to be run when a reset button in a form is clicked.<br>
+            => onsubmit - specifies a JavaScript to be run when a form is submitted.<br><hr>
+
+            <h3 id="overrider">input form overrider attributes</h3>
+           
+            <a href="#">back to top</a><br>
+            <br>=> <b id="formaction">formaction</b><br><br>
+            The input formaction attribute specifies the URL of the file that will process the input when the form is submitted.
+            Note: This attribute overrides the action attribute of the &lt;form> element.<br>
+            The formaction attribute works with the following input types: submit and image.<br>
+            Example: <br>
+            &lt;form action="/action_page.php"><br>
+              Name: &lt;input type="text" id="name" name="name">&emsp; <br>
+              &lt;input type="submit" value="Submit"><br>
+              &lt;input type="submit" formaction="/action_page_admin.php" value="Submit as Admin"><br>
+            &lt;/form><br>
+            <form action="/action_page.php">
+              Name: <input type="text" id="name" name="name">&emsp; 
+              <input type="submit" value="Submit">
+              <input type="submit" formaction="/action_page_admin.php" value="Submit as Admin">
+            </form><hr>
+            
+            <a href="#">back to top</a><br>
+             <br>=> <b id="formenctype">formenctype</b><br><br>
+            The input formenctype attribute specifies how the form-data should be encoded when submitted (only for forms with method="post").<br>
+            Note: This attribute overrides the enctype attribute of the &lt;form> element.<br>
+            The formenctype attribute works with the following input types: submit and image.<br>
+            Example: <br>
+            &lt;form action="/action_page.php" method="post"><br>
+              Name: &lt;input type="text" id="name" name="name">&emsp; <br>
+              &lt;input type="submit" value="Submit"><br>
+              &lt;input type="submit" formenctype="multipart/form-data" value="Submit as Multipart"><br>
+            &lt;/form><br>
+            <form action="/action_page.php" method="post">
+              Name: <input type="text" id="name" name="name">&emsp; 
+              <input type="submit" value="Submit">
+              <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart">
+            </form><hr>
+           
+            <a href="#">back to top</a><br>
+            <br>=> <b id="formmethod">formmethod</b><br><br>
+            The input formmethod attribute specifies the HTTP method (get or post) to use when submitting the form (only for forms with action="").<br>
+            Note: This attribute overrides the method attribute of the &lt;form> element.<br>
+            The formmethod attribute works with the following input types: submit and image.<br>
+            Example: <br>
+            &lt;form action="/action_page.php" method="post"><br>
+              Name: &lt;input type="text" id="name" name="name">&emsp; <br>
+              &lt;input type="submit" value="Submit"><br>
+              &lt;input type="submit" formmethod="get" value="Submit as GET"><br>
+            &lt;/form><br>
+            <form action="/action_page.php" method="post">
+              Name: <input type="text" id="name" name="name">&emsp; 
+              <input type="submit" value="Submit">
+              <input type="submit" formmethod="get" value="Submit as GET">
+            </form><hr>
+           
+            <a href="#">back to top</a><br>
+            <br>=> <b id="formtarget">formtarget</b><br><br>
+            The input formtarget attribute specifies where to display the response after submitting the form (only for forms with action="").<br>
+            Note: This attribute overrides the target attribute of the &lt;form> element.<br>
+            The formtarget attribute works with the following input types: submit and image.<br>
+            Example: <br>
+            &lt;form action="/action_page.php" method="post"><br>
+              Name: &lt;input type="text" id="name" name="name">&emsp; <br>
+              &lt;input type="submit" value="Submit"><br>
+              &lt;input type="submit" formtarget="_blank" value="Submit in New Window"><br>
+            &lt;/form><br> 
+            <form action="/action_page.php" method="post">
+              Name: <input type="text" id="name" name="name">&emsp; 
+              <input type="submit" value="Submit">
+              <input type="submit" formtarget="_blank" value="Submit in New Window">
+            </form><hr>
     </form>
+    <a href="#">back to top</a>
+  <div class="footer">
+      <p>&copy; 2021 All Rights Reserved.</p>
+  </div>
 </body>
 </html>
