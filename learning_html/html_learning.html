@@ -31,7 +31,7 @@
     .left {
         padding: 0px;
         margin: 0px;
-        background-color: rgba(231, 42, 17, 0.925);
+        background-color: rgba(25, 136, 15, 0.74);
         overflow: hidden;
         list-style-type: none;
         color: rgba(240, 248, 255, 0.788);
@@ -173,6 +173,7 @@
     }</style>
 </head>
 <body>
+    <div>
     <ul class="left">
         <li>Home</li>
         <li>Html</li>
@@ -183,7 +184,7 @@
         <li class="right"><a href="#bottom">Bottom</a></li>
         <li class="right"><a href="../learning_html/html_forms_learning.html">Login</a></li>
     </ul><br>
-    <div>
+    
     <h1>Contents</h1>
     <ul class="content">
         <li><a href="#tags" class="hyper">Html tags and attributes</a></li>
@@ -205,13 +206,11 @@
     <h1 title="main header"><u> Html tutorial </u></h1>    <!-- title attribute can be used to provide additional information
                                                                 about the element on hover -->
     ● &lt;body&gt; &lt;/body&gt; contains all the things visible on the web page.
-    =>the user agent css style is :
-    <pre>
-    body {
-        display: block;
-        margin: 8px;
-    }
-    </pre><hr>
+    =>the user agent css style is : <br>
+    body {<br>
+        display: block;<br>
+        margin: 8px;<br>
+    }<br><hr>
 
     <h3 id="tags">html tags and attributes</h3> 
     <a href="#" class="hyper">back to top</a>
@@ -229,25 +228,23 @@
         =>there are 6 heading tags from <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> , the size and boldness of the text 
         inside the header tags will go on decreasing as we go from h1 to h6.<br>
         =>we can use this header tags multiple times in a single html file.<br>
-        =>the user agent css style is : 
-        <pre>
-        h1 {
-            display: block;
-            font-size: 2em;
-            margin-block-start: 0.67em;
-            margin-block-end: 0.67em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-        }
-        </pre>
+        =>the user agent css style is : <br>
+        h1 {<br>
+            display: block;<br>
+            font-size: 2em;<br>
+            margin-block-start: 0.67em;<br>
+            margin-block-end: 0.67em;<br>
+            margin-inline-start: 0px;<br>
+            margin-inline-end: 0px;<br>
+            font-weight: bold;<br>
+        }<br>
         => eg. <b>&lt;h1&gt;</b> heading 1 <b>&lt;/h1&gt;</b>
-        <h1 style="text-align:left">heading 1</h1>
-        <h2 style="text-align:left">heading 2</h2>
-        <h3 style="text-align:left">heading 3</h3>
-        <h4 style="text-align:left">heading 4</h4>
-        <h5 style="text-align:left">heading 5</h5>
-        <h6 style="text-align:left">heading 6</h6>
+        <h1 style = "text-align:left"> heading 1</h1>
+        <h2 style= "text-align:left"> heading 2</h2>
+        <h3 style= "text-align:left">heading 3</h3>
+        <h4 style= "text-align:left">heading 4</h4>
+        <h5 style= "text-align:left">heading 5</h5>
+        <h6 style= "text-align:left">heading 6</h6>
     </p><hr>
    
     <h3 id="block">html blocks vs inline</h3>
@@ -267,31 +264,28 @@
     &lt;code>, &lt;dfn>, &lt;em>, &lt;i>, &lt;img>, &lt;input>, &lt;kbd>, &lt;label>, &lt;map>, &lt;object>, &lt;q>, &lt;s>, &lt;samp>, 
     &lt;select>, &lt;small>, &lt;span>, &lt;strong>, &lt;sub>, &lt;sup>, &lt;textarea>, &lt;time>, &lt;tt>, &lt;var>.<br><hr> 
     => the contents inside <b>&lt;pre&gt;</b> and <b>&lt;/pre&gt;</b> tags are shown as it is, without any formatting.
-       usually it reserves the space and the line breaks.<br>
+       usually it reserves the space and the line breaks.(it is not advised to use pre tag as it disturbs the responsiveness of the website.)<br>
     the user agent css style is:
-    <pre>
-        pre {
-            display: block;
-            font-family: monospace;
-            white-space: pre;
-            margin: 1em 0px;
-        }
-    </pre><hr>
+        pre {<br>
+            display: block;<br>
+            font-family: monospace;<br>
+            white-space: pre;<br>
+            margin: 1em 0px;<br>
+        }<br><hr>
     => the <b>&lt;br&gt;</b> tag is used to insert a single line break.<hr>
     => the <b>&lt;hr&gt;</b> tag is used to insert a horizontal line below.
-    the user agent css style is:
-    <pre> 
-    hr {
-        display: block;
-        unicode-bidi: isolate;
-        margin-block-start: 0.5em;
-        margin-block-end: 0.5em;
-        margin-inline-start: auto;
-        margin-inline-end: auto;
-        overflow: hidden;
-        border-style: inset;
-        border-width: 1px;
-    }</pre><hr>
+    the user agent css style is: <br>
+    hr {<br>
+        display: block;<br>
+        unicode-bidi: isolate;<br>
+        margin-block-start: 0.5em;<br>
+        margin-block-end: 0.5em;<br>
+        margin-inline-start: auto;<br>
+        margin-inline-end: auto;<br>
+        overflow: hidden;<br>
+        border-style: inset;<br>
+        border-width: 1px;<br>
+    }<br><hr>
     
     <h3 id="class">Html class and id</h3>
     <a href="#" class="hyper">back to top</a><br><br>
@@ -344,9 +338,6 @@
     => the <b>&lt;mark&gt;</b> tag is used to insert a marked text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;mark&gt; marked text &lt;/mark&gt;</b> 
         -><mark> marked text </mark> <br>
-    => the <b>&lt;pre&gt;</b> tag is used to insert a preformatted text, the spaces and line breaks are kept as it is. <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;pre&gt; preformatted text &lt;/pre&gt;</b> 
-        -><pre> preformatted text </pre> <br>
         => the <b>&lt;small&gt;</b> tag is used to make small sized text.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;small&gt; small text &lt;/small&gt;</b> 
         -><small> small text </small> <br>
@@ -371,7 +362,7 @@
         => The HTML <b>&lt;blockquote&gt;</b> element defines a section that is quoted from another source.<br>
            Example
                 <br>Here is a quote from WWF's website:<br>
-                <b>&lt;blockquote&gt;</b> cite="http://www.worldwildlife.org/who/index.html">
+                <b>&lt;blockquote&gt;</b> cite="http://www.worldwildlife.org /who/index.html">
                 For 60 years, WWF has worked to help people and nature thrive. 
                 As the world's leading conservation organization, WWF works in nearly 100 countries. 
                 At every level, we collaborate with people around the world to develop and deliver innovative 
@@ -389,17 +380,17 @@
              >An active link is underlined and red<br><hr>
         => By default, the linked page will be displayed in the current browser window.<br>
              Use the attribute "target" to open the linked document in a new browser window or tab:<br>
-             Example: <b>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;</b>Visit W3Schools!<b>&lt;/a&gt;</b> ->
+             Example: <b>&lt;a href= "https:// www.w3schools.com/" target="_blank"&gt;</b>Visit W3Schools!<b>&lt;/a&gt;</b> ->
                 <a href="https://www.w3schools.com/" target="_blank">Visit-W3Schools!</a><hr>   
         => to use image as link , we just have to put the img tag inside the <b>&lt;a&gt;</b> tag.<br>
-            <b>&lt;a href="../learning_html/login_page.html">
-            &lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style="width:42px;height:42px;"&gt;
+            <b>&lt;a href= "../learning_html/ login_page.html">
+            &lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style= "width:42px; height:42px;"&gt;
             &lt;/a&gt;</b> &rAarr;
             <a href="../learning_html/login_page.html">
             <img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style="width:40px;height:40px;">
             </a><hr>    
         =>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
-         <br>Example: <b>&lt;a href="mailto:udaybiswasofficial@gmail.com"&gt;</b> email <b>&lt;/a&gt;</b>  
+         <br>Example: <b>&lt;a href = "mailto:udaybiswas official@gmail.com"&gt;</b> Send-email-to-us <b>&lt;/a&gt;</b>  
             -><a href="mailto:udaybiswasofficial@gmail.com">Send-email-to-us. </a><hr>  
         => if the page is too long , then to access different parts of the page :<br>
             First, use the id attribute to create a bookmark:<br>
@@ -423,19 +414,20 @@
            <b>src</b> - defines the path to the image , <b>alt</b> - defines an alternate text for the image, 
            and the css style attribute is used to define the float, width and height of an image.<br>
            the width is given in percentage and the height is given in pixels to get the the best result.<br>
-           Example : <b>&lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right;width:42px;height:42px;"&gt;</b>
-           <img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right;width:42px;height:42px;"><br><br><br><br>
+           Example : <b>&lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" style= "float:right; width:42px; height:42px;"&gt;</b>
+           <img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right; width:42px;height:42px;"><br><br><br><br>
            <img src="../images/peakpx.jpg" style="width:45%;height:250px">
            <img src="../images/victory.jpg" style="width:45%;height:250px"><hr>
         <h4 style="text-align:left">html image maps</h4>
-        <img src="../images/workplace.jpg"  style="float:left;margin-right:5px;" usemap="#image-map">
+        <!-- <img src="../images/workplace.jpg"  style="float:left;margin-right:5px;">
         <map name="image-map">
         <area target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle">
         <area target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect">
         <area target="_blank" alt="mobile" href="https://www.samsung.com/" coords="289,172,327,172,334,245,293,244" shape="poly">
         <area target="_blank" alt="checking default" href="https://www.hello.com/" shape="default">
-        </map>
+        </map> -->
         => An image map is used to make an image with clickable areas.<br>
+        but the image size will not adjust with the screen size, so it is not responsive, so image with width less than 300px should be used.<br>
            The HTML &lt;map&gt; tag is used to define an image map, and then it is linked with the &lt;img&gt; tag using "usemap" attribute.<br>
            The &lt;area&gt; tag defines an area inside an image map, it is present inside &lt;map&gt; tag, and it has several attributes
            such as : href, shape, coords, alt, target, download.<br>
@@ -445,12 +437,12 @@
                and x2,y2 are coordinates of bottom-right corner of the rectangle)<br>
               >for poly(polygon), the coordinates are x1,y1,x2,y2,x3,y3,....,xn,yn.(x1,y1 are coordinates of first point of the polygon and so on)<br>
               >for default, the coordinates are not required, it selects the entire region.<br>
-           Example : 
+           Example : <br>
               <b>&lt;img src="../images/workplace.jpg"  style="float:left;margin-right:5px;" usemap="#image-map"&gt;<br>
                 &lt;map name="image-map"&gt;<br>
                 &lt;area target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle"&gt;<br>
                 &lt;area target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect"&gt;<br>
-                &lt;area target="_blank" alt="mobile" href="https://www.samsung.com/" coords="289,172,327,172,334,245,293,244" shape="poly"&gt;<br>
+                &lt;area target="_blank" alt="mobile" href="https://www.samsung.com/" coords= "289,172, 327,172, 334,245, 293,244" shape="poly"&gt;<br>
                 &lt;area target="_blank" alt="checking default" href="https://www.hello.com/" shape="default"&gt;<br>
                 &lt;/map&gt;</b><br><br><br><hr>
         
@@ -469,13 +461,13 @@
                 <b>&lt;picture style="float:left;margin-right:5px;"&gt;<br>
                    &lt;source srcset="../images/peakpx.jpg" media="(max-width: 600px)"&gt; </b> //0px&lt; device-width &lt;600px <br>
                   <b>&lt;source srcset="../images/victory.jpg" media="(max-width: 900px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
-                  <b>&lt;img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:200px" &gt; </b> //device-width &gt; 900px<br>
+                  <b>&lt;img src="../images/workplace.jpg" alt="workplace" style= "width:100%; height:200px;" &gt; </b> //device-width &gt; 900px<br>
                 <b>&lt;/picture&gt; </b><br>
                 <h3>OR</h3>
                 <b>&lt;picture&gt;<br>
                    &lt;source srcset="../images/peakpx.jpg" media="(min-width: 900px)"&gt; </b> //device-width &gt; 900px<br>
                    <b>&lt;source srcset="../images/victory.jpg" media="(min-width: 600px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
-                   <b>&lt;img src="../images/workplace.jpg" alt="workplace" style="width:100%;height:200px" &gt; </b> //0px&lt; device-width &lt;600px <br>
+                   <b>&lt;img src="../images/workplace.jpg" alt="workplace" style= "width:100%; height:200px;" &gt; </b> //0px&lt; device-width &lt;600px <br>
                 <b>&lt;/picture&gt; </b><br><hr>
 
         <h3 id="table">html tables</h3>
@@ -489,23 +481,21 @@
           the css property <b>border-collapse</b> is used to collapse the table borders to avoid double borders.<br><br><br>
             Example :<br>
             the following css property is used in all of the below tables.<br>
-            <pre>
-                table, th, td{
-                    border: 1px solid rgba(0, 0, 0, 0.945);
-                    border-collapse: collapse;
-                    padding: 5px;
-                    text-align: center;
-                    background-color: rgba(127, 225, 255, 0.726);
-                    color: black;
-                }
-                table{
-                    width: 50%;
-                    float:left;
-                    margin-right: 10px;
-                    color:antiquewhite;
-                    margin-bottom: 15px;
-                }
-            </pre>
+                table, th, td{<br>
+                    border: 1px solid rgba(0, 0, 0, 0.945);<br>
+                    border-collapse: collapse;<br>
+                    padding: 5px;<br>
+                    text-align: center;<br>
+                    background-color: rgba(127, 225, 255, 0.726);<br>
+                    color: black;<br>
+                }<br>
+                table{<br>
+                    width: 50%;<br>
+                    float:left;<br>
+                    margin-right: 10px;<br>
+                    color:antiquewhite;<br>
+                    margin-bottom: 15px;<br>
+                }<br>
             <span><table>
                 <caption><b><u>table 1</u></b></caption>
                 <tr><td></td><th>row1</th><th>row2</th><th>row3</th></tr>
@@ -588,14 +578,14 @@
                     &lt;tr&gt;&lt;td&gt;2.&lt;/td&gt;&lt;td&gt;Mukesh&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;<br>
                 &lt;/table&gt;<br><br>
                 the following css code is used to style the table 5 and table 6.<br>
-                <pre>.table5 th:nth-child(even), .table5 td:nth-child(even){
-                    background-color: rgba(241, 31, 31, 0.842);
-                    color: rgba(240, 248, 255, 0.959);
-                }
-                .table6 tr:nth-child(odd) td,.table6 tr:nth-child(odd) th{
-                    background-color: #4722eee7;
-                    color: rgba(234, 238, 241, 0.856);
-                }</pre><hr>
+                .table5 th:nth-child(even), .table5 td:nth-child(even){<br>
+                    background-color: rgba(241, 31, 31, 0.842);<br>
+                    color: rgba(240, 248, 255, 0.959);<br>
+                }<br>
+                .table6 tr:nth-child(odd) td,.table6 tr:nth-child(odd) th{<br>
+                    background-color: #4722eee7;<br>
+                    color: rgba(234, 238, 241, 0.856);<br>
+                }<hr>
                 <table class="tab">
                     <caption><b><u>table 7</u></b></caption>
                     <tr><td></td><th>Name</th><th>Age</th><th>Marks</th></tr>
@@ -612,28 +602,26 @@
                 =>we can use the border-bottom and hover property to make the table look more attractive.<br>
                 for that we firsty have to use the "border-collapse: collapse;" property to remove the space between the table cells.<br>
                 for table 7 the following css code is used.<br>
-                <pre>
-                    .tab th,.tab td{
-                        padding: 5px;
-                        text-align: center;
-                        color: rgba(240, 228, 228, 0.945);
-                    }
-                    .tab tr{
-                        border-bottom: 1px white solid;
-                    }
-                     .tab tr:hover td,.tab tr:hover th{
-                        color:black;
-                        background-color: white;
-                    }
-                     .tab{
-                        width: 50%;
-                        float:left;
-                        margin-right: 10px;
-                        color:antiquewhite;
-                        margin-bottom: 15px;
-                        border-collapse:collapse;
-                    }
-                </pre><hr>
+                    .tab th,.tab td{<br>
+                        padding: 5px;<br>
+                        text-align: center;<br>
+                        color: rgba(240, 228, 228, 0.945);<br>
+                    }<br>
+                    .tab tr{<br>
+                        border-bottom: 1px white solid;<br>
+                    }<br>
+                     .tab tr:hover td,.tab tr:hover th{<br>
+                        color:black;<br>
+                        background-color: white;<br>
+                    }<br>
+                     .tab{<br>
+                        width: 50%;<br>
+                        float:left;<br>
+                        margin-right: 10px;<br>
+                        color:antiquewhite;<br>
+                        margin-bottom: 15px;<br>
+                        border-collapse:collapse;<br>
+                    }<br><hr>
                 <table class="tab2">
                     <caption><b><u>table 8</u></b></caption>
                     <colgroup>
@@ -641,7 +629,7 @@
                         <col span="2" style="background-color: rgb(238, 18, 54)!important;">
                         <col span="2" style="background-color: rgba(14, 97, 6, 0.952)">
                       </colgroup>
-                    <tr><td></td><th>Name</th><th>Age</th><th>Maths</th><th>science</th><th>english</th></tr>
+                    <tr><td></td><th>Name</th><th>Age</th><th>I</th><th>II</th><th>III</th></tr>
                     <tr><th>1.</th><td>Suresh</td><td>30</td><td>44</td><td>49</td><td>38</td></tr>
                     <tr><td>2.</td><td>Mukesh</td><td>27</td><td>49</td><td>44</td><td>42</td></tr>
                     <tr><th>3.</th><td>Ramesh</td><td>25</td><td>50</td><td>24</td><td>44</td></tr>
@@ -683,7 +671,7 @@
                     <li>item 2 &emsp; &lt;= &emsp;</li>
                     <li>item 3</li>
                 </ul>
-                &lt;ul style="list-style-type:square;"&gt;<br>
+                &lt;ul style= "list-style-type :square;" &gt;<br>
                     &lt;li&gt;item 1&lt;/li&gt;<br>
                     &lt;li&gt;item 2&lt;/li&gt;<br>
                     &lt;li&gt;item 3&lt;/li&gt;<br>
@@ -759,7 +747,7 @@
                 referrerpolicy="no-referrer" loading="lazy" align="center"></iframe><br><br><hr> -->
 
                 &lt;iframe src="static_page.html" width="70%" height="500px" name="iframe_"&gt;your browser doesnt support iframe.&lt;/iframe&gt;<br><br>
-                &lt;span&gt;&lt;a href="https://www.google.com/webhp?igu=1" target="iframe_"&gt;click here to open google in iframe&lt;/a&gt;&lt;/span&gt;<br><br><hr>
+                &lt;span&gt;&lt;a href="https://www.google.com/ webhp?igu=1" target="iframe_"&gt;click here to open google in iframe&lt;/a&gt;&lt;/span&gt;<br><br><hr>
                 <iframe src="static_page.html" width="70%" height="500px" name="iframe_">your browser doesnt support iframe.</iframe>
                 <br><br>
                 <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span><br><br><hr>
@@ -784,7 +772,7 @@
                 =>the url is case sensitive.<br>
                 =>the url is used to identify the location of a resource on the internet.<br>
                 
-                =>A normal url looks like this - scheme://prefix.domain:port/path/filename<br>
+                =>A normal url looks like this - scheme:// prefix.domain:port/ path/filename<br>
                 Explanation:<br><br>
                 
                 scheme - defines the type of Internet service (most common is http or https)<br>
@@ -794,7 +782,7 @@
                 path - defines a path at the server (If omitted: the root directory of the site)<br>
                 filename - defines the name of a document or resource<br><br>
                 Example:<br>
-                https://www.w3schools.com/html/default.asp<br><hr>
+                https://www.w3schools.com/ html/default.asp<br><hr>
        
             <h3 id="media">Html media</h3>
             <a href="#" class="hyper">back to top</a><br><br>
@@ -810,16 +798,16 @@
                 Example:<br>
                 &lt;audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" autoplay controls loop preload="auto" poster="poster.jpg" style="width:40%;"&gt;&lt;/audio&gt;&lt;br&gt;<br>
                 &lt;video src="../video/29. Favicon and Meta Tags.mp4" autoplay controls loop preload="auto" poster="poster.jpg" style="width:40%;"&gt;&lt;/video&gt;&lt;br&gt;&lt;hr&gt;<br><br>
-                <audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" controls preload="auto" style="width:40%;"></audio><br>
-                <video src="../video/29. Favicon and Meta Tags.mp4" controls loop poster="../images/workplace.jpg" style="width:40%;height:300px;"></video><br><hr>
+                <audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" controls preload="auto" style="width:70%;"></audio><br>
+                <video src="../video/29. Favicon and Meta Tags.mp4" controls loop poster="../images/workplace.jpg" style="width:70%;height:300px;"></video><br><hr>
                 <b>embedding youtube videos.</b><br>
                 we can use the &lt;iframe&gt; tag to embed youtube videos.<br>
                 Example:<br>
-                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0L-D-k_0GGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;<br>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/4wg6df4KnQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><hr>
+                &lt;iframe style= "width:70%; height:30vh;" src= "https://www.youtube.com/ embed/0L-D-k_0GGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;<br>
+                <iframe style="width:70%;height:30vh;" src="https://www.youtube.com/embed/4wg6df4KnQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><hr>
             </div>
             <a href="#" class="hyper">back to top</a>
-            <div class="footer">
+            <div class="footer" id="bottom">
                 <p>&copy; 2021 All Rights Reserved.</p>
             </div>
 </body>
