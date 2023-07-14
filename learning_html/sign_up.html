@@ -2,67 +2,94 @@
 <html lang="en">
 <head>
     <link rel="shortcut icon" type="image/icon" href="../images/icons8-gunter-100.png">
-    <link rel="stylesheet" type="text/css" href="sign_up.css">
+    <link rel="stylesheet" type="text/css" href="../learning_html/sign_up.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup page</title>
 </head>
 <body>
-    <form>
-        <label for="username">Username</label><br>       
-        <input type="text" required id="username">
-        </div>
-        <div>
-            <label for="country">Country</label><br>       
-            <input type="text" value="India" disabled required id="country">
-            </div>
-        <div>
-            <label for="email">Email</label><br>       
-            <input type="email" required id="email" placeholder="abc@example.com">
-            </div>
-        <div>
-        <label for="password">Password</label><br>
-        <input type="password" id="password" required>
-        </div>
-        Gender<br>
-        <input style="accent-color:red" type="radio" name="gender" value="male" id="male"><label for="male">male </label>
-        <input type="radio" name="gender" value="female" id="female"><label for="female">female</label>
-        <input type="radio" name="gender" value="other" id="other"><label for="other">other</label>
-        <div>
-            <label for="date">Date of Birth</label><br>
-            <select name="date" id="date">
-                <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option>
-                <option>06</option><option>07</option><option>08</option><option>09</option><option>10</option>
-                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-                <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
-                <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
-            </select>
-            <select name="month">
-                <option>january</option>
-                <option>february</option>
-                <option>march</option>
-                <option>april</option>
-                <option>may</option>
-                <option>june</option>
-                <option>july</option>
-                <option>august</option>
-                <option>september</option>
-                <option>october</option>
-                <option>november</option>
-                <option>december</option>
-            </select>
-            <input type="number" name="year" placeholder="year" required>
-            <input type="date" name="dob"> <br>
-            Why should we select you?<br>
-            <textarea name="selection" rows="5" cols="50"></textarea> 
-        </div>
-        <audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" controls preload="auto" style="width:40%;"></audio><br>
-        <div>
-            <input type="submit" value="submit1">
-        <button type="button" name="submit" onclick="location.href='../learning_html/static_page.html';">Submit</button>
-        </div>
+    <h1 style="text-align: center;">Register For Torment !!</h1>
+    <form action="../learning_html/html_learning.html">
+            <fieldset>
+                <legend>Personalia</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">Name: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dob">Date Of Birth: </label>
+                        </td>
+                        <td>
+                            <input type="date" name="dob" id="dob" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender : 
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Male</label> &ensp;
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Female</label> &ensp;
+                            <input type="radio" name="gender" id="others" value="others">
+                            <label for="others">Others</label> &ensp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email : </label></td>
+                        <td><input type="email" placeholder="abc@xyz.com" name="email" id="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country : </label></td>
+                        <td>
+                            <select name="country" id="country" required>
+                                <option selected>select</option>
+                                <option value="afghanistan">Afghanistan</option>
+                                <option value="armenia">armenia</option>
+                                <option value="bangladesh">bangladesh</option>
+                                <option value="india">india</option>
+                                <option value="nepal">nepal</option>
+                                <option value="sri lanka">sri lanka</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>credentials : </legend>
+                <table>
+                    <tr>
+                        <td><label for="uname">create username: </label></td>
+                        <td>
+                            <input type="text" name="uname" id="uname" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color:red">password must be atleast 8 characters long</td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">create password : </label></td>
+                        <td><input type="password" name="password" id="pass" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cpass">confirm password : </label></td>
+                        <td><input type="password" name="confirm" id="cpass" required></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>
+            </fieldset>
+            <br>
+            <input type="submit">
     </form>
 </body>
 </html>
