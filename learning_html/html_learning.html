@@ -10,8 +10,11 @@
     <!-- the open graph data is a metadata protocol that is built by facebook to give extra information during link sharing on whatsapp, facebook, or instagram -->
    <meta property="og:title" content="HyperCode">
    <meta property="og:image" content="../images/hyper.jpg">
+   <meta property="og:image:type" content="image/jpg" /> 
+   <meta property="og:image:width" content="400" /> 
+   <meta property="og:image:height" content="300" />
    <meta property="og:description" content="The HyperCode provides great tutorials about different technologies used in web development.">
-   <meta property="og:url" content="uday-biswas.netlify.app">
+   <meta property="og:url" content="hypercode.netlify.app">
    <!-- the twitter properties that are built by twitter to give extra information during link sharing on twitter -->
    <meta name="twitter:site" content="@MozDevNet">
    <meta name="twitter:title" content="MDN Web Docs">
@@ -233,7 +236,10 @@
         => By default, the linked page will be displayed in the current browser window.<br>
              Use the attribute "target" to open the linked document in a new browser window or tab:<br>
              Example: <b>&lt;a href= "https:// www.w3schools.com/" target="_blank"&gt;</b>Visit W3Schools!<b>&lt;/a&gt;</b> ->
-                <a href="https://www.w3schools.com/" target="_blank">Visit-W3Schools!</a><hr>   
+                <a href="https://www.w3schools.com/" target="_blank">Visit-W3Schools!</a><hr> 
+        => The files other than html will be downloaded automatically when the link is clicked except images,for that we have to add the attribute download.<br>
+            Example: <b>&lt;a href="../images/icons8-gunter-100.png" download="penguin_photo"&gt;</b>Download Image<b>&lt;/a&gt;</b> ->
+            <a href="../images/icons8-gunter-100.png" download="penguin_photo">Download Image</a><hr>  
         => to use image as link , we just have to put the img tag inside the <b>&lt;a&gt;</b> tag.<br>
             <b>&lt;a href= "../learning_html/ login_page.html">
             &lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style= "width:42px; height:42px;"&gt;
@@ -272,15 +278,20 @@
            Example : <b>&lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" style= "float:right; width:42px; height:42px;"&gt;</b>
            <img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right; width:42px;height:42px;"><br><br><br><br>
            <img src="../images/peakpx.jpg" style="width:45%;height:250px">
-           <img src="../images/victory.jpg" style="width:45%;height:250px"><hr>
+           <img src="../images/victory.jpg" style="width:45%;height:250px"><br><br>
+        => The html tag &lt;figure&gt; is used to provide a semantic container for figures, and to clearly link the figure to the caption.
+              <br>Example : <b>&lt;figure&gt; &lt;img src="../images/peakpx.jpg" style="width:45%;height:250px"&gt;
+              &lt;figcaption&gt; peakpx &lt;/figcaption&gt; &lt;/figure&gt;</b>
+              <figure> <img src="../images/peakpx.jpg" style="width:45%;height:250px">
+              <figcaption> peakpx </figcaption> </figure>
         <h4 style="text-align:left">html image maps</h4>
         <div style="overflow-x:auto;">
       <img src="../images/workplace.jpg" usemap="#image-map"  style="float:left;margin-right:5px;">
         <map name="image-map">
-        <area target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle">
-        <area target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect">
-        <area target="_blank" alt="mobile" href="https://www.samsung.com/" coords="289,172,327,172,334,245,293,244" shape="poly">
-        <area   target="_blank" alt="checking default" href="https://www.hello.com/" shape="default">
+        <area rel="noopener" target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle">
+        <area rel="noopener" target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect">
+        <area rel="noopener" target="_blank" alt="mobile" href="https://www.samsung.com/" coords="289,172,327,172,334,245,293,244" shape="poly">
+        <area rel="noopener" target="_blank" alt="checking default" href="https://www.hello.com/" shape="default">
         </map></div>
         => An image map is used to make an image with clickable areas.<br>
         but the image size will not adjust with the screen size, so it is not responsive, so image with width less than 300px should be used.<br>
