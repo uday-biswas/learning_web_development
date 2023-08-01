@@ -6,6 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The HyperCode provides great tutorials about different technologies used in web development.">  <!-- the description provides the text that will be shown during google search and used in seo -->
+    <!-- the open graph data is a metadata protocol that is built by facebook to give extra information during link sharing on whatsapp, facebook, or instagram -->
+   <meta property="og:title" content="HyperCode">
+   <meta property="og:image" content="../images/hyper.jpg">
+   <meta property="og:description" content="The HyperCode provides great tutorials about different technologies used in web development.">
+   <meta property="og:url" content="uday-biswas.netlify.app">
+   <!-- the twitter properties that are built by twitter to give extra information during link sharing on twitter -->
+   <meta name="twitter:site" content="@MozDevNet">
+   <meta name="twitter:title" content="MDN Web Docs">
+   <meta name="twitter:description" content="The Mozilla Developer Network (MDN) provides information about Open Web technologies.">
+   <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+
     <title>html tutorial</title>    <!-- title tag is used to define the title of the web page -->
     <link rel="icon" type="image/icon" href="../images/icons8-gunter-100.png">
     <link rel="stylesheet" type="text/css" href="../learning_html/html_learning.css">    <!--link tag is used to link external files to the html file -->
@@ -25,6 +37,7 @@
         <li class="right"><a href="../learning_html/sign_up.html">Sign Up</a></li>
         <li class="right"><a href="../learning_html/login.html">Login</a></li>
     </ul><br>
+    <div id="top"><a href="#"><img id="back" src="../images/back_to_top.png" alt="backtotop"></a></div>
     <div><br>
     <h1>Contents</h1>
     <ul class="content">
@@ -54,7 +67,6 @@
     }<br><hr>
 
     <h3 id="tags">html tags and attributes</h3> 
-    <a href="#" class="hyper">back to top</a>
     <p>                   
         =>The tag name can either start from an alphabet or an underscore( _ ).<br>
         => Attributes can provide additional information about the HTML elements 
@@ -64,7 +76,6 @@
     </p>  <hr>
  
     <h3 id="headings">html headings</h3>
-    <a href="#" class="hyper">back to top</a>
     <p>
         =>there are 6 heading tags from <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> , the size and boldness of the text 
         inside the header tags will go on decreasing as we go from h1 to h6.<br>
@@ -89,7 +100,7 @@
     </p><hr>
    
     <h3 id="block">html blocks vs inline</h3>
-    <a href="#" class="hyper">back to top</a><br><br>
+    <br><br>
     =>Every HTML element has a default display value, depending on what type of element it is.<br>
     =>There are two display values: block and inline.<br><hr>
     =>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.<br>
@@ -129,7 +140,7 @@
     }<br><hr>
     
     <h3 id="class">Html class and id</h3>
-    <a href="#" class="hyper">back to top</a><br><br>
+    <br><br>
     =>Class<br>
     The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript 
     to access and manipulate elements with the specific class name.
@@ -142,7 +153,7 @@
     eg. &lt;h2 id="city">Paris.&lt;/h2><br><hr>
   
     <h3 id="formatting">html text formatting</h3>
-    <a href="#" class="hyper">back to top</a><br><br>
+    <br><br>
     => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
        -><abbr title="World Health Organisation">WHO</abbr> <br>
@@ -196,7 +207,7 @@
         -><wbr> possible line-break </wbr> <hr>
         
         <h3 id="quote">html quotation</h3>
-        <a href="#" class="hyper">back to top</a><br><br>
+        <br><br>
         => the <b>&lt;q&gt;</b> tag is used to insert the content inside short quotation.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
             -><q> short quotation </q> <hr>
@@ -211,7 +222,7 @@
                 <br><b>&lt;/blockquote&gt;</b><hr>
 
         <h3 id="link">html links</h3>
-        <a href="#" class="hyper">back to top</a><br><br>
+        <br><br>
         <span class="links">=> the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;a href="http://www.google.com"&gt; google &lt;/a&gt;</b> 
                 -><a href="http://www.google.com"> google </a> <hr>
@@ -232,7 +243,10 @@
             </a><hr>    
         =>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
          <br>Example: <b>&lt;a href = "mailto:udaybiswas official@gmail.com"&gt;</b> Send-email-to-us <b>&lt;/a&gt;</b>  
-            -><a href="mailto:udaybiswasofficial@gmail.com">Send-email-to-us. </a><hr>  
+            -><a href="mailto:udaybiswasofficial@gmail.com">Send-email-to-us. </a><hr>
+        =>Use tel: inside the href attribute to create a link that opens the user's call program (to let them call):
+         <br>Example: <b>&lt;a href = "tel:9938291832"&gt;</b> call-us <b>&lt;/a&gt;</b>  
+            -><a href="tel:9938291832">call-us</a><hr>  
         => if the page is too long , then to access different parts of the page :<br>
             First, use the id attribute to create a bookmark:<br>
             <b>&lt;h3 id="quote"&gt;html quotation&lt;/h3&gt;</b><br>
@@ -249,7 +263,7 @@
             -><nav> navigation links </nav> <hr></span>
      
        <h3 id="image">html images</h3>
-       <a href="#" class="hyper">back to top</a><br><br>
+       <br><br>
         => The HTML <img> tag is used to embed an image in a web page.<br>
            the essential attributes of the <img> tag are: src, alt, float, height and width.<br>
            <b>src</b> - defines the path to the image , <b>alt</b> - defines an alternate text for the image, 
@@ -313,7 +327,7 @@
                 <b>&lt;/picture&gt; </b><br><hr>
 
         <h3 id="table">html tables</h3>
-        <a href="#" class="hyper">back to top</a><br><br>
+        <br><br>
         =>all the table content lie inside &lt;table&gt; tags.<br>
           the &lt;td&gt; tag defines a standard cell in an HTML table.<br>
           the &lt;th&gt; tag defines a header cell in an HTML table,basically it shows the cell content in bold.<br>
@@ -494,7 +508,7 @@
                 &lt;/table&gt;<br><br><hr>
   
             <h3 id="list">Html lists</h3>
-            <a href="#" class="hyper">back to top</a><br><br>
+            <br><br>
                 =>there are three types of lists in html.<br>
                 <ul>
                     <li>unordered list</li>
@@ -567,7 +581,7 @@
                 &lt;/dl&gt;<br><br><hr>
    
             <h3 id="iframe">Html iframe</h3>
-            <a href="#" class="hyper">back to top</a><br><br>
+            <br><br>
                 =>the <b>&lt;iframe&gt; tag is used to embed another webpage within the current HTML document.</b><br>
                 =>the <b>src</b> attribute of the <b>iframe</b> tag is used to define the source of the embedded webpage.<br>
                 =>the <b>width</b> and <b>height</b> attributes of the <b>iframe</b> tag are used to define the width and height of the embedded webpage.<br>
@@ -596,7 +610,7 @@
                 <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span><br><br><hr>
               
             <h3 id="entities">Html entities or symbols</h3>
-            <a href="#" class="hyper">back to top</a><br><br>
+            <br><br>
                 An HTML entity is a piece of text that begins with an ampersand (&) and ends with a
                 semicolon(;) and between is the hex code or entity name. These entities are used to display
                 the reserved characters. <br>Eg., these are some html entities with how they will look on browser:<br>
@@ -606,7 +620,7 @@
                 =>all other entity codes for different symbols can be found on google. :)<hr>
                 
             <h3 id="url">Html url(uniform resource locator)</h3>
-            <a href="#" class="hyper">back to top</a><br><br>
+            <br><br>
                 =>a url is a unique address of a resource on the internet.<br>
                 =>a url is made up of 3 parts - protocol, domain name and path.<br>
                 =>the protocol is the type of communication between the browser and the server.<br>
@@ -628,7 +642,7 @@
                 https://www.w3schools.com/ html/default.asp<br><hr>
        
             <h3 id="media">Html media</h3>
-            <a href="#" class="hyper">back to top</a><br><br>
+                <br><br>
                 =>media is used to embed audio, video, images, etc.<br>
                 =>the &lt;audio&gt; tag is used to embed audio and &lt;video&gt; tag is used to embed video.<br>
                 =>the <b>src</b> attribute is used to define the source of the audio or video<br>
@@ -649,7 +663,6 @@
                 &lt;iframe style= "width:70%; height:70vh;" src= "https://www.youtube.com/ embed/0L-D-k_0GGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;<br>
                 <iframe style="width:70%;height:70vh;" src="https://youtube.com/embed/0CiXpY_9des" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><hr>
             </div>
-            <a href="#" class="hyper">back to top</a>
             <div class="footer" id="bottom">
                 <p>&copy; 2021 All Rights Reserved.</p>
             </div>
