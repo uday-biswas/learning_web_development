@@ -27,7 +27,7 @@
 </head>
 
 <body>
-
+<header>
     <ul class="left">
         <li><a href="../learning_html/home_page.html">Home</a></li>
         <li id="current">Html</li>
@@ -39,9 +39,12 @@
         <li class="right"><a href="#bottom">Bottom</a></li>
         <li class="right"><a href="../learning_html/sign_up.html">Sign Up</a></li>
         <li class="right"><a href="../learning_html/login.html">Login</a></li>
-    </ul><br>
-    <div id="top"><a href="#"><img id="back" src="../images/back_to_top.png" alt="backtotop"></a></div>
-    <div><br>
+    </ul>
+</header>
+<div id="top"><a href="#"><img id="back" src="../images/back_to_top.png" alt="backtotop"></a></div>
+<main>
+    <h1>Welcome To ByteBenders</h1>
+    <nav>
     <h1>Contents</h1>
     <ul class="content">
         <li><a href="#tags" class="hyper">Html tags and attributes</a></li>
@@ -60,199 +63,217 @@
         <li><a href="#media" class="hyper">Html media</a></li>
         <li><a href="../learning_html/html_forms_learning.html" class="hyper" target="_blank">Html forms</a></li>
     </ul>
-    <h1 title="main header"><u> Html tutorial </u></h1>    <!-- title attribute can be used to provide additional information
-                                                                about the element on hover -->
-    => &lt;body&gt; &lt;/body&gt; contains all the things visible on the web page.
-    =>the user agent css style is : <br>
-    body {<br>
-        display: block;<br>
-        margin: 8px;<br>
-    }<br><hr>
+    </nav>
+    <section>
+        <p>
+            <h1 title="main header"> Html tutorial </h1>
+                => &lt;body&gt; &lt;/body&gt; contains all the things visible on the web page.
+                =>the user agent css style is : <br>
+                body {<br>
+                  display: block;<br>
+                  margin: 8px;<br>
+                }
+        </p>
+    </section>
 
-    <h3 id="tags">html tags and attributes</h3> 
-    <p>                   
-        =>The tag name can either start from an alphabet or an underscore( _ ).<br>
-        => Attributes can provide additional information about the HTML elements 
-             on your page and control their behaviour. <br>
-           Eg: <b> &lt;tag_name attribute_name="value"&gt; Content Enclosed &lt;/tag_name&gt; </b><br>
-        =>HTML tags are not case sensitive, &lt;p&gt; means the same as &lt;P&gt;
-    </p>  <hr>
+    <section>
+        <p>                   
+            <h3 id="tags">html tags and attributes</h3> 
+                =>The tag name can either start from an alphabet or an underscore( _ ).<br>
+                => Attributes can provide additional information about the HTML elements 
+                     on your page and control their behaviour. <br>
+                   Eg: <b> &lt;tag_name attribute_name="value"&gt; Content Enclosed &lt;/tag_name&gt; </b><br>
+                =>HTML tags are not case sensitive, &lt;p&gt; means the same as &lt;P&gt;
+        </p>
+    </section>
  
-    <h3 id="headings">html headings</h3>
-    <p>
-        =>there are 6 heading tags from <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> , the size and boldness of the text 
-        inside the header tags will go on decreasing as we go from h1 to h6.<br>
-        =>we can use this header tags multiple times in a single html file.<br>
-        =>the user agent css style is : <br>
-        h1 {<br>
-            display: block;<br>
-            font-size: 2em;<br>
-            margin-block-start: 0.67em;<br>
-            margin-block-end: 0.67em;<br>
-            margin-inline-start: 0px;<br>
-            margin-inline-end: 0px;<br>
-            font-weight: bold;<br>
-        }<br>
-        => eg. <b>&lt;h1&gt;</b> heading 1 <b>&lt;/h1&gt;</b>
-        <h1 style = "text-align:left"> heading 1</h1>
-        <h2 style= "text-align:left"> heading 2</h2>
-        <h3 style= "text-align:left">heading 3</h3>
-        <h4 style= "text-align:left">heading 4</h4>
-        <h5 style= "text-align:left">heading 5</h5>
-        <h6 style= "text-align:left">heading 6</h6>
-    </p><hr>
+    <section>
+        <p>
+           <h3 id="headings">html headings</h3>
+                =>there are 6 heading tags from <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> , the size and boldness of the text 
+                inside the header tags will go on decreasing as we go from h1 to h6.<br>
+                =>we can use this header tags multiple times in a single html file.<br>
+                =>the user agent css style is : <br>
+                h1 {<br>
+                    display: block;<br>
+                    font-size: 2em;<br>
+                    margin-block-start: 0.67em;<br>
+                    margin-block-end: 0.67em;<br>
+                    margin-inline-start: 0px;<br>
+                    margin-inline-end: 0px;<br>
+                    font-weight: bold;<br>
+                }<br>
+                => eg. <b>&lt;h1&gt;</b> heading 1 <b>&lt;/h1&gt;</b>
+                <h1>heading 1</h1>
+                <h2>heading 2</h2>
+                <h3>heading 3</h3>
+                <h4>heading 4</h4>
+                <h5>heading 5</h5>
+                <h6>heading 6</h6>
+        </p>
+    </section>
    
-    <h3 id="block">html blocks vs inline</h3>
-    <br><br>
-    =>Every HTML element has a default display value, depending on what type of element it is.<br>
-    =>There are two display values: block and inline.<br><hr>
-    =>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.<br>
-    =>A block-level element always takes up the full width available (stretches out to the left and right as far as it can).<br>
-    =>Two commonly used block elements are: &lt;p> and &lt;div>.<br>
-    the other block elements are: &lt;address>, &lt;article>, &lt;aside>, &lt;blockquote>, &lt;canvas>, &lt;dd>, &lt;div>, &lt;dl>, 
-    &lt;dt>, &lt;fieldset>, &lt;figcaption>, &lt;figure>, &lt;footer>, &lt;form>, &lt;h1> to &lt;h6>, &lt;header>, &lt;hr>, &lt;li>, 
-    &lt;main>, &lt;nav>, &lt;noscript>, &lt;ol>, &lt;output>, &lt;p>, &lt;pre>, &lt;section>, &lt;table>, &lt;tfoot>, &lt;ul>,
-     &lt;video>.<br><hr>
-    =>An inline element does not start on a new line, and it only takes up as much width as necessary.<br>
-    =>Two commonly used inline elements are: &lt;a> and &lt;span>.<br>
-    the other inline elements are: &lt;a>, &lt;abbr>, &lt;acronym>, &lt;b>, &lt;bdo>, &lt;big>, &lt;br>, &lt;button>, &lt;cite>,
-    &lt;code>, &lt;dfn>, &lt;em>, &lt;i>, &lt;img>, &lt;input>, &lt;kbd>, &lt;label>, &lt;map>, &lt;object>, &lt;q>, &lt;s>, &lt;samp>, 
-    &lt;select>, &lt;small>, &lt;span>, &lt;strong>, &lt;sub>, &lt;sup>, &lt;textarea>, &lt;time>, &lt;tt>, &lt;var>.<br><hr> 
-    => the contents inside <b>&lt;pre&gt;</b> and <b>&lt;/pre&gt;</b> tags are shown as it is, without any formatting.
-       usually it reserves the space and the line breaks.(it is not advised to use pre tag as it disturbs the responsiveness of the website.)<br>
-    the user agent css style is:
-        pre {<br>
-            display: block;<br>
-            font-family: monospace;<br>
-            white-space: pre;<br>
-            margin: 1em 0px;<br>
-        }<br><hr>
-    => the <b>&lt;br&gt;</b> tag is used to insert a single line break.<hr>
-    => the <b>&lt;hr&gt;</b> tag is used to insert a horizontal line below.
-    the user agent css style is: <br>
-    hr {<br>
-        display: block;<br>
-        unicode-bidi: isolate;<br>
-        margin-block-start: 0.5em;<br>
-        margin-block-end: 0.5em;<br>
-        margin-inline-start: auto;<br>
-        margin-inline-end: auto;<br>
-        overflow: hidden;<br>
-        border-style: inset;<br>
-        border-width: 1px;<br>
-    }<br><hr>
+    <section>
+        <p>
+            <h3 id="block">html blocks vs inline</h3>
+              =>Every HTML element has a default display value, depending on what type of element it is.<br>
+              =>There are two display values: block and inline.<br><br>
+            =>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.<br>
+            =>A block-level element always takes up the full width available (stretches out to the left and right as far as it can).<br>
+            =>Two commonly used block elements are: &lt;p> and &lt;div>.<br>
+            the other block elements are: &lt;address>, &lt;article>, &lt;aside>, &lt;blockquote>, &lt;canvas>, &lt;dd>, &lt;div>, &lt;dl>, 
+            &lt;dt>, &lt;fieldset>, &lt;figcaption>, &lt;figure>, &lt;footer>, &lt;form>, &lt;h1> to &lt;h6>, &lt;header>, &lt;hr>, &lt;li>, 
+            &lt;main>, &lt;nav>, &lt;noscript>, &lt;ol>, &lt;output>, &lt;p>, &lt;pre>, &lt;section>, &lt;table>, &lt;tfoot>, &lt;ul>,
+             &lt;video>.<br><br>
+            =>An inline element does not start on a new line, and it only takes up as much width as necessary.<br>
+            =>Two commonly used inline elements are: &lt;a> and &lt;span>.<br>
+            the other inline elements are: &lt;a>, &lt;abbr>, &lt;acronym>, &lt;b>, &lt;bdo>, &lt;big>, &lt;br>, &lt;button>, &lt;cite>,
+            &lt;code>, &lt;dfn>, &lt;em>, &lt;i>, &lt;img>, &lt;input>, &lt;kbd>, &lt;label>, &lt;map>, &lt;object>, &lt;q>, &lt;s>, &lt;samp>, 
+            &lt;select>, &lt;small>, &lt;span>, &lt;strong>, &lt;sub>, &lt;sup>, &lt;textarea>, &lt;time>, &lt;tt>, &lt;var>.<br><br> 
+            => the contents inside <b>&lt;pre&gt;</b> and <b>&lt;/pre&gt;</b> tags are shown as it is, without any formatting.
+               usually it reserves the space and the line breaks.(it is not advised to use pre tag as it disturbs the responsiveness of the website.)<br>
+            the user agent css style is:
+                pre {<br>
+                    display: block;<br>
+                    font-family: monospace;<br>
+                    white-space: pre;<br>
+                    margin: 1em 0px;<br>
+                }<br><br>
+            => the <b>&lt;br&gt;</b> tag is used to insert a single line break.<br><br>
+            => the <b>&lt;hr&gt;</b> tag is used to insert a horizontal line below.
+            the user agent css style is: <br>
+            hr {<br>
+                display: block;<br>
+                unicode-bidi: isolate;<br>
+                margin-block-start: 0.5em;<br>
+                margin-block-end: 0.5em;<br>
+                margin-inline-start: auto;<br>
+                margin-inline-end: auto;<br>
+                overflow: hidden;<br>
+                border-style: inset;<br>
+                border-width: 1px;<br>
+            }
+        </p>
+    </section>
     
-    <h3 id="class">Html class and id</h3>
-    <br><br>
-    =>Class<br>
-    The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript 
-    to access and manipulate elements with the specific class name.
-    The class attribute can be used on any HTML element, and each class can be used on multiple elements.<br>
-    eg. &lt;h2 class="city">Paris.&lt;/h2><br>
-    =>Id<br>
-    The id attribute specifies a unique id for an HTML element and we cannot have more than one element with the same id in an HTML document.<br>
-    The id attribute is most used to point to a specific style in a style sheet, and by JavaScript (via the HTML DOM) to manipulate the
-    specific element with the specific id.<br>
-    eg. &lt;h2 id="city">Paris.&lt;/h2><br><hr>
+    <section>
+        <p>
+            <h3 id="class">Html class and id</h3>
+            =>Class<br>
+            The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript 
+            to access and manipulate elements with the specific class name.
+            The class attribute can be used on any HTML element, and each class can be used on multiple elements.<br>
+            eg. &lt;h2 class="city">Paris.&lt;/h2><br>
+            =>Id<br>
+            The id attribute specifies a unique id for an HTML element and we cannot have more than one element with the same id in an HTML document.<br>
+            The id attribute is most used to point to a specific style in a style sheet, and by JavaScript (via the HTML DOM) to manipulate the
+            specific element with the specific id.<br>
+            eg. &lt;h2 id="city">Paris.&lt;/h2>
+        </p>
+    </section>
   
-    <h3 id="formatting">html text formatting</h3>
-    <br><br>
-    => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
-       -><abbr title="World Health Organisation">WHO</abbr> <br>
-    => the <b>&lt;address&gt;</b> tag is used to define the contact information of the author or owner of the document or article.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;address&gt; 123, abc street, xyz city, 123456 &lt;/address&gt;</b> 
-       -><address> 123, abc street, xyz city, 123456 </address> <br>
-    => the <b>&lt;b&gt; and &lt;strong&gt;</b> tags are used to make bold text.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;b&gt; bold or strong text &lt;/b&gt;</b> 
-       -><b> bold or strong text </b> <br>
-    => the <b>&lt;bdo&gt;</b> tag is used to insert a text with a different direction.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;bdo dir="rtl"&gt; text with a different direction &lt;/bdo&gt;</b> 
-       -><bdo dir="rtl"> text with a different direction </bdo> <br>
-    => the <b>&lt;blockquote&gt;</b> tag is used to insert a block of quoted text.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;blockquote&gt; quoted text &lt;/blockquote&gt;</b> 
-       -><blockquote> quoted text </blockquote> <br>
-    => the <b>&lt;cite&gt;</b> tag is used to insert a citation.<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;cite&gt; citation &lt;/cite&gt;</b> 
-       -><cite> citation </cite> <br>
-    => the <b>&lt;code&gt; , &lt;kbd&gt; , &lt;samp&gt; </b> tags are used to make a text look like written by typewritter.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;code&gt; this is the way &lt;/code&gt;</b> 
-        -><code> this is the way </code> <br>
-    => the <b>&lt;del&gt; and &lt;s&gt;</b> tags are used to make a deleted or strikethrough text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;del&gt; deleted or strikethrough text &lt;/del&gt;</b> 
-        -><del> deleted or strikethrough text </del> <br>
-    => the <b>&lt;dfn&gt;</b> tag is used to insert a definition.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;dfn&gt; definition &lt;/dfn&gt;</b> 
-        -><dfn> definition </dfn> <br>
-    => the <b>&lt;em&gt;</b> and <b>&lt;i&gt;</b> tag is used to insert emphasized or italic text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;em&gt; emphasized or italic text &lt;/em&gt;</b> 
-        -><em> emphasized or italic text </em> <br>
-    => the <b>&lt;ins&gt; and &lt;u&gt; </b> tags are used to insert a underlined or inserted text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;u&gt; underlined or inserted text &lt;/u&gt;</b> 
-        -><u> underlined or inserted text </u> <br>
-    => the <b>&lt;mark&gt;</b> tag is used to insert a marked text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;mark&gt; marked text &lt;/mark&gt;</b> 
-        -><mark> marked text </mark> <br>
-        => the <b>&lt;small&gt;</b> tag is used to make small sized text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;small&gt; small text &lt;/small&gt;</b> 
-        -><small> small text </small> <br>
-        => the <b>&lt;sub&gt;</b> tag is used to insert a subscript text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>(a + b)&lt;sub&gt; 2 &lt;/sub&gt;</b> 
-        ->(a + b)<sub>2</sub> <br>
-        => the <b>&lt;sup&gt;</b> tag is used to insert a superscript text.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>(a + b)&lt;sup&gt; 2 &lt;/sup&gt;</b> 
-        ->(a + b)<sup>2 </sup> <br>
-        => the <b>&lt;var&gt;</b> tag is used to insert a variable.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;var&gt; variable &lt;/var&gt;</b> 
-        -><var> variable </var> <br>
-        => the <b>&lt;wbr&gt;</b> tag is used to insert a possible line-break.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;wbr&gt; possible line-break &lt;/wbr&gt;</b> 
-        -><wbr> possible line-break </wbr> <hr>
+    <section>
+        <p>
+            <h3 id="formatting">html text formatting</h3>
+            => the <b>&lt;abbr&gt;</b> tag is used to insert an abbreviation.<br>
+               &emsp; eg. <b>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</b> 
+               -><abbr title="World Health Organisation">WHO</abbr> <br>
+            => the <b>&lt;address&gt;</b> tag is used to define the contact information of the author or owner of the document or article.<br>
+               &emsp; eg. <b>&lt;address&gt; 123, abc street, xyz city, 123456 &lt;/address&gt;</b> 
+               -><address> 123, abc street, xyz city, 123456 </address> <br>
+            => the <b>&lt;b&gt; and &lt;strong&gt;</b> tags are used to make bold text.<br>
+               &emsp; eg. <b>&lt;b&gt; bold or strong text &lt;/b&gt;</b> 
+               -><b> bold or strong text </b> <br>
+            => the <b>&lt;bdo&gt;</b> tag is used to insert a text with a different direction.<br>
+               &emsp; eg. <b>&lt;bdo dir="rtl"&gt; text with a different direction &lt;/bdo&gt;</b> 
+               -><bdo dir="rtl"> text with a different direction </bdo> <br>
+            => the <b>&lt;blockquote&gt;</b> tag is used to insert a block of quoted text.<br>
+               &emsp; eg. <b>&lt;blockquote&gt; quoted text &lt;/blockquote&gt;</b> 
+               -><blockquote> quoted text </blockquote> <br>
+            => the <b>&lt;cite&gt;</b> tag is used to insert a citation.<br>
+               &emsp; eg. <b>&lt;cite&gt; citation &lt;/cite&gt;</b> 
+               -><cite> citation </cite> <br>
+            => the <b>&lt;code&gt; , &lt;kbd&gt; , &lt;samp&gt; </b> tags are used to make a text look like written by typewritter.<br>
+                &emsp; eg. <b>&lt;code&gt; this is the way &lt;/code&gt;</b> 
+                -><code> this is the way </code> <br>
+            => the <b>&lt;del&gt; and &lt;s&gt;</b> tags are used to make a deleted or strikethrough text.<br>
+                &emsp; eg. <b>&lt;del&gt; deleted or strikethrough text &lt;/del&gt;</b> 
+                -><del> deleted or strikethrough text </del> <br>
+            => the <b>&lt;dfn&gt;</b> tag is used to insert a definition.<br>
+                &emsp; eg. <b>&lt;dfn&gt; definition &lt;/dfn&gt;</b> 
+                -><dfn> definition </dfn> <br>
+            => the <b>&lt;em&gt;</b> and <b>&lt;i&gt;</b> tag is used to insert emphasized or italic text.<br>
+                &emsp; eg. <b>&lt;em&gt; emphasized or italic text &lt;/em&gt;</b> 
+                -><em> emphasized or italic text </em> <br>
+            => the <b>&lt;ins&gt; and &lt;u&gt; </b> tags are used to insert a underlined or inserted text.<br>
+                &emsp; eg. <b>&lt;u&gt; underlined or inserted text &lt;/u&gt;</b> 
+                -><u> underlined or inserted text </u> <br>
+            => the <b>&lt;mark&gt;</b> tag is used to insert a marked text.<br>
+                &emsp; eg. <b>&lt;mark&gt; marked text &lt;/mark&gt;</b> 
+                -><mark> marked text </mark> <br>
+                => the <b>&lt;small&gt;</b> tag is used to make small sized text.<br>
+                &emsp; eg. <b>&lt;small&gt; small text &lt;/small&gt;</b> 
+                -><small> small text </small> <br>
+                => the <b>&lt;sub&gt;</b> tag is used to insert a subscript text.<br>
+                &emsp; eg. <b>(a + b)&lt;sub&gt; 2 &lt;/sub&gt;</b> 
+                ->(a + b)<sub>2</sub> <br>
+                => the <b>&lt;sup&gt;</b> tag is used to insert a superscript text.<br>
+                &emsp; eg. <b>(a + b)&lt;sup&gt; 2 &lt;/sup&gt;</b> 
+                ->(a + b)<sup>2 </sup> <br>
+                => the <b>&lt;var&gt;</b> tag is used to insert a variable.<br>
+                &emsp; eg. <b>&lt;var&gt; variable &lt;/var&gt;</b> 
+                -><var> variable </var> <br>
+        </p>
+    </section>
         
-        <h3 id="quote">html quotation</h3>
-        <br><br>
-        => the <b>&lt;q&gt;</b> tag is used to insert the content inside short quotation.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
-            -><q> short quotation </q> <hr>
-        => The HTML <b>&lt;blockquote&gt;</b> element defines a section that is quoted from another source.<br>
-           Example
-                <br>Here is a quote from WWF's website:<br>
-                <b>&lt;blockquote&gt;</b> cite="http://www.worldwildlife.org /who/index.html">
-                For 60 years, WWF has worked to help people and nature thrive. 
-                As the world's leading conservation organization, WWF works in nearly 100 countries. 
-                At every level, we collaborate with people around the world to develop and deliver innovative 
-                solutions that protect communities, wildlife, and the places in which they live.
-                <br><b>&lt;/blockquote&gt;</b><hr>
+    <section>
+        <p>
+            <h3 id="quote">html quotation</h3>
+            => the <b>&lt;q&gt;</b> tag is used to insert the content inside short quotation.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;q&gt; short quotation &lt;/q&gt;</b> 
+                -><q> short quotation </q> <br><br>
+            => The HTML <b>&lt;blockquote&gt;</b> element defines a section that is quoted from another source.<br>
+               Example
+                    <br>Here is a quote from WWF's website:<br>
+                    <b>&lt;blockquote&gt;</b> cite="http://www.worldwildlife.org /who/index.html">
+                    For 60 years, WWF has worked to help people and nature thrive. 
+                    As the world's leading conservation organization, WWF works in nearly 100 countries. 
+                    At every level, we collaborate with people around the world to develop and deliver innovative 
+                    solutions that protect communities, wildlife, and the places in which they live.
+                    <br><b>&lt;/blockquote&gt;</b>
+        </p>
+    </section>
 
+    <section>
         <h3 id="link">html links</h3>
-        <br><br>
-        <span class="links">=> the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. <b>&lt;a href="http://www.google.com"&gt; google &lt;/a&gt;</b> 
-                -><a href="http://www.google.com"> google </a> <hr>
+        <p>
+        => the <b>&lt;a&gt;</b> tag is used to insert a link.<br>
+                &emsp; eg. <b>&lt;a href="http://www.google.com"&gt; google &lt;/a&gt;</b> 
+                -><a href="http://www.google.com"> google </a> <br><br>
         => By default, links will appear as follows in all browsers:<br>
              >An unvisited link is underlined and blue<br>
              >A visited link is underlined and purple<br>
-             >An active link is underlined and red<br><hr>
+             >An active link is underlined and red<br><br>
         => By default, the linked page will be displayed in the current browser window.<br>
              Use the attribute "target" to open the linked document in a new browser window or tab:<br>
              Example: <b>&lt;a href= "https:// www.w3schools.com/" target="_blank"&gt;</b>Visit W3Schools!<b>&lt;/a&gt;</b> ->
-                <a href="https://www.w3schools.com/" target="_blank">Visit-W3Schools!</a><hr> 
+                <a rel="noopener" href="https://www.w3schools.com/" target="_blank">Visit-W3Schools!</a><br><br> 
         => The files other than html will be downloaded automatically when the link is clicked except images,for that we have to add the attribute download.<br>
             Example: <b>&lt;a href="../images/icons8-gunter-100.png" download="penguin_photo"&gt;</b>Download Image<b>&lt;/a&gt;</b> ->
-            <a href="../images/icons8-gunter-100.png" download="penguin_photo">Download Image</a><hr>  
+            <a href="../images/icons8-gunter-100.png" download="penguin_photo">Download Image</a><br><br>  
         => to use image as link , we just have to put the img tag inside the <b>&lt;a&gt;</b> tag.<br>
             <b>&lt;a href= "../learning_html/ login_page.html">
             &lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style= "width:42px; height:42px;"&gt;
             &lt;/a&gt;</b> &rAarr;
             <a href="../learning_html/login_page.html">
-            <img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" style="width:40px;height:40px;">
-            </a><hr>    
+            <img src="../images/icons8-gunter-100.png" alt="penguin photo" target="_blank" id="links">
+            </a><br><br>    
         =>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
          <br>Example: <b>&lt;a href = "mailto:udaybiswas official@gmail.com"&gt;</b> Send-email-to-us <b>&lt;/a&gt;</b>  
-            -><a href="mailto:udaybiswasofficial@gmail.com">Send-email-to-us. </a><hr>
+            -><a href="mailto:udaybiswasofficial@gmail.com">Send-email-to-us. </a><br><br>
         =>Use tel: inside the href attribute to create a link that opens the user's call program (to let them call):
          <br>Example: <b>&lt;a href = "tel:9938291832"&gt;</b> call-us <b>&lt;/a&gt;</b>  
-            -><a href="tel:9938291832">call-us</a><hr>  
+            -><a href="tel:9938291832">call-us</a><br><br>  
         => if the page is too long , then to access different parts of the page :<br>
             First, use the id attribute to create a bookmark:<br>
             <b>&lt;h3 id="quote"&gt;html quotation&lt;/h3&gt;</b><br>
@@ -260,33 +281,34 @@
             Example : <b>&lt;a href="#quote"&gt;html quotation&lt;/a&gt;</b> -> <a href="#quote">html quotation</a><br>
             You can also add a link to a bookmark on another page:
             <br>&lt;a href="static_page.html#bold1"&gt; players list &lt;/a&gt;
-             -> <a href="static_page.html#bold1">players list</a> <hr>
+             -> <a href="static_page.html#bold1">players list</a> <br><br>
         => the <b>&lt;link&gt;</b> tag is used to link external files.<br>
             eg. <b>&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</b> // here link tag is used to link with the external css file<br> 
-            eg. <b>&lt;link rel="icon" type="image/icon" href="../image/favicon.jpg"&gt;</b> //here link tag is used to add the favicon to the webpage<hr>    
-        => the <b>&lt;nav&gt;</b> tag is used to define navigation links.<br>
-            eg. <b>&lt;nav&gt; navigation links &lt;/nav&gt;</b> 
-            -><nav> navigation links </nav> <hr></span>
+            eg. <b>&lt;link rel="icon" type="image/icon" href="../image/favicon.jpg"&gt;</b> //here link tag is used to add the favicon to the webpage<br><br>    
+        => the <b>&lt;nav&gt;</b> tag is used to define navigation links.
+        </p>
+    </section>
      
-       <h3 id="image">html images</h3>
-       <br><br>
-        => The HTML <img> tag is used to embed an image in a web page.<br>
-           the essential attributes of the <img> tag are: src, alt, float, height and width.<br>
+    <section>
+        <p>
+        <h3 id="image">html images</h3>
+        => The HTML &lt;img&gt; tag is used to embed an image in a web page.<br>
+           the essential attributes of the &lt;img&gt; tag are: src, alt, float, height and width.<br>
            <b>src</b> - defines the path to the image , <b>alt</b> - defines an alternate text for the image, 
            and the css style attribute is used to define the float, width and height of an image.<br>
            the width is given in percentage and the height is given in pixels to get the the best result.<br>
            Example : <b>&lt;img src="../images/icons8-gunter-100.png" alt="penguin photo" style= "float:right; width:42px; height:42px;"&gt;</b>
            <img src="../images/icons8-gunter-100.png" alt="penguin photo" style="float:right; width:42px;height:42px;"><br><br><br><br>
-           <img src="../images/peakpx.jpg" style="width:45%;height:250px">
-           <img src="../images/victory.jpg" style="width:45%;height:250px"><br><br>
+           <img src="../images/peakpx.jpg" alt="peakpx" style="width:45%;height:250px">
+           <img src="../images/victory.jpg" alt="victory" style="width:45%;height:250px"><br><br>
         => The html tag &lt;figure&gt; is used to provide a semantic container for figures, and to clearly link the figure to the caption.
               <br>Example : <b>&lt;figure&gt; &lt;img src="../images/peakpx.jpg" style="width:45%;height:250px"&gt;
               &lt;figcaption&gt; peakpx &lt;/figcaption&gt; &lt;/figure&gt;</b>
-              <figure> <img src="../images/peakpx.jpg" style="width:45%;height:250px">
+              <figure> <img src="../images/peakpx.jpg" alt="peakpx" style="width:45%;height:250px">
               <figcaption> peakpx </figcaption> </figure>
         <h4 style="text-align:left">html image maps</h4>
         <div style="overflow-x:auto;">
-      <img src="../images/workplace.jpg" usemap="#image-map"  style="float:left;margin-right:5px;">
+      <img src="../images/workplace.jpg" alt="workplace" usemap="#image-map"  style="float:left;margin-right:5px;">
         <map name="image-map">
         <area rel="noopener" target="_blank" alt="tea-cup" href="https://www.cup.com/" coords="337,302,46" shape="circle">
         <area rel="noopener" target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect">
@@ -311,7 +333,7 @@
                 &lt;area target="_blank" alt="laptop" title="hp laptops" href="https://www.hp.com/" coords="31,40,274,348" shape="rect"&gt;<br>
                 &lt;area target="_blank" alt="mobile" href="https://www.samsung.com/" coords= "289,172, 327,172, 334,245, 293,244" shape="poly"&gt;<br>
                 &lt;area target="_blank" alt="checking default" href="https://www.hello.com/" shape="default"&gt;<br>
-                &lt;/map&gt;</b><br><br><br><hr>
+                &lt;/map&gt;</b><br><br>
         
             <h4 style="text-align:left">html picture</h4>
             <picture style="float:left;margin-right:5px;">
@@ -335,10 +357,13 @@
                    &lt;source srcset="../images/peakpx.jpg" media="(min-width: 900px)"&gt; </b> //device-width &gt; 900px<br>
                    <b>&lt;source srcset="../images/victory.jpg" media="(min-width: 600px)"&gt; </b> //600px &lt; device-width &lt; 900px <br>
                    <b>&lt;img src="../images/workplace.jpg" alt="workplace" style= "width:100%; height:200px;" &gt; </b> //0px&lt; device-width &lt;600px <br>
-                <b>&lt;/picture&gt; </b><br><hr>
+                <b>&lt;/picture&gt; </b>
+        </p>
+    </section>
 
+    <section>
         <h3 id="table">html tables</h3>
-        <br><br>
+        <p>
         =>all the table content lie inside &lt;table&gt; tags.<br>
           the &lt;td&gt; tag defines a standard cell in an HTML table.<br>
           the &lt;th&gt; tag defines a header cell in an HTML table,basically it shows the cell content in bold.<br>
@@ -516,16 +541,19 @@
                     &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;<br>
                     &lt;tr&gt;&lt;th&gt;1.&lt;/th&gt;&lt;td&gt;Suresh&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;<br>
                     &lt;tr&gt;&lt;td&gt;2.&lt;/td&gt;&lt;td&gt;Mukesh&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;<br>
-                &lt;/table&gt;<br><br><hr>
+                &lt;/table&gt;
+        </p>
+    </section>
   
+    <section>
+        <p>
             <h3 id="list">Html lists</h3>
-            <br><br>
                 =>there are three types of lists in html.<br>
                 <ul>
                     <li>unordered list</li>
                     <li>ordered list</li>
                     <li>definition list</li>
-                </ul><hr>
+                </ul>
                 =>the <b>&lt;ul&gt; tag is used to represent unordered list.</b>
                 and the <b>li</b> tag is used to represent list item, and li tag is written inside ul tag.<br>
                 The CSS "list-style-type" property is used to define the style of the list item marker. It can have one of the following values:<br>
@@ -553,7 +581,7 @@
                     <li class="right"><a href="login">login</a></li>
                     <li class="right"><a href="signup">signup</a></li>
                     <li class="right"><a href="logout">logout</a></li>
-                </ul><br><hr>
+                </ul><br><br>
 
                 =>the <b>&lt;ol&gt; tag is used to represent ordered list.</b>
                 and the <b>li</b> tag is used to represent list item.<br>
@@ -571,7 +599,7 @@
                     &lt;li&gt;item 1&lt;/li&gt;<br>
                     &lt;li&gt;item 2&lt;/li&gt;<br>
                     &lt;li&gt;item 3&lt;/li&gt;<br>
-                &lt;/ol&gt;<br><br><hr>
+                &lt;/ol&gt;<br><br>
                 =>the <b>&lt;dl&gt; tag is used to represent definition list.</b>
                 and the <b>dt</b> tag is used to represent definition term and <b>dd</b> tag is used to represent definition description.<br>
                 <dl>
@@ -589,10 +617,13 @@
                     &lt;dd&gt;item 2 description&lt;/dd&gt;<br>
                     &lt;dt&gt;item 3&lt;/dt&gt;<br>
                     &lt;dd&gt;item 3 description&lt;/dd&gt;<br>
-                &lt;/dl&gt;<br><br><hr>
+                &lt;/dl&gt;
+        </p>
+    </section>
    
+    <section>
+        <p>
             <h3 id="iframe">Html iframe</h3>
-            <br><br>
                 =>the <b>&lt;iframe&gt; tag is used to embed another webpage within the current HTML document.</b><br>
                 =>the <b>src</b> attribute of the <b>iframe</b> tag is used to define the source of the embedded webpage.<br>
                 =>the <b>width</b> and <b>height</b> attributes of the <b>iframe</b> tag are used to define the width and height of the embedded webpage.<br>
@@ -618,20 +649,26 @@
                 &lt;span&gt;&lt;a href="https://www.google.com/ webhp?igu=1" target="iframe_"&gt;click here to open google in iframe&lt;/a&gt;&lt;/span&gt;<br><br><hr>
                 <iframe src="static_page.html" width="70%" height="500px" name="iframe_">your browser doesnt support iframe.</iframe>
                 <br><br>
-                <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span><br><br><hr>
+                <span><a href="https://www.google.com/webhp?igu=1" target="iframe_" >click here to open google in iframe</a></span>
+        </p>
+    </section>
               
+    <section>
+        <p>
             <h3 id="entities">Html entities or symbols</h3>
-            <br><br>
                 An HTML entity is a piece of text that begins with an ampersand (&) and ends with a
                 semicolon(;) and between is the hex code or entity name. These entities are used to display
                 the reserved characters. <br>Eg., these are some html entities with how they will look on browser:<br>
                 ● some useful character entities - &#38;nbsp;(single space), &#38;lt;(&lt;), &#38;gt;(>), &#38;apos;('), &#38;copy;(&copy;)<br>
                 ● mathematical symbols - &#38;forall;(&forall;) , &#38;sum;(∑), &#38;prod;(∏), &#38;infin;(∞), &#38;int;(∫)<br>
                 ● some other entities - &#38;larr;(←), &#38;hearts;(♥), &#38;trade;(™)<br>
-                =>all other entity codes for different symbols can be found on google. :)<hr>
-                
+                =>all other entity codes for different symbols can be found on google. :)
+        </p>
+    </section>
+
+    <section>
+        <p>
             <h3 id="url">Html url(uniform resource locator)</h3>
-            <br><br>
                 =>a url is a unique address of a resource on the internet.<br>
                 =>a url is made up of 3 parts - protocol, domain name and path.<br>
                 =>the protocol is the type of communication between the browser and the server.<br>
@@ -650,10 +687,13 @@
                 path - defines a path at the server (If omitted: the root directory of the site)<br>
                 filename - defines the name of a document or resource<br><br>
                 Example:<br>
-                https://www.w3schools.com/ html/default.asp<br><hr>
-       
+                https://www.w3schools.com/ html/default.asp
+        </p>
+    </section>
+
+    <section>
+        <p>
             <h3 id="media">Html media</h3>
-                <br><br>
                 =>media is used to embed audio, video, images, etc.<br>
                 =>the &lt;audio&gt; tag is used to embed audio and &lt;video&gt; tag is used to embed video.<br>
                 =>the <b>src</b> attribute is used to define the source of the audio or video<br>
@@ -667,15 +707,17 @@
                 &lt;audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" autoplay controls loop preload="auto" poster="poster.jpg" style="width:40%;"&gt;&lt;/audio&gt;&lt;br&gt;<br>
                 &lt;video src="../video/29. Favicon and Meta Tags.mp4" autoplay controls loop preload="auto" poster="poster.jpg" style="width:40%;"&gt;&lt;/video&gt;&lt;br&gt;&lt;hr&gt;<br><br>
                 <audio src="../audio/02 Banjaara - Ek Villain ( PagalWorld.com ).mp3" controls preload="auto" style="width:70%;"></audio><br>
-                <video src="../video/29. Favicon and Meta Tags.mp4" controls loop poster="../images/workplace.jpg" style="width:70%;height:300px;"></video><br><hr>
+                <video src="../video/29. Favicon and Meta Tags.mp4" controls loop poster="../images/workplace.jpg" style="width:70%;height:300px;"></video><br><br>
                 <b>embedding youtube videos.</b><br>
                 we can use the &lt;iframe&gt; tag to embed youtube videos.<br>
                 Example:<br>
                 &lt;iframe style= "width:70%; height:70vh;" src= "https://www.youtube.com/ embed/0L-D-k_0GGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;<br>
-                <iframe style="width:70%;height:70vh;" src="https://youtube.com/embed/0CiXpY_9des" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><hr>
-            </div>
-            <div class="footer" id="bottom">
-                <p>&copy; 2021 All Rights Reserved.</p>
-            </div>
+                <iframe style="width:70%;height:70vh;" src="https://youtube.com/embed/0CiXpY_9des" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+    </section>
+</main>
+<footer id="bottom">
+    <p>&copy; 2021 All Rights Reserved.</p>
+</footer>
 </body>
 </html>

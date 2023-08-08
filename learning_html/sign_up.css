@@ -4,3 +4,23 @@ body{
     margin:0px;
     font-family:Arial, Helvetica, sans-serif;
 }
+#forms{
+    width: 70%;
+    margin: auto;
+}
+#forms fieldset table{
+    margin: auto;
+}
+fieldset{
+    margin-bottom: 20px;
+}
+#middle{
+    text-align: center;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.281);
+    color: rgba(240, 248, 255, 0.973);
+    text-align: center;
+    padding: 5px;
+    margin-top: 50px;
+}
