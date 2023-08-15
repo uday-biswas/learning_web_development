@@ -1,17 +1,8 @@
-section::after{
-    content: "";
-    display: block;
-    height: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.493);
-}
-a#signup{
-    float:right;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid rgba(17, 2, 2, 0.76);
-    background-color: rgba(223, 46, 15, 0.774);
-    color: rgba(240, 248, 255, 0.973);
-    border-radius: 4px;
+body{
+    color: #ebe1e1c0;
+    margin:0px;
+    padding-left: 4px;
+    background-image : url("../images/star.jpg");
 }
 a{
         text-decoration: none;
@@ -21,14 +12,16 @@ a{
         border: 1px solid rgba(20, 5, 5, 0.719);
         border-radius: 3px;
 }
-body{
-    color: #ebe1e1c0;
-    margin:0px;
-    padding-left: 4px;
-    background-image : url("../images/star.jpg");
+a#signup{
+    float:right;
+    margin: 10px;
+    padding: 6px;
 }
-div{
-    margin-left: 7px;
+section::after{
+    content: "";
+    display: block;
+    height: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.493);
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: "Times New Roman", Times, serif;
@@ -36,12 +29,6 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
     color: #f8eeeeea;
 
-}
-h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover{
-    color: #f07c10c0;
-}
-hr{
-    color: rgba(201, 181, 181, 0.479);
 }
 .long{
     float:left;
@@ -56,5 +43,6 @@ footer{
     padding: 5px;
 }
 li, li ul li, li ul{
-    margin: 10px;
+    margin: 6px;
+    border: 1px solid black;
 }
