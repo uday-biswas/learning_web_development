@@ -43,6 +43,5 @@ footer{
     padding: 5px;
 }
 li, li ul li, li ul{
-    margin: 6px;
-    border: 1px solid black;
+    margin: 8px;
 }
