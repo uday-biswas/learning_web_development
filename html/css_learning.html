@@ -5,23 +5,440 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Tutorial</title>
     <link rel="icon" type="image/icon" href="../images/icons8-gunter-100.png">
-    <link rel="stylesheet" type="text/css" href="../learning_html/css_learning.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_learning.css">
 </head>
 <body>
+    <header>
     <ul class="left">
-        <li><a href="../learning_html/home_page.html">Home</a></li>
-        <li><a href="../learning_html/html_learning.html">Html</a></li>
+        <li><a href="../html/home_page.html">Home</a></li>
+        <li><a href="../html/html_learning.html">Html</a></li>
         <li id="current">Css</li>
         <li>JavaScript</li>
         <li>React</li>
         <li>backend</li>
         <li>About Us</li>
         <li class="right"><a href="#bottom">Bottom</a></li>
-        <li class="right"><a href="../learning_html/sign_up.html">Sign Up</a></li>
-        <li class="right"><a href="../learning_html/login.html">Login</a></li>
-    </ul><br>
+        <li class="right"><a href="../html/sign_up.html">Sign Up</a></li>
+        <li class="right"><a href="../html/login.html">Login</a></li>
+    </ul>
+    </header>
+    
+    <div id="top"><a href="#"><img id="back" src="../images/back_to_top.png" alt="backtotop"></a></div>
 
-    <h1>Welcome to ByteBenders!!</h1>
-    <h2><u>Css tutorials</u></h2>
+    <main>
+        <h1>Welcome to ByteBenders!!</h1>
+        <nav>
+        <h1>Contents</h1>
+        <ul class="content">
+
+        </ul>
+        </nav>
+    
+        <section>
+        <h3>Css Tutorials</h3>
+        <p>
+            Cascading style sheets(css) is used to format the Html of the website to make it beautiful and attractive.
+        </p>
+        </section>
+    
+        <section>
+            <h3>Adding Css To HTML Page</h3>
+            <p>
+                There are three ways to add css to html page.
+                <ul>
+                    <li>Inline Css</li>
+                    <li>Internal Css</li>
+                    <li>External Css</li>
+                </ul>
+                Cascading order defines which style will be applied to element 
+                when multiple styles are used.<br> 
+                Cascading order priority: Inline > ( internal == external ) > browser default. <br><br> 
+                The internal and external CSS are treated equally by the browser. But the order of their
+                definition decides which one's property will get preference. <br>
+                If link to external CSS is defined before the internal CSS, then properties of internal CSS will
+                get the preference, i.e internal CSS > external CSS. <br>
+                If link to external CSS is defined after the internal CSS, then properties of external CSS will get
+                preference over internal CSS, i.e. external CSS > internal CSS. <br>
+                <dl>
+                    <dt>=> Inline styles</dt>
+                    <dd>
+                        Inline styles are used using the style <b>attribute</b> along with the element tag.
+                        Example: <br> 
+                        <div class="code">&lt;p style="color: red;"&gt;Inline Css&lt;/p&gt;</div>
+                    </dd>
+                    <dt>=> Internal styles</dt>
+                    <dd>
+                        Internal styles are used using the style <b>element</b> in the head section of the html page.
+                        Example: <br> 
+                        <div class="code">
+                            &lt;style&gt; <br>
+                                p { color: red; } <br>
+                            &lt;/style&gt; <br>
+                        </div>
+                    </dd>
+                    <dt>=> External styles</dt>
+                    <dd>
+                        External styles are applied using a complete different CSS file.
+                        To use external stylesheet, a link tag is used in the head section of the html page. <br>
+                        <div class="code">
+                            &lt;link rel="stylesheet" href="style.css" type="text/css"&gt; <br>
+                        </div>
+                        The <b>rel</b> attribute defines the relationship between the html page and the linked file. <br>
+                        The <b>href</b> attribute defines the path of the linked file. <br>
+                        The <b>type</b> attribute defines the type of the linked file. <br>
+                </dl>
+            </p>
+        </section>
+
+        <section>
+            <h3>Css Selectors</h3>
+            <p>
+                There are mainly three types of selectors in css.
+                <ul>
+                    <li>Element Selector</li>
+                    <li>Class Selector</li>
+                    <li>Id Selector</li>
+                </ul>
+                <dl>
+                    <dt>=> Element Selector</dt>
+                    <dd>
+                        Element selector is used to select all the elements of the same type.
+                        Example: <br> 
+                        <div class="code">
+                            p { color: red; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> Class Selector</dt>
+                    <dd>
+                        Class selector is used to select all the elements of the same class.
+                        we just have to write a dot(.) before the class name.
+                        Example: <br>
+                        <div class="code">
+                            for html element: &lt;p class="red"&gt;Class Selector&lt;/p&gt; <br>
+                            appying css like this : .red { color: red; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> Id Selector</dt>
+                    <dd>
+                        Id selector is used to select a single element of the same id.
+                        we have to write a hash(#) before the id name. There could be only one 
+                        id in the tag, and the id is unique in the html page.
+                        Example: <br> 
+                        <div class="code">
+                            for html element: &lt;p id="red"&gt;Id Selector&lt;/p&gt; <br>
+                            appying css like this : #red { color: red; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> Grouping Selectors</dt>
+                    <dd>
+                        Grouping selectors are used to apply same css to multiple selectors.
+                        we have to write a comma(,) between the selectors.
+                        Example: <br>
+                        <div class="code">
+                            p, .red, #code { color: red; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> Nesting Selectors</dt>
+                    <dd>
+                        Nesting selectors are used to apply css to the child elements of a parent element.
+                        we have to write a space( ) between the selectors, such that the sequence reperesents a hierarchy, startin from the top.
+                        Example: <br>
+                        <div class="code">
+                            p .red { color: red; } <br>  
+                        </div>
+                        we can refer to the direct child element of a parent element by using the greater than sign(>) between the selectors.
+                        Example: <br>
+                        <div class="code">
+                            p > .red { color: red; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> chaining selectors</dt>
+                    <dd>
+                        chaining selectors are used to apply css to the element tags having a specific class or id.
+                        only the element tags having the specific class or id will be selected.
+                        Example: <br>
+                        <div class="code">
+                            p.red { color: red; } <br>
+                            p#code { font-family: 'Lucida Console' } <br>
+                        </div>
+                    </dd>
+                </dl>
+            </p>
+        </section>
+
+        <section>
+            <h3>CSS Background</h3>
+            <p>
+                The background properties are used to set the background effects of an element.
+                <dl>
+                    <dt>=> background-color</dt>
+                    <dd>
+                        The background-color property is used to set the background color of an element.
+                        Example: <br>
+                        <div class="code">
+                            p { background-color: red; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> background-image</dt>
+                    <dd>
+                        The background-image property is used to set the background image of an element.
+                        by default , a background image is placed at the top left corner of an element, and is 
+                        repeated both vertically and horizontally. <br>
+                        The values that it can take are: <br>
+                        <ul>
+                            <li>
+                                <b>url(uniform resource link)</b> - specifies the url of the image. we can specify more than one image by separating them with a comma(,).
+                                Example: <br>
+                                <div class="code">
+                                    p { background-image: url('image.jpg'); } <br>
+                                </div>
+                            </li>
+                            <li>
+                                <b>linear-gradient</b> - sets a linear gradient as the background image. at least two colors needed to be mentioned. 
+                                the direction of the gradient can be specified by mentioning the angle in degrees or by mentioning the direction as to right top, to right bottom, to left top, to left bottom.
+                                Example: <br>
+                                <div class="code">
+                                    p { background-image: linear-gradient(to right, red, blue); } <br>
+                                </div>
+                            </li>
+                            <li>
+                                <b>radial-gradient</b> - sets a radial gradient as the background image. at least two colors needed to be mentioned.
+                                Example: <br>
+                                <div class="code">
+                                    p { background-image: radial-gradient(red, blue); } <br>
+                                </div>
+                            </li>
+                            <li>
+                                <b>repeating-linear-gradient</b> - sets a repeating linear gradient as the background image. at least two colors needed to be mentioned.
+                                Example: <br>
+                                <div class="code">
+                                    p { background-image: repeating-linear-gradient(red, blue); } <br>
+                                </div>
+                            </li>
+                            <li>
+                                <b>repeating-radial-gradient</b> - sets a repeating radial gradient as the background image. at least two colors needed to be mentioned.
+                                Example: <br>
+                                <div class="code">
+                                    p { background-image: repeating-radial-gradient(red, blue); } <br>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt>=> background-repeat</dt>
+                    <dd>
+                        The background-repeat property is used to set the background image repeatation of an element.
+                        Example: <br>
+                        <div class="code">
+                            p { background-repeat: repeat-x; } <br>
+                        </div>
+                        The background-repeat property can have following values: <br>
+                        <ul>
+                            <li>
+                                repeat - the background image will be repeated both horizontally and vertically, this is default.
+                            </li>
+                            <li>
+                                repeat-x - the background image will be repeated horizontally.
+                            </li>
+                            <li>
+                                repeat-y - the background image will be repeated vertically.
+                            </li>
+                            <li>
+                                no-repeat - the background image will not be repeated.
+                            </li>
+                            <li>
+                                round - the image is repeated and shrink or stretched to fit the element.
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt>=> background-position</dt>
+                    <dd>
+                        The background-position property is used to set the background image position of an element.
+                        by default , the image is placed at the top left corner of an element.
+                        the value can be of the form 'x y'. x represents the horizontal position and y represents the vertical position.
+                        it can take values in pixels(px), percentages(%), or keywords like left, right, top, bottom, center.
+                        Example: <br>
+                        <div class="code">
+                            p { background-position: left top; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> background-attachment</dt>
+                    <dd>
+                        The background-attachment property is used to specify whether a background image should scroll or be fixed.
+                        Example: <br>
+                        <div class="code">
+                            p { background-attachment: fixed; } <br>
+                        </div>
+                        The background-attachment property can have following values: <br>
+                        <ul>
+                            <li>scroll - this is default value. it will scroll with page.</li>
+                            <li>fixed - the background image will not scroll with the page.</li>
+                            <li>local - the background image will with the element's contents.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> background-size</dt>
+                    <dd>
+                        The background-size property is used to specify the size of the background image.
+                        Example: <br>
+                        <div class="code">
+                            p { background-size: 100px 100px; } <br>
+                        </div>
+                        it can take values in pixels(px), percentages(%), or keywords like cover, contain, auto.
+                        <ul>
+                            <li>auto - this is default value. the background image will be displayed in its original size.</li>
+                            <li>length or percentage - the first value is width and second value is height.</li>
+                            <li>cover - the background image will be resized to cover the entire width of the element.</li>
+                            <li>contain - the background image will be resized to fit the entire element.</li>
+                        </ul>
+                </dl>
+            </p>
+        </section>
+
+        <section>
+            <h3>Css Units</h3>
+            <p>
+                There are two types of units in css: <br>
+                <ul>
+                    <li>
+                        <b>Absolute Units</b> - these units are fixed and do not change with the size of the browser window. <br>
+                        <ul>
+                            <li>px - pixels</li>
+                            <li>cm - centimeters</li>
+                            <li>mm - millimeters</li>
+                            <li>in - inches</li>
+                            <li>pt - points</li>
+                            <li>pc - picas</li>
+                        </ul><br>
+                    </li>
+                    <li>
+                        <b>Relative Units</b> - these units are relative to other length units. <br>
+                        <ul>
+                            <li>% - relative to parent element.</li>
+                            <li>em - relative to the font-size of the element</li>
+                            <li>rem - relative to font-size of the root element</li>
+                            <li>vw - relative to 1% of the width of the viewport</li>
+                            <li>vh - relative to 1% of the height of the viewport</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+        </section>
+
+        <section>
+            <h3>CSS Border</h3>
+            <p>
+                The CSS border properties allow you to specify the style, width, and color of an element's border. <br>
+                border is shorthand property for border-width, border-style, and border-color. <br>
+                Example: <br>
+                <div class="code">
+                    p { border: 1px solid black; } <br>
+                </div>
+                The different properties of border are: <br>
+                <dl>
+                    <dt>=> border-style</dt>
+                    <dd>
+                        The border-style property is used to specify the style of the border. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { border-style: solid; } <br>
+                        </div>
+                        The border-style property can have following values: <br>
+                        <ul>
+                            <li>none - no border</li>
+                            <li>hidden - same as none, but takes space</li>
+                            <li>dotted - a dotted border</li>
+                            <li>dashed - a dashed border</li>
+                            <li>solid - a solid border</li>
+                            <li>double - a double border</li>
+                            <li>groove - a 3D grooved border. The effect depends on the border-color value</li>
+                            <li>ridge - a 3D ridged border. The effect depends on the border-color value</li>
+                            <li>inset - a 3D inset border. The effect depends on the border-color value</li>
+                            <li>outset - a 3D outset border. The effect depends on the border-color value</li>
+                            <li>inherit - inherits this property from its parent element.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> border-width</dt>
+                    <dd>
+                        The border-width property is used to specify the width of the border. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { border-width: 5px; } <br>
+                        </div>
+                        The border-width property can have following values: <br>
+                        <ul>
+                            <li>thin - a thin border</li>
+                            <li>medium - a medium border</li>
+                            <li>thick - a thick border</li>
+                            <li>length - specifies the width in px, pt, cm, etc.</li>
+                            <li>initial - sets this property to its default value.</li>
+                            <li>inherit - inherits this property from its parent element.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> border-color</dt>
+                    <dd>
+                        The border-color property is used to specify the color of the border. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { border-color: red; } <br>
+                        </div>
+                        we can provide different colors to different sides of border. <br>
+                        Example: <br>   
+                        <div class="code">
+                            p { border-color: red green blue yellow; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> border individual sides</dt>
+                    <dd>
+                        we can also provide different border to different sides of an element. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { border-top: 1px solid black; } <br>
+                            p { border-bottom: 1px solid black; } <br>
+                            p { border-left: 1px solid black; } <br>
+                            p { border-right: 1px solid black; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> border-radius</dt>
+                    <dd>
+                        The border-radius property is used to add rounded borders to an element. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { border-radius: 5px; } <br>
+                        </div>
+                        we can also provide different radius to different sides of an element. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { border-top-left-radius: 5px; } <br>
+                            p { border-top-right-radius: 5px; } <br>
+                            p { border-bottom-left-radius: 5px; } <br>
+                            p { border-bottom-right-radius: 5px; } <br>
+                        </div>
+                    </dd>
+                    <br> Here is an interesting example : <br><br>
+                    <div id="border">
+                        #border{ <br>
+                            border-style: dotted; <br>
+                            border-radius: 10px 40px; <br>
+                            border-color: rgb(26, 11, 27); <br>
+                            background-color: rgb(115, 91, 223); <br>
+                            width: 40%; <br>
+                            border-width: 10px 4px; <br>
+                            text-align: center; <br>
+                        }
+                    </div>
+                </dl>
+            </p>
+        </section>
+
+        <section>
+            <h3>Text and font styling</h3>
+            <p>
+
+            </p>
+        </section>
+    </main>
+
+    <footer id="bottom">
+        <p>&copy; 2021 All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
