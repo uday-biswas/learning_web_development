@@ -23,14 +23,30 @@
     </ul>
     </header>
     
-    <div id="top"><a href="#"><img id="back" src="../images/back_to_top.png" alt="backtotop"></a></div>
+    <a href="#"><img id="back" src="../images/back_to_top.png" alt="backtotop"></a>
 
     <main>
         <h1>Welcome to ByteBenders!!</h1>
         <nav>
         <h1>Contents</h1>
         <ul class="content">
-
+           <li><a href="#adding">Adding css to html page</a></li>
+           <li><a href="#selectors">Css selectors</a></li>
+           <li><a href="#background">Css Background</a></li>
+           <li><a href="#units">Css Units</a></li>
+           <li><a href="#border">Css Borders</a></li>
+           <li><a href="#fonts">Text and Font styling</a></li>
+           <li><a href="#margin">Margins and padding</a></li>
+           <li><a href="#display">Display</a></li>
+           <li><a href="#position">Css position</a></li>
+           <li><a href="#media">Media Queries</a></li>
+           <li><a href="#over">Css overflow</a></li>
+           <li><a href="#transition">Transition</a></li>
+           <li><a href="#boxshadow">Box shadow</a></li>
+           <li><a href="#animation">Css animation</a></li>
+           <li><a href="#flex">Css Flex-box</a></li>
+           <li><a href="#grid">Css Grid</a></li>
+           <li><a href="#tailwind">Tailwind</a></li>
         </ul>
         </nav>
     
@@ -42,7 +58,7 @@
         </section>
     
         <section>
-            <h3>Adding Css To HTML Page</h3>
+            <h3 id="adding">Adding Css To HTML Page</h3>
             <p>
                 There are three ways to add css to html page.
                 <ul>
@@ -91,7 +107,7 @@
         </section>
 
         <section>
-            <h3>Css Selectors</h3>
+            <h3 id="selectors">Css Selectors</h3>
             <p>
                 There are mainly three types of selectors in css.
                 <ul>
@@ -167,7 +183,7 @@
         </section>
 
         <section>
-            <h3>CSS Background</h3>
+            <h3 id="background">CSS Background</h3>
             <p>
                 The background properties are used to set the background effects of an element.
                 <dl>
@@ -294,7 +310,7 @@
         </section>
 
         <section>
-            <h3>Css Units</h3>
+            <h3 id="units">Css Units</h3>
             <p>
                 There are two types of units in css: <br>
                 <ul>
@@ -324,7 +340,7 @@
         </section>
 
         <section>
-            <h3>CSS Border</h3>
+            <h3 id="border">CSS Border</h3>
             <p>
                 The CSS border properties allow you to specify the style, width, and color of an element's border. <br>
                 border is shorthand property for border-width, border-style, and border-color. <br>
@@ -414,7 +430,7 @@
                         </div>
                     </dd>
                     <br> Here is an interesting example : <br><br>
-                    <div id="border">
+                    <div id="egborder">
                         #border{ <br>
                             border-style: dotted; <br>
                             border-radius: 10px 40px; <br>
@@ -430,7 +446,575 @@
         </section>
 
         <section>
-            <h3>Text and font styling</h3>
+            <h3 id="fonts">Text and font styling</h3>
+            <p>
+                Font properties define the look of the font like font family, boldness, size, style etc. <br>
+                Text properties define the layout and presentation of text, like text alignment, text decoration, and text transformation. <br>
+                <dl>
+                    <dt>=> font-size</dt>
+                    <dd>
+                        This defines the size of the font. it can be absolute , or relative. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { font-size: 20px; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> font-family</dt>
+                    <dd>
+                        This defines the font family of the text. it should hold multiple values, <br>
+                        in case the first font is not available, the second one will be used, and so on. <br>
+                        if the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman". <br>
+                        Example: <br>
+                        <div class="code">
+                            p { font-family: "Times New Roman", Times, serif; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> font-style</dt>
+                    <dd>
+                        This defines the style of the font. it can be normal, italic, oblique, initial, inherit. <br>
+                        Example: <br>
+                        <div class="code">
+                            p.normal { font-style: normal; } <br>
+                            p.italic { font-style: italic; } <br>
+                            p.oblique { font-style: oblique; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> font-weight</dt>
+                    <dd>
+                        This defines the weight of the font. it can be normal, bold, bolder, lighter, initial, inherit.
+                        it can also be a number from 100 to 900.
+                        Example: <br>
+                        <div class="code">
+                            p.bold { font-weight: bold; } <br>
+                            p.number { font-weight: 230; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> font-variant</dt>
+                    <dd>
+                        This defines whether the font should be displayed in small capital letters. <br>
+                        Example: <br>
+                        <div class="code">
+                            p.normal { font-variant: normal; } <br>
+                            p.small { font-variant: small-caps; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> text-align</dt>
+                    <dd>
+                        This defines the horizontal alignment of the text. it can be left, right, center, justify, initial, inherit.
+                        Example: <br>
+                        <div class="code">
+                            p.left { text-align: left; } <br>
+                            p.right { text-align: right; } <br>
+                            p.center { text-align: center; } <br>
+                            p.justify { text-align: justify; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> text-decoration</dt>
+                    <dd>
+                        This defines the decoration of the text. it can be none, underline, overline, line-through, initial, inherit.
+                        Example: <br>
+                        <div class="code">
+                            p.none { text-decoration: none; } <br>
+                            p.underline { text-decoration: underline; } <br>
+                            p.overline { text-decoration: overline; } <br>
+                            p.line-through { text-decoration: line-through; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> text-transform</dt>
+                    <dd>
+                        This defines the capitalization of the text.
+                        it can take the following values: <br>
+                        <ul>
+                            <li><b>uppercase</b> - turns every character to uppercase.</li>
+                            <li><b>lowercase</b> - turns every character to lowercase.</li>
+                            <li><b>capitalize</b> - turns the first character of every word to uppercase.</li>
+                            <li><b>none</b> - text renders as it is . it is default.</li>
+                        </ul>
+                        Example: <br>
+                        <div class="code">
+                            p.capitalize { text-transform: capitalize; } <br>
+                            #upper { text-transform: uppercase; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> text-indent</dt>
+                    <dd>
+                        This defines the indentation of the first line in a text-block. <br>
+                        Example: <br>
+                        <div class="code">
+                            &lt;p style="text-indent: 100px;"&gt; Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Perspiciatis dolore dolores, iure molestias fugit suscipit beatae hic fugiat inventore debitis 
+                                error nisi ipsum praesentium enim reprehenderit doloribus odio facere, dolor accusantium. Fugiat 
+                                unde iste sapiente praesentium soluta quas doloribus nulla?&lt;/p&gt;
+                        </div>
+                        will show: <br>
+                        <p id="indent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Perspiciatis dolore dolores, iure molestias fugit suscipit beatae hic fugiat inventore debitis 
+                            error nisi ipsum praesentium enim reprehenderit doloribus odio facere, dolor accusantium. Fugiat 
+                            unde iste sapiente praesentium soluta quas doloribus nulla?</p>
+                    </dd>
+                    <dt>=> text-shadow</dt>
+                    <dd>
+                        This adds shadow to the text. it can take 3 values: 
+                        which are position of the shadow on the x-axis, position of the 
+                        shadow on the y-axis, and the color of the shadow.
+                        Example: <br>
+                        <div class="code">
+                            p { text-shadow: 2px 2px blue; } <br>
+                        </div>
+                        will show text like: <br>
+                        <p style="text-shadow: 2px 2px blue">Text Shadow </p>
+                    </dd>
+                    <dt>=> line-height</dt>
+                    <dd>
+                        This defines the height of a line. it can be a absolute, or a percentage. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { line-height: 1.5px; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> letter-spacing</dt>
+                    <dd>
+                        This defines the spacing between letters. it can be a absolute, or a percentage. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { letter-spacing: 1.5px; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> word-spacing</dt>
+                    <dd>
+                        This defines the spacing between words. it can be a absolute, or a percentage. <br>
+                        Example: <br>
+                        <div class="code">
+                            p { word-spacing: 1.5px; } <br>
+                        </div>
+                    </dd>
+            </p>          
+        </section>
+
+        <section>
+            <h3 id="margin">Margins and Padding</h3>
+            <p>
+               => The margin property is used to create space between the borders and the surrounding elements.
+               it can have values as absolute or percentage. <br>
+               or 'auto' which will apply on the left and right margins of a block element, and center it. <br>
+               and we can provide margins separately to the sides by using 'margin-top', 'margin-bottom', 'margin-left', 'margin-right'.
+               example: <br>
+               <div class="code">
+                     p { margin: 10px; }       //all sides 10px <br>
+                     p { margin: 10px 20px; }      //top and bottom 10px, left and right 20px <br>
+                     p { margin: 10px 20px 30px; }    //top 10px, left and right 20px, bottom 30px <br>
+                     p { margin: 10px 20px 30px 40px; }    //top 10px, right 20px, bottom 30px, left 40px <br>
+               </div>
+               <br>
+                => The padding property is used to create space between the content and the border.
+                it can have values as absolute or percentage. <br>
+                and we can provide padding separately to the sides by using 'padding-top', 'padding-bottom', 'padding-left', 'padding-right'.
+                example: <br>
+                <div class="code">
+                     p { padding: 10px; }       //all sides 10px <br>
+                     p { padding: 10px 20px; }      //top and bottom 10px, left and right 20px <br>
+                     p { padding: 10px 20px 30px; }    //top 10px, left and right 20px, bottom 30px <br>
+                     p { padding-top: 10px; }  //top 10px <br>
+                </div>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="display">Display</h3>
+            <p>
+                =>The display property has following values: inline , block , inline-block , none. <br>
+                <dl>
+                    <dt>=> Inline Display properties: </dt>
+                    <dd>
+                        <ul>
+                            <li>element doesn't starts in a new line</li>
+                            <li>only takes up as much width as necessary , <b>so, cannot set height and width.</b></li>
+                            <li>the vertical margins do not work.</li>
+                        </ul>
+                        example: <br>
+                        <div class="code">
+                            html code : <br><br>
+                            &lt;ul id="inline"&gt; <br>
+                                &lt;li&gt;item 1&lt;/li&gt; <br>
+                                &lt;li&gt;item 2&lt;/li&gt; <br>
+                                &lt;li&gt;item 3&lt;/li&gt; <br>
+                            &lt;/ul&gt; <br><br>
+
+                            css code : <br><br>
+                            #inline li { <br>
+                                &emsp;display: inline; <br>
+                            } <br>
+                        </div>
+                        will show: <br>
+                        <ul id="inline">
+                            <li>item 1</li>
+                            <li>item 2</li>
+                            <li>item 3</li>
+                        </ul>
+                    </dd>
+                    <dt>=> Block Display properties: </dt>
+                    <dd>
+                        <ul>
+                            <li>element starts in a new line</li>
+                            <li>takes up the full width available, width and height is adjustable.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> Inline-block Display properties: </dt>
+                    <dd>
+                        <ul>
+                            <li>element can sit next to each other.</li>
+                            <li>height and width can be set now.</b></li>
+                        </ul>
+                        example: <br>
+                        <div class="code">
+                            html code : <br><br>
+                            &lt;div class="iblock"&gt; hello &lt;/div&gt; <br>
+                            &lt;div class="iblock"&gt; world &lt;/div&gt; <br><br>
+
+                            css code : <br><br>
+                            .iblock { <br>
+                                &emsp;display: inline-block; <br>
+                                &emsp;width: 100px; <br>
+                                &emsp;height: 100px; <br>
+                                &emsp;color: black;<br>
+                                &emsp;text-align: center; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightblue; <br>
+                            } <br>
+                        </div>
+                        will show: <br>
+                        <div class="iblock"> hello </div>
+                        <div class="iblock"> world </div>
+                    </dd>
+                </dl>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="position">Css Position</h3>
+            <p>
+                the position property is for specifying the positioning of element on the page relative to web page or parent element.
+                it has following values: static, relative, absolute, fixed, sticky. <br>
+                but this property is not enough to manipulate the position of element, therefore, to move the elements we use these 4 properties: left, right, top, bottom. <br>
+                the above properties i.e. left,right, top , bottom have numerical values in both relative and absolute units. <br><br>
+                Lets explain the position property one by one : <br>
+                <dl>
+                    <dt>=> static</dt>
+                    <dd>
+                        this is the default property. properties like left, right , top, bottom does not work when this is used.
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>=> relative</dt>
+                    <dd>
+                        the relative positions the element relative to its first positioned ancestor element.
+                        and now the properties like left, right , top, bottom works. <br>
+                        <b>the original position of the element remains occupied.</b>
+                        example: <br>
+                        <div class="code">
+                            html code : <br><br>
+                            &lt;div class="outer"&gt; <br>
+                                &emsp;&lt;h2&gt;outer box&lt;/h2&gt; <br>
+                                &emsp;&lt;div class="inner"&gt; inner box relative to the outer div &lt;/div&gt; <br>
+                                &emsp;&lt;div&gt; this element is placed with its upper space as blank, which shows that the space is occupied by the inner box &lt;/div&gt; <br>
+                            &lt;/div&gt; <br><br>
+
+                            css code : <br><br>
+                            .outer{ <br>
+                                &emsp;width: 60%; <br>
+                                &emsp;height: 100px; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightpink; <br>
+                                &emsp;margin: 0px auto; <br>
+                                &emsp;padding: 5px; <br>
+                            } <br><br>
+                            .inner{ <br>
+                                &emsp;position: relative; <br>
+                                &emsp;top: 40px; <br>
+                                &emsp;left: 30px; <br>
+                                &emsp;width: 70%; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightgreen; <br>
+                            } <br>
+                        </div>
+                        will show: <br>
+                        <div class="outer">
+                            <span>outer box</span>
+                            <div class="inner"> inner box relative to outer box </div>
+                            <div>this element is placed with its upper space as blank, which shows that the space is occupied by the inner box.</div>
+                        </div>
+                        <br><span>-> the inner box is 40px from top and 30px from left relative to its original position.</span>
+                    </dd>
+                    <dt><br>=> absolute</dt>
+                    <dd>
+                        the absolute positions the element relative to its immediate parent element. the parent element should be relative.
+                        if there is no relative immediate parent element then the element will be positioned relative to the body element.
+                        and the properties like left, right , top, bottom works. <br>
+                        <b>the original position of the element does not remains occupied.</b>
+                        example: <br>
+                        <div class="code">
+                            html code : <br><br>
+                            &lt;div class="outer_absolute"&gt; <br>
+                                &emsp;&lt;span&gt;outer box&lt;/span&gt; <br>
+                                &emsp;&lt;div class="inner_absolute"&gt; inner box absolute to the outer div &lt;/div&gt; <br>
+                                &emsp;&lt;div&gt; this element is placed just after the text 'outer box' text, which shows that the space is not occupied by the inner box &lt;/div&gt; <br>
+                            &lt;/div&gt; <br><br>
+
+                            css code : <br><br>
+                            .outer_absolute{ <br>
+                                &emsp;width: 60%; <br>
+                                &emsp;height: 100px; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightpink; <br>
+                                &emsp;margin: 0px auto; <br>
+                                &emsp;padding: 5px; <br>
+                                &emsp;position: relative; <br>
+                            } <br><br>
+                            .inner_absolute{ <br>
+                                &emsp;position: absolute; <br>
+                                &emsp;top: 40px; <br>
+                                &emsp;left: 30px; <br>
+                                &emsp;width: 70%; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightgreen; <br>
+                            } <br>
+                        </div>
+                        will show: <br>
+                        <div class="outer_absolute">
+                            <span>outer box</span>
+                            <div class="inner_absolute"> inner box absolute to outer box </div>
+                            <div>this element is placed just after the text 'outer box' text, which shows that the space is not occupied by the inner box.</div>
+                        </div>
+                        <br><span>-> the inner box is 40px from top and 30px from left relative to its parent(outer box).</span>
+                    </dd>
+                    <dt><br>=> fixed</dt>
+                    <dd>
+                        the fixed positions the element relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+                         and the properties like left, right , top, bottom works. <br>
+                        <b>the original position of the element does not remains occupied.</b><br>
+                        example: the 'go to top button' on the bottom right side of the page. <br>
+                        <div class="code">
+                            html code : <br><br>
+                            &lt;a href="#"&gt;&lt;img id="back" src="../images/back_to_top.png" alt="backtotop"&gt;&lt;/a&gt;
+
+                            css code : <br><br>
+                            #back{ <br>
+                                &emsp;position: fixed; <br>
+                                &emsp;bottom: 8px; <br>
+                                &emsp;right: 8px; <br>
+                                &emsp;border-radius: 50%; <br>
+                                &emsp;width: 30px; <br>
+                                &emsp;height: 30px; <br>
+                            } <br>
+                        </div>
+                    </dd>
+                    <dt>=> sticky</dt>
+                    <dd>
+                        A sticky element toggles between relative and fixed, depending on the scroll position.
+                        it is positioned relative until a given position is met in the viewport , then it sticks in place ( like fixed).
+                        example: <br>
+                        <div class="code">
+                            html code : <br><br>
+                            &lt;div class="outer_sticky"&gt; <br>
+                                &emsp;&lt;span&gt;outer box&lt;/span&gt; <br>
+                                &emsp;&lt;div class="inner_sticky"&gt; inner box sticky to the outer div &lt;/div&gt; <br>
+                                &emsp;&lt;div&gt; this element is placed just after the text 'outer box' text, which shows that the space is occupied by the inner box &lt;/div&gt; <br>
+                            &lt;/div&gt; <br><br>
+
+                            css code : <br><br>
+                            .outer_sticky{ <br>
+                                &emsp;width: 60%; <br>
+                                &emsp;height: 200px; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightpink; <br>
+                                &emsp;margin: 0px auto; <br>
+                                &emsp;padding: 5px; <br>
+                                &emsp;position: relative; <br>
+                            } <br><br>
+                            .inner_sticky{ <br>
+                                &emsp;position: sticky; <br>
+                                &emsp;top: 300px; <br>
+                                &emsp;width: 70%; <br>
+                                &emsp;border: 1px solid black; <br>
+                                &emsp;background-color: lightgreen; <br>
+                            } <br>
+                        </div>
+                        will show: <br>
+                        <div class="outer_sticky">
+                            <span>outer box</span>
+                            <div class="inner_sticky"> inner box sticky to outer box </div>
+                        </div>
+                        <br><span>-> the inner box will be at 500px from top of the web page and then it will act as fixed.</span>
+                    </dd>
+                </dl>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="media">Media Queries</h3>
+            <p>
+                To make the website responsive , we set the width of the elements in percentage with max-width and min-width.
+                example: <br>
+                .outer{ <br>
+                    &emsp;width: 80%; <br>
+                    &emsp;max-width: 600px; <br>
+                    &emsp;min-width: 300px; <br>
+                } <br>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="over">Overflow</h3>
+            <p>
+                the overflow property is used to specify what happens if the content of an element overflows.
+                overflow property only works for block elements with a specified height. 
+                we can have overflow-x and overflow-y for horizontal and vertical overflow respectively. <br>
+                it can have the following values: <br>
+                <ul>
+                    <li>visible : this is default value. the content overflows and seen outside the box.</li>
+                    <li>hidden : only the content that fits inside the box is visible and the overflow is clipped.</li>
+                    <li>scroll : all the ocntent is visible through a scroll bar added to the box.</li>
+                    <li>auto : a scroll bar gets added if content overflows.</li>
+                </ul>
+                example: <br>
+                html code : <br><br>
+                <div class="code">
+                    html code : <br><br>
+                        &lt;div id="overflow"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero dolor magnam, 
+                        ea repellendus, similique tenetur quasi dolorum rem velit nam eligendi reiciendis 
+                        saepe quo officiis omnis perferendis sed nulla nostrum inventore! Reprehenderit, 
+                        vero! Vero quisquam hic illum labore voluptate similique vitae exercitationem unde 
+                        suscipit nobis ipsam, vel consectetur obcaecati!&lt;/div&gt;
+
+                    css code : <br><br>
+                    #overflow{ <br>
+                        &emsp;width: 200px; <br>
+                        &emsp;height: 200px; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;overflow: scroll; <br>
+                        &emsp;background-color: blue; <br>
+                    } <br>
+                </div>
+                will show: <br>
+                <div id="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero dolor magnam, 
+                    ea repellendus, similique tenetur quasi dolorum rem velit nam eligendi reiciendis 
+                    saepe quo officiis omnis perferendis sed nulla nostrum inventore! Reprehenderit, 
+                    vero! Vero quisquam hic illum labore voluptate similique vitae exercitationem unde 
+                    suscipit nobis ipsam, vel consectetur obcaecati!</div>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="transition">Css Transition</h3>
+            <p>
+                The transition property is a shorthand property for the four transition properties: <br>
+                <ul>
+                    <li>transition-property : specifies the name of the CSS property the transition effect is for.</li>
+                    <li>transition-duration : specifies how many seconds or milliseconds a transition effect takes to complete.</li>
+                    <li>transition-timing-function : specifies the speed curve of the transition effect.
+                        it can have the following values: <br>
+                        <ul>
+                            <li>ease : specifies a transition effect with a slow start, then fast, then end slowly (this is default).</li>
+                            <li>linear : specifies a transition effect with the same speed from start to end.</li>
+                            <li>ease-in : specifies a transition effect with a slow start.</li>
+                            <li>ease-out : specifies a transition effect with a slow end.</li>
+                            <li>ease-in-out : specifies a transition effect with a slow start and end.</li>
+                            <li>cubic-bezier(n,n,n,n) : lets you define your own values in a cubic-bezier function.</li>
+                        </ul>
+                    <li>transition-delay : specifies a delay (in seconds) for the transition effect.</li>
+                </ul>
+                example: <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div id="backtransition"&gt; <br>
+                        &emsp;this box will change its color when hovered <br>
+                    &lt;/div&gt; <br><br>
+
+                    css code : <br><br>
+                    #backtransition{ <br>
+                        &emsp;width: 200px; <br>
+                        &emsp;height: 100px; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;background-color: blue; <br>
+                        &emsp;transition: background-color 1s ease-in-out; <br>
+                    } <br><br>
+                    #backtransition:hover{ <br>
+                        &emsp;background-color: red; <br>
+                    } <br>
+                </div>
+                will show: <br>
+                <div id="backtransition">this box will change its color when hovered</div>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="boxshadow">Css Box-shadow</h3>
+            <p>
+                The box-shadow property adds shadow to an element.
+                it takes 5 values: horizontal-offset , vertical-offset , blur-radius , spread-radius , color. <br>
+                out of which horizontal-offset and vertical-offset are required, blur defines how much blur the shadow will be, and spread sets the size of the shadow.<br>
+                default color of the shadow is black. <br>
+                we can have multiple shadows by separating them with commas. <br>
+                we can have internal shadow by adding inset keyword before the values. <br>
+                example: <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div id="internal"&gt; <br>
+                        &emsp;this box contains internal shadow <br>
+                    &lt;/div&gt; <br>
+                    &lt;div id="external"&gt; <br>
+                        &emsp;this box contains external shadow <br>
+                    &lt;/div&gt; <br><br>
+
+                    css code : <br><br>
+                    #internal{ <br>
+                        &emsp;width: 40%; <br>
+                        &emsp;padding: 7px; <br>
+                        &emsp;background-color: rgb(150, 40, 59); <br>
+                        &emsp;display: inline-block; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;box-shadow: inset 1px 1px 3px 3px blue; <br>
+                        &emsp;margin: 0px 10px; <br>
+                    } <br><br>
+                    #external{ <br>
+                        &emsp;width: 40%; <br>
+                        &emsp;padding: 7px; <br>
+                        &emsp;background-color: rgb(150, 40, 59); <br>
+                        &emsp;display: inline-block; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;box-shadow: 1px 1px 3px 3px blue; <br>
+                        &emsp;margin: 0px 10px; <br>
+                    } <br>
+                </div>
+                will show: <br>
+                <div id="internal">this box contains internal shadow</div>
+                <div id="external">this box contains external shadow</div>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="animation">Css animation</h3>
+            <p>
+
+            </p>
+        </section>
+
+        <section>
+            <h3 id="flex">Css flex-box</h3>
+            <p>
+
+            </p>
+        </section>
+
+        <section>
+            <h3 id="grid">Css grid</h3>
+            <p>
+
+            </p>
+        </section>
+
+        <section>
+            <h3 id="tailwind">Css Tailwind</h3>
             <p>
 
             </p>
