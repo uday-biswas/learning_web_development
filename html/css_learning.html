@@ -41,8 +41,9 @@
            <li><a href="#position">Css position</a></li>
            <li><a href="#media">Media Queries</a></li>
            <li><a href="#over">Css overflow</a></li>
-           <li><a href="#transition">Transition</a></li>
            <li><a href="#boxshadow">Box shadow</a></li>
+           <li><a href="#transition">Transition</a></li>
+           <li><a href="#transforms">Css Transform</a></li>
            <li><a href="#animation">Css animation</a></li>
            <li><a href="#flex">Css Flex-box</a></li>
            <li><a href="#grid">Css Grid</a></li>
@@ -114,6 +115,7 @@
                     <li>Element Selector</li>
                     <li>Class Selector</li>
                     <li>Id Selector</li>
+                    <li>pseudo classes</li>
                 </ul>
                 <dl>
                     <dt>=> Element Selector</dt>
@@ -176,6 +178,29 @@
                         <div class="code">
                             p.red { color: red; } <br>
                             p#code { font-family: 'Lucida Console' } <br>
+                        </div>
+                    </dd>
+                    <dt>=> pseudo classes</dt>
+                    <dd>
+                        pseudo classes are used to apply css to the elements in a specific state.
+                        Example: <br>
+                        <div class="code">
+                            a:hover { color: red; } <br><br>
+                            section:nth-child(2n) { background-color: blue; }  //every even numbered section will have background color as blue <br><br>
+                            section:nth-child(2n+1) { background-color: green; }  //every odd numbered section will have background color as green <br><br>
+                            p::first-line { font-weight: bold; }  //the first line of every paragraph will be bold. <br><br>
+                            p::first-letter { font-size: 2em; }  //the first letter of every paragraph will be 2 times bigger than the rest of the letters. <br><br>
+
+                            //to get different images as list-style-type, we can use the following code: <br>
+                            ul { list-style-type: none; } <br>
+                            li::before { <br>
+                                content: ''; <br>
+                                background-image: url('image.png'); <br>
+                                display: inline-block; <br>
+                                height: 16px; <br>
+                                width: 16px; <br>
+                                background-size: contain; <br>
+                            } <br>
                         </div>
                     </dd>
                 </dl>
@@ -844,7 +869,7 @@
                             <span>outer box</span>
                             <div class="inner_sticky"> inner box sticky to outer box </div>
                         </div>
-                        <br><span>-> the inner box will be at 500px from top of the web page and then it will act as fixed.</span>
+                        <br><span>-> the inner box will be at 300px from top of the web page and then it will act as fixed.</span>
                     </dd>
                 </dl>
             </p>
@@ -853,13 +878,42 @@
         <section>
             <h3 id="media">Media Queries</h3>
             <p>
-                To make the website responsive , we set the width of the elements in percentage with max-width and min-width.
+                It is used to make the website more responsive. The order of media queries matters, the 
+                last media query that is satisfying will be applied. <br>
+                its syntax is : <br>
+                <div class="code">
+                    @media mediatype and (media feature) { <br>
+                        &emsp;css-code; <br>
+                    } <br>
+                </div>
                 example: <br>
-                .outer{ <br>
-                    &emsp;width: 80%; <br>
-                    &emsp;max-width: 600px; <br>
-                    &emsp;min-width: 300px; <br>
-                } <br>
+                <div class="code">
+                    #div1{ <br>
+                        &emsp;width: 60%;    //default width <br>
+                        &emsp;border : 1px solid black; <br>
+                    } <br>
+                    @media screen and (max-width: 600px) {  //if screen size is less than 600px <br>
+                        &emsp;#div1 { width:80%; } <br>
+                        &emsp;#main { margin-left : 5px; } <br>
+                    } <br>
+                    @media screen and (max-width: 400px) {  //if screen size is less than 400px <br>
+                        &emsp;#div1 { width:100%; } <br>
+                        &emsp;#main { margin-left : 2px; } <br>
+                    } <br><br>
+                    //here the last media query that is satisfying will be applied. <br>
+                    so, if the screen size is greater than 600px, then the default width of div1 will be 60%.
+                    and if the screen size is less than 600px but greater than 400px, then the width of div1 will be 80%.
+                    and if the screen size is less than 400px, then the width of div1 will be 100%. <br>
+                </div><br><br>
+                => To make the website more responsive, we set the width of the elements in percentage with max-width and min-width.
+                example: <br>
+                <div class="code">
+                    .outer{ <br>
+                        &emsp;width: 80%; <br>
+                        &emsp;min-width: 300px; <br>
+                        &emsp;max-width: 600px; <br>
+                    }
+                </div>
             </p>
         </section>
 
@@ -901,49 +955,6 @@
                     saepe quo officiis omnis perferendis sed nulla nostrum inventore! Reprehenderit, 
                     vero! Vero quisquam hic illum labore voluptate similique vitae exercitationem unde 
                     suscipit nobis ipsam, vel consectetur obcaecati!</div>
-            </p>
-        </section>
-
-        <section>
-            <h3 id="transition">Css Transition</h3>
-            <p>
-                The transition property is a shorthand property for the four transition properties: <br>
-                <ul>
-                    <li>transition-property : specifies the name of the CSS property the transition effect is for.</li>
-                    <li>transition-duration : specifies how many seconds or milliseconds a transition effect takes to complete.</li>
-                    <li>transition-timing-function : specifies the speed curve of the transition effect.
-                        it can have the following values: <br>
-                        <ul>
-                            <li>ease : specifies a transition effect with a slow start, then fast, then end slowly (this is default).</li>
-                            <li>linear : specifies a transition effect with the same speed from start to end.</li>
-                            <li>ease-in : specifies a transition effect with a slow start.</li>
-                            <li>ease-out : specifies a transition effect with a slow end.</li>
-                            <li>ease-in-out : specifies a transition effect with a slow start and end.</li>
-                            <li>cubic-bezier(n,n,n,n) : lets you define your own values in a cubic-bezier function.</li>
-                        </ul>
-                    <li>transition-delay : specifies a delay (in seconds) for the transition effect.</li>
-                </ul>
-                example: <br>
-                <div class="code">
-                    html code : <br><br>
-                    &lt;div id="backtransition"&gt; <br>
-                        &emsp;this box will change its color when hovered <br>
-                    &lt;/div&gt; <br><br>
-
-                    css code : <br><br>
-                    #backtransition{ <br>
-                        &emsp;width: 200px; <br>
-                        &emsp;height: 100px; <br>
-                        &emsp;border: 1px solid black; <br>
-                        &emsp;background-color: blue; <br>
-                        &emsp;transition: background-color 1s ease-in-out; <br>
-                    } <br><br>
-                    #backtransition:hover{ <br>
-                        &emsp;background-color: red; <br>
-                    } <br>
-                </div>
-                will show: <br>
-                <div id="backtransition">this box will change its color when hovered</div>
             </p>
         </section>
 
@@ -991,11 +1002,175 @@
                 <div id="external">this box contains external shadow</div>
             </p>
         </section>
+        
+        <section>
+            <h3 id="transition">Css Transition</h3>
+            <p>
+                The transition property is a shorthand property for the four transition properties: <br>
+                <ul>
+                    <li>transition-property : specifies the name of the CSS property the transition effect is for.</li>
+                    <li>transition-duration : specifies how many seconds or milliseconds a transition effect takes to complete.</li>
+                    <li>transition-timing-function : specifies the speed curve of the transition effect.
+                        it can have the following values: <br>
+                        <ul>
+                            <li>ease : specifies a transition effect with a slow start, then fast, then end slowly (this is default).</li>
+                            <li>linear : specifies a transition effect with the same speed from start to end.</li>
+                            <li>ease-in : specifies a transition effect with a slow start.</li>
+                            <li>ease-out : specifies a transition effect with a slow end.</li>
+                            <li>ease-in-out : specifies a transition effect with a slow start and end.</li>
+                            <li>cubic-bezier(n,n,n,n) : lets you define your own values in a cubic-bezier function.</li>
+                        </ul>
+                    <li>transition-delay : specifies a delay (in seconds) for the transition effect.</li>
+                </ul>
+                example: <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div id="backtransition"&gt; <br>
+                        &emsp;this box will change its color when hovered <br>
+                    &lt;/div&gt; <br><br>
+
+                    css code : <br><br>
+                    #backtransition{ <br>
+                        &emsp;width: 200px; <br>
+                        &emsp;height: 100px; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;background-color: blue; <br>
+                        &emsp;transition: background-color 1s ease-in-out; <br>
+                    } <br><br>
+                    #backtransition:hover{ <br>
+                        &emsp;background-color: red; <br>
+                    } <br>
+                </div>
+                will show: <br>
+                <div id="backtransition">this box will change its color when hovered</div>
+            </p>
+        </section>
+
+        <section>
+            <h3 id="transforms">Css Transform</h3>
+            <p>
+                => The transform property can transform an element in 2D or 3D space. <br>
+                it can have the following values: <br>
+                <ul>
+                    <li>rotate(n deg) : rotates an element clockwise from its current position.</li>
+                    <li>scale(n,n) : increases or decreases the size of an element.</li>
+                    <li>translate(x,y) : moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).</li>
+                    <li>skew(x-angle,y-angle) : skews an element along the X and Y-axis by the given angles.</li>
+                    <li>matrix(n,n,n,n,n,n) : combines all the 2D transform methods into one.</li>
+                </ul>
+                example: <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div id="transform"&gt; <br>
+                        &emsp;this box will rotate when hovered <br>
+                    &lt;/div&gt; <br><br>
+
+                    css code : <br><br>
+                    #transform{ <br>
+                        &emsp;width: 200px; <br>
+                        &emsp;height: 100px; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;background-color: blue; <br>
+                        &emsp;transition: transform 1s ease-in-out; <br>
+                    } <br><br>
+                    #transform:hover{ <br>
+                        &emsp;transform: rotate(180deg); <br>
+                    } <br>
+                </div>
+                will show: <br>
+                <div id="transform">this box will rotate when hovered</div>
+            </p>
+        </section>
 
         <section>
             <h3 id="animation">Css animation</h3>
             <p>
+                => The animation property is a shorthand property for the following animation properties: <br>
+                <ul>
+                    <li>animation-name : specifies the name of the @keyframes animation.</li>
+                    <li>animation-duration : specifies how many seconds or milliseconds an animation takes to complete one cycle.</li>
+                    <li>animation-timing-function : specifies the speed curve of the animation.
+                        it can have the following values: <br>
+                        <ul>
+                            <li>ease : specifies an animation with a slow start, then fast, then end slowly (this is default).</li>
+                            <li>linear : specifies an animation with the same speed from start to end.</li>
+                            <li>ease-in : specifies an animation with a slow start.</li>
+                            <li>ease-out : specifies an animation with a slow end.</li>
+                            <li>ease-in-out : specifies an animation with a slow start and end.</li>
+                            <li>cubic-bezier(n,n,n,n) : lets you define your own values in a cubic-bezier function.</li>
+                        </ul>
+                    <li>animation-delay : specifies a delay (in seconds) for the animation to start.</li>
+                    <li>animation-iteration-count : specifies the number of times an animation should be played.
+                        it can have the following values: <br>
+                        <ul>
+                            <li>infinite : specifies that the animation should be played infinite times (this is default).</li>
+                            <li>number : specifies the number of times an animation should be played.</li>
+                        </ul>
+                    </li>
+                    <li>animation-direction : specifies whether or not the animation should play in reverse on alternate cycles.
+                        it can have the following values: <br>
+                        <ul>
+                            <li>normal : specifies that the animation should be played as normal (this is default).</li>
+                            <li>reverse : specifies that the animation should be played in reverse direction.</li>
+                            <li>alternate : specifies that the animation should be played forwards first, then backwards.</li>
+                            <li>alternate-reverse : specifies that the animation should be played backwards first, then forwards.</li>
+                        </ul>
+                    </li>
+                </ul>
+                example: <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div id="animationdiv1"&gt; &lt;/div&gt; <br>
+                    &lt;div id="animationdiv2"&gt; &lt;/div&gt; //using multiple animations <br><br>
 
+                    css code : <br><br>
+                    @keyframes changeShape{ <br>
+                        &emsp;0%{ border-radius: 0%; } <br>
+                    
+                        &emsp;25%{ border-radius: 12.5%; } <br>
+                    
+                        &emsp;50%{ border-radius: 25%; } <br>
+                    
+                        &emsp;75%{ border-radius: 37.5%; } <br>
+                    
+                        &emsp;100%{ border-radius: 50%; } <br>
+                    } <br>
+                    @keyframes rotate{ <br>
+                        &emsp;0%{ transform: rotate(0deg); } <br>
+                    
+                        &emsp;100%{ transform: rotate(360deg);} <br>
+                    } <br>
+                    @keyframes reducesize{ <br>
+                        &emsp;0%{ height: 100px; width: 100px; } <br>
+                    
+                        &emsp;100%{ height: 50px; width: 50px; } <br>
+                    } <br>
+                    #animationdiv1{ <br>
+                        &emsp;display: inline-block; <br>
+                        &emsp;width: 100px; <br>
+                        &emsp;height: 100px; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;margin: 0px 10px; <br>
+                        &emsp;background-color: rgb(18, 18, 160); <br>
+                        &emsp;animation: changeShape 1s ease-in-out alternate infinite; <br>
+                    } <br>
+                    #animationdiv2{ <br>
+                        &emsp;display: inline-block; <br>
+                        &emsp;width: 100px; <br>
+                        &emsp;height: 100px; <br>
+                        &emsp;border: 1px solid black; <br>
+                        &emsp;margin: 0px 10px; <br>
+                        &emsp;background-color: rgb(18, 18, 160); <br>
+                        &emsp;animation-name: changeShape, rotate, reducesize; <br>
+                        &emsp;animation-duration: 1s, 1s, 1s; <br>
+                        &emsp;animation-timing-function: ease-in-out, ease-in-out, ease-in-out; <br>
+                        &emsp;animation-iteration-count: infinite, infinite, infinite; <br>
+                        &emsp;animation-direction: alternate, alternate, alternate; <br>
+                    }
+                </div>
+                will show: <br><br>
+                <div id="animationdiv1"></div>
+                <div id="animationdiv2"></div>
             </p>
         </section>
 
