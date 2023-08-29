@@ -820,7 +820,7 @@
                         example: the 'go to top button' on the bottom right side of the page. <br>
                         <div class="code">
                             html code : <br><br>
-                            &lt;a href="#"&gt;&lt;img id="back" src="../images/back_to_top.png" alt="backtotop"&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;img id="back" src="../images/back-to-top.png" alt="backtotop"&gt;&lt;/a&gt;
 
                             css code : <br><br>
                             #back{ <br>
@@ -1177,14 +1177,384 @@
         <section>
             <h3 id="flex">Css flex-box</h3>
             <p>
+                the flexbox layout provides way to layout , align and distribute space among items in a container. 
+                flex properties are defined on the child elements of the flex container. <br>
+                => The flex container properties are: flex-direction, order, flex-wrap, flex-grow, flex-shrink, flex-justify content, align-items, align-content, align-self , flex-basis. <br>
+                -> if the flex direction is row, then the main axis is horizontal and the cross axis is vertical. <br>
+                -> if the flex direction is column, then the main axis is vertical and the cross axis is horizontal. <br><br>
 
+                shortcuts for the properties: <br>
+                <ul>
+                    <li>flex-direction : it defines the direction in which the flex-items should be laid out.</li>
+                    <li>flex-wrap : decides the flex items will be in single or multiple lines.</li>
+                    <li>flex-grow : if there is an extra space, then it decides which flex item will grow at what ratio.</li>
+                    <li>justify-content : it decides where the flex items will be placed on the main axis.</li>
+                    <li>align-items : it decides where the flex items will be placed on the cross axis.</li>
+                    <li>align-content : if there are multiple lines of flex, then it decides where the flex items will be placed.</li>
+                    <li>align-self : used for alignment of selected flex items inside the flex container.</li>
+                </ul>
+                <dl>
+                     <dt>=> Flex-direction</dt>
+                        <dd>The flex-direction property specifies the direction of the flexible items. <br>
+                            the basic layout of flexbox will look like : <br>
+                            <div class="code">
+                            &lt;div class="flex-container"&gt; <br>
+                                &emsp;&lt;div class="div1"&gt;div1&lt;/div&gt; <br>
+                                &emsp;&lt;div class="div2"&gt;div2&lt;/div&gt; <br>
+                                &emsp;&lt;div class="div3"&gt;div3&lt;/div&gt; <br>
+                            &lt;/div&gt; <br>
+
+                    .    the css code:
+                            .flex-container { display:flex; width:250px; height:250px; background-color:lightgrey; } <br>
+                            .flex-container div { width:70px; height:70px; } <br>
+                            .div1 { background-color:#7ff9ae; } <br>
+                            .div2 { background-color:#76bbfc; } <br>
+                            .div3 { background-color:#ff7f8e; } <br>
+                            </div>
+                            will show: <br>
+                            <div class="flex-container">
+                                <div class="div1">div1</div>
+                                <div class="div2">div2</div>
+                                <div class="div3">div3</div>
+                            </div>
+
+                            <br><br>=> It can have the following values: <br>
+                            <ul>
+                                <li>
+                                    row : default value. items are placed the same as the text direction.
+                                </li>
+                                <li>
+                                    column : items are placed top to bottom. the layout will look like: <br>
+                                    <div class="code">
+                                        .flex-column { display:flex; flex-direction: column; width:250px; height:250px; background-color:lightgrey;} <br>
+                                        .flex-column div { width:70px; height:70px; } <br>
+                                        .div1 { background-color:#7ff9ae; } <br>
+                                        .div2 { background-color:#76bbfc; } <br>
+                                        .div3 { background-color:#ff7f8e; } <br>
+                                    </div>
+                                    will show: <br>
+                                    <div class="flex-column">
+                                        <div class="div1">div1</div>
+                                        <div class="div2">div2</div>
+                                        <div class="div3">div3</div>
+                                    </div>
+                                </li>
+                                <li>row-reverse : it stacks the flex items horizontally , from right to left.</li>
+                                <li>column-reverse : it stacks the flex items vertically, from bottom to top.</li>
+                            </ul>
+                        </dd>
+                    <dt>=> Flex wrap</dt>
+                    <dd>
+                        The flex-wrap property specifies whether the flex items should wrap or not. <br>
+                        <ul>
+                            <li>
+                                nowrap : default value. the flex items will not wrap.
+                                example: <br>
+                                <div class="code">
+                                    the html code : <br><br>
+                                    &lt;div class="flex-nowrap"&gt; <br>
+                                        &emsp;&lt;div class="div1"&gt;div1&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div2"&gt;div2&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div3"&gt;div3&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div1"&gt;div4&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div2"&gt;div5&lt;/div&gt; <br>
+                                    &lt;/div&gt; <br><br>
+                                    
+                                    the css code : <br><br>
+                                    .flex-wrap { display:flex; flex-wrap: nowrap; width:250px; height:250px; background-color:lightgrey; } <br>
+                                    .flex-wrap div { width:70px; height:70px; } <br>
+                                    .div1 { background-color:#7ff9ae; } <br>
+                                    .div2 { background-color:#76bbfc; } <br>
+                                    .div3 { background-color:#ff7f8e; } <br>
+                                </div>
+                                will show: <br>
+                                <div class="flex-nowrap">
+                                    <div class="div1">div1</div>
+                                    <div class="div2">div2</div>
+                                    <div class="div3">div3</div>
+                                    <div class="div1">div4</div>
+                                    <div class="div2">div5</div>
+                            </li>
+                            <li>
+                                wrap : the flex items will wrap if necessary.i.e. if the total
+                                flex items is width is larger than the width of the container, the items will arrange
+                                themselves in the next column.
+                                example: <br>
+                                <div class="code">
+                                    the html code : <br><br>
+                                    &lt;div class="flex-wrap"&gt; <br>
+                                        &emsp;&lt;div class="div1"&gt;div1&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div2"&gt;div2&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div3"&gt;div3&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div1"&gt;div4&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div2"&gt;div5&lt;/div&gt; <br>
+                                        &emsp;&lt;div class="div3"&gt;div6&lt;/div&gt; <br>
+                                    &lt;/div&gt; <br><br>
+                                    
+                                    the css code : <br><br>
+                                    .flex-wrap { display:flex; flex-wrap: wrap; width:250px; height:250px; background-color:lightgrey; } <br>
+                                    .flex-wrap div { width:70px; height:70px; } <br>
+                                    .div1 { background-color:#7ff9ae; } <br>
+                                    .div2 { background-color:#76bbfc; } <br>
+                                    .div3 { background-color:#ff7f8e; } <br>
+                                </div>
+                                will show: <br>
+                                <div class="flex-wrap">
+                                    <div class="div1">div1</div>
+                                    <div class="div2">div2</div>
+                                    <div class="div3">div3</div>
+                                    <div class="div1">div4</div>
+                                    <div class="div2">div5</div>
+                                    <div class="div3">div6</div>
+                                </div>
+                            </li>
+                            <li>wrap-reverse : the flex items will wrap if necessary, in reverse order.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> Flex grow</dt>
+                    <dd>
+                        The flex-grow property specifies how much the item will grow relative to the rest of the items if there is some extra space.
+                        <br>
+                        <div class="code">
+                            the html code : <br><br>
+                            &lt;div class="flex-grow"&gt; <br>
+                                &emsp;&lt;div id="d1"&gt;div1&lt;/div&gt; <br>
+                                &emsp;&lt;div id="d2"&gt;div2&lt;/div&gt; <br>
+                                &emsp;&lt;div id="d3"&gt;div3&lt;/div&gt; <br>
+                            &lt;/div&gt; <br><br>
+                            
+                            the css code : <br><br>
+                            .flex-grow { display:flex; width:250px; height:250px; background-color:lightgrey; } <br>
+                            .flex-grow div { width:50px; height:50px; } <br>
+                            #d1 { background-color:#7ff9ae; flex-grow: 1; } <br>
+                            #d2 { background-color:#76bbfc; flex-grow: 2; } <br>
+                            #d3 { background-color:#ff7f8e; flex-grow: 3; } <br>
+                        </div>
+                        will show: <br>
+                        <div class="flex-grow">
+                            <div id="d1">div1</div>
+                            <div id="d2">div2</div>
+                            <div id="d3">div3</div>
+                        </div>
+                    </dd>
+                    <dt>=> Flex shrink</dt>
+                    <dd>
+                        It is similar to flex-grow, but it specifies how much the item will shrink relative to the rest of the items if there is not enough space.
+                        example: <br>
+                        <div class="code">
+                            #div1 { background-color:#7ff9ae; flex-shrink: 1; } <br>
+                            #div2 { background-color:#76bbfc; flex-shrink: 2; } <br>
+                            #div3 { background-color:#ff7f8e; flex-shrink: 3; } <br>
+                        </div>
+                    </dd>
+                    <dt>=> Flex justify-content</dt>
+                    <dd>
+                        The justify-content property is used to align the flex items along the main axis. <br>
+                        it can take the following values: <br>
+                        <ul>
+                            <li>flex-start : the flex items will be aligned to the left of the container.</li>
+                            <li>flex-end : the flex items will be aligned to the right of the container.</li>
+                            <li>center : the flex items will be aligned at the center of the container.</li>
+                            <li>space-between : the flex items will be evenly distributed in the container.</li>
+                            <li>space-around : the flex items will be evenly distributed in the container, with half-size spaces on either end.</li>
+                            <li>space-evenly : the flex items will be distributed so that the spacing between any two items (and the space to the edges) is equal.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> Flex align-items</dt>
+                    <dd>
+                        The align-items property is used to align the flex items along the cross axis. <br>
+                        it can take the following values: <br>
+                        <ul>
+                            <li>stretch : the flex items will stretch to fill the container.</li>
+                            <li>flex-start : the flex items will be aligned to the top of the container.</li>
+                            <li>flex-end : the flex items will be aligned to the bottom of the container.</li>
+                            <li>center : the flex items will be aligned at the vertical center of the container.</li>
+                            <li>baseline : the flex items will be aligned such that the baselines of the content inside the items aligns.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> Flex align-content</dt>
+                    <dd>
+                        The align-content property is used to align the flex lines along the cross axis if there is extra space in the cross axis. <br>
+                        it can take the following values: <br>
+                        <ul>
+                            <li>stretch : the flex lines will stretch to fill the container.</li>
+                            <li>flex-start : the flex lines will be aligned to the top of the container.</li>
+                            <li>flex-end : the flex lines will be aligned to the bottom of the container.</li>
+                            <li>center : the flex lines will be aligned at the vertical center of the container.</li>
+                            <li>space-between : the flex lines will be evenly distributed in the container.</li>
+                            <li>space-around : the flex lines will be evenly distributed in the container, with half-size spaces on either end.</li>
+                            <li>space-evenly : the flex lines will be distributed so that the spacing between any two lines (and the space to the edges) is equal.</li>
+                        </ul>
+                    </dd>
+                    <dt>=> flex - align self</dt>
+                    <dd>
+                        The align-self property is used to align a specific flex item along the cross axis, overriding the align-items value of the flex container. <br>
+                        it can take the following values: <br>
+                        <ul>
+                            <li>auto : the element inherits its parent container's align-items property, or "stretch" if it has no parent container.</li>
+                            <li>stretch : the flex item will stretch to fill the container.</li>
+                            <li>flex-start : the flex item will be aligned to the top of the container.</li>
+                            <li>flex-end : the flex item will be aligned to the bottom of the container.</li>
+                            <li>center : the flex item will be aligned at the vertical center of the container.</li>
+                            <li>baseline : the flex item will be aligned such that the baselines of the content inside the items aligns.</li>
+                        </ul>
+                </dl>
             </p>
         </section>
 
         <section>
             <h3 id="grid">Css grid</h3>
             <p>
-
+                A grid layout consists of a parent element, with one or more child elements. <br>
+                The parent element is referred to as the grid container, and the child elements are referred to as grid items. <br>
+                -> Grid columns : the vertical lines of grid items are called columns. <br>
+                -> Grid rows : the horizontal lines of grid items are called rows. <br>
+                -> Grid gaps : the spaces between each column/row are called gaps. <br>
+                   &emsp; it has 3 properties: grid-column-gap, grid-row-gap, grid-gap. <br>
+                
+                => The grid container properties are: grid-template-columns, grid-template-rows, grid-template-areas, grid-template, grid-row, grid-column, grid-column-gap, grid-row-gap, grid-gap, justify-items, align-items, place-items, justify-content, align-content, place-content, grid-auto-columns, grid-auto-rows, grid-auto-flow, grid. <br>
+                -> grid-template-columns : specifies the number (and the widths) of columns in a grid layout. <br>
+                &emsp; example: <br>
+                grid-template-columns: 100px 100px 100px; //3 columns of 100px each <br>
+                grid-template-columns: 20% 20% 20% 20% 20%; //5 columns of 20% each <br>
+                grid-template-columns: auto auto auto; //3 columns of auto width <br>
+                -> grid-template-rows : specifies the number (and the heights) of rows in a grid layout. <br>
+                &emsp; example: <br>
+                grid-template-rows: 100px 100px 100px; //3 rows of 100px each <br>
+                -> grid-template-areas : specifies the names of the grid areas. <br>
+                &emsp; example: <br>
+                grid-template-areas: "header header header" <br>
+                                     "main main sidebar" <br>
+                                     "footer footer footer"; <br>
+                -> grid-template : is a shorthand property for the grid-template-rows, grid-template-columns, and the grid-template-areas properties. <br>
+                &emsp; example: <br>
+                grid-template: 100px 100px 100px / 100px 100px 100px; //3 rows of 100px each and 3 columns of 100px each <br>
+                -> grid-row : specifies a grid item's size and location in a grid layout, and is a shorthand property for the grid-row-start, grid-row-end. <br>
+                &emsp; example: <br>
+                grid-row: 1 / 3; //the grid item will start on row line 1 and end on row line 3 <br>
+                -> grid-column : specifies a grid item's size and location in a grid layout, and is a shorthand property for the grid-column-start, grid-column-end. <br>
+                &emsp; example: <br>
+                grid-column: 1 / 3; //the grid item will start on column line 1 and end on column line 3 <br>
+                -> grid-column-gap : specifies the size of the gap between the columns in a grid layout. <br>
+                &emsp; example: <br>
+                grid-column-gap: 50px; //the gap between the columns will be 50px <br>
+                -> grid-row-gap : specifies the size of the gap between the rows in a grid layout. <br>
+                -> grid-gap : is a shorthand property for the grid-row-gap and the grid-column-gap properties. <br>
+                -> justify-items : specifies the position of the grid items along the inline (row) axis. <br>
+                &emsp; it can take the following values: start, end, center, stretch. <br>
+                &emsp; example: <br>
+                justify-items: center; //the grid items will be positioned at the center of the grid area <br>
+                -> align-items : specifies the position of the grid items along the block (column) axis. <br>
+                &emsp; it can take the following values: start, end, center, stretch. <br>
+                &emsp; example: <br>
+                align-items: center; //the grid items will be positioned at the center of the grid area <br>
+                -> grid-area : specifies a grid item's size and location in a grid layout, and is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and the grid-column-end properties. <br>
+                &emsp; example: <br>
+                grid-area: 1 / 1 / 3 / 6; //the grid item will start on row line 1 and column line 1 and end on row line 3 and column line 6 <br>
+                -> justify-content : specifies the position of the grid items along the inline (row) axis. <br>
+                &emsp; it can take the following values: start, end, center, stretch, space-around, space-between, space-evenly. <br>
+                &emsp; example: <br>
+                justify-content: center; //the grid items will be positioned at the center of the grid area <br>
+                -> align-content : specifies the position of the grid items along the block (column) axis. <br>
+                &emsp; it can take the following values: start, end, center, stretch, space-around, space-between, space-evenly. <br>
+                &emsp; example: <br>
+                align-content: center; //the grid items will be positioned at the center of the grid area <br>
+                -> repeat( ) : specifies a track listing, repeating the track listing n times. <br>
+                &emsp; example: <br>
+                grid-template-columns: repeat(3, 1fr); //3 columns of 1fr each <br>
+                -> minmax( ) : it takes two arguments - min and max size. <br>
+                &emsp; example: <br>
+                grid-template-columns: repeat(3, minmax(100px, 1fr)); //3 columns of 100px each and 1fr each <br>
+                <br><br>
+                examples: <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div class="grid-container"&gt; <br>
+                        &emsp;&lt;div class="div1"&gt;div1&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div2"&gt;div2&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div3"&gt;div3&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div4"&gt;div4&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div5"&gt;div5&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div6"&gt;div6&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div7"&gt;div7&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div8"&gt;div8&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div9"&gt;div9&lt;/div&gt; <br>
+                    &lt;/div&gt; <br><br>
+                    
+                    the css code : <br><br>
+                    .grid-container { <br>
+                        &emsp;display: grid; <br>
+                        &emsp;grid-template-columns: repeat(3, 1fr); <br>
+                        &emsp;grid-template-rows: 100px 100px 100px 50px 50px; <br>
+                        &emsp;grid-gap: 10px; <br>
+                        &emsp;background-color: #2196F3; <br>
+                        &emsp;padding: 10px; <br>
+                    } <br>
+                    .grid-container > div { <br>
+                        &emsp;background-color: rgba(255, 255, 255, 0.8); <br>
+                        &emsp;text-align: center; <br>
+                        &emsp;font-size: 30px; <br>
+                    } <br>
+                    .div1 { grid-area: 1 / 1 / 2 / 4; } <br>
+                    .div2 { grid-area: 2 / 1 / 3 / 2; } <br>
+                    .div3 { grid-area: 2 / 2 / 3 / 3; } <br>
+                    .div4 { grid-area: 2 / 3 / 3 / 4; } <br>
+                    .div5 { grid-area: 3 / 1 / 4 / 2; } <br>
+                    .div6 { grid-area: 3 / 2 / 4 / 3; } <br>
+                    .div7 { grid-area: 3 / 3 / 4 / 4; } <br>
+                    .div8 { grid-area: 4 / 1 / 5 / 4; } <br>
+                    .div9 { grid-area: 5 / 1 / 6 / 4; } <br>
+                </div>
+                will show: <br>
+                <div class="grid-container">
+                    <div class="div1">div1 is loading</div>
+                    <div class="div2">div2 is loading</div>
+                    <div class="div3">div3 is loading</div>
+                    <div class="div4">div4 is loading</div>
+                    <div class="div5">div5 is loading</div>
+                    <div class="div6">div6 is loading</div>
+                    <div class="div7">div7 is loading</div>
+                    <div class="div8">div8 is loading</div>
+                    <div class="div9">div9 is loading</div>
+                </div>
+                <br><br>
+                another example with autofit and minmax() : <br>
+                <div class="code">
+                    html code : <br><br>
+                    &lt;div class="grid-container"&gt; <br>
+                        &emsp;&lt;div class="div1"&gt;div1&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div2"&gt;div2&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div3"&gt;div3&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div4"&gt;div4&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div5"&gt;div5&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div6"&gt;div6&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div7"&gt;div7&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div8"&gt;div8&lt;/div&gt; <br>
+                        &emsp;&lt;div class="div9"&gt;div9&lt;/div&gt; <br>
+                    &lt;/div&gt; <br><br>
+                    
+                    the css code : <br><br>
+                    .grid-container2 { <br>
+                        &emsp;display: grid; <br>
+                        &emsp;grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); <br>
+                        &emsp;grid-template-rows: 100px 100px 100px 50px 50px; <br>
+                        &emsp;grid-gap: 10px; <br>
+                        &emsp;background-color: #2196F3; <br>
+                        &emsp;padding: 10px; <br>
+                    } <br>
+                    .grid-container2 > div { <br>
+                        &emsp;background-color: rgba(255, 255, 255, 0.8); <br>
+                        &emsp;text-align: center; <br>
+                        &emsp;font-size: 30px; <br>
+                    } <br>
+                </div>
+                will show: <br>
+                <div class="grid-container2">
+                    <div class="d1">div1</div>
+                    <div class="d2">div2</div>
+                    <div class="d3">div3</div>
+                    <div class="d4">div4</div>
+                </div>
             </p>
         </section>
 
